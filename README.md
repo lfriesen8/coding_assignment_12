@@ -62,7 +62,7 @@ Edit
 npm install
 npm install --save-dev @types/jest @types/styled-components
 npm install styled-components
-npx install storybook
+npm install storybook
 This will install all necessary packages.
 
 🚀 Running the Project1️⃣ Start the React App
