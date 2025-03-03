@@ -26,7 +26,7 @@ export const Card: React.FC<CardProps> = ({
       {image && <CardImage src={image} alt={title} />}
       <CardTitle>{title}</CardTitle>
       <CardDescription>{description}</CardDescription>
-      {buttonLabel && <CardButton onClick={onButtonClick}>{buttonLabel}</CardButton>}
+      {buttonLabel && <CardButton onClick={() => onButtonClick && onButtonClick()}>{buttonLabel}</CardButton>}
     </StyledCard>
   );
 };

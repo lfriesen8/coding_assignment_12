@@ -32,11 +32,11 @@ type Story = StoryObj<typeof meta>;
  */
 export const Default: Story = {
   args: {
-    src: "https://via.placeholder.com/1200x400",
+    src: "https://designcollaborative.com/wp-content/uploads/2021/09/Slider6_Sweetwater-Electric-Guitars-Area-e1633015825122.jpg",
     alt: "Hero Image",
     height: "400px",
     overlayColor: "rgba(0,0,0,0.5)",
-    text: "Welcome to Storybook",
+    text: "Welcome to the music store",
     textColor: "#fff",
   },
 };
@@ -46,7 +46,7 @@ export const Default: Story = {
  */
 export const NoText: Story = {
   args: {
-    src: "https://via.placeholder.com/1200x400",
+    src: "https://designcollaborative.com/wp-content/uploads/2021/09/Slider6_Sweetwater-Electric-Guitars-Area-e1633015825122.jpg",
     alt: "Hero Image",
     height: "400px",
     overlayColor: "rgba(0,0,0,0.3)",

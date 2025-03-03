@@ -17,8 +17,8 @@ import { Button } from "./Button";
  * - The **background color** can be modified dynamically in Storybook.
  * - Click actions are recorded in the Storybook Actions panel.
  *
- * @file Button.stories.tsx
- * @author Your Name
+ * 
+ * Liam Friesen
  */
 
 // Storybook metadata configuration

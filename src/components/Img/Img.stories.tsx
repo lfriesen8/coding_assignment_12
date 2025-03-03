@@ -31,7 +31,7 @@ type Story = StoryObj<typeof meta>;
  */
 export const Default: Story = {
   args: {
-    src: "https://via.placeholder.com/150",
+    src: "https://www.thomann.de/blog/wp-content/uploads/2024/08/Djtransitions_header_770x425.png",
     alt: "Placeholder Image",
     width: 150,
     height: 150,
@@ -44,7 +44,7 @@ export const Default: Story = {
  */
 export const Rounded: Story = {
   args: {
-    src: "https://via.placeholder.com/150",
+    src: "https://www.thomann.de/blog/wp-content/uploads/2024/08/Djtransitions_header_770x425.png",
     alt: "Rounded Image",
     width: 150,
     height: 150,
@@ -57,7 +57,7 @@ export const Rounded: Story = {
  */
 export const FullWidth: Story = {
   args: {
-    src: "https://via.placeholder.com/600x300",
+    src: "https://www.thomann.de/blog/wp-content/uploads/2024/08/Djtransitions_header_770x425.png",
     alt: "Full-Width Image",
     width: "100%",
     height: 300,

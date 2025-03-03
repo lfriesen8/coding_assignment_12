@@ -4,7 +4,7 @@ import { Dropdown } from "./Dropdown";
 /**
  * **Dropdown Component - Storybook**
  *
- * Showcases different variations of the `Dropdown` component.
+ * Showcases different variations of the `Dropdown` component, including a disabled state.
  */
 
 const meta: Meta<typeof Dropdown> = {
@@ -18,6 +18,7 @@ const meta: Meta<typeof Dropdown> = {
     options: { control: "object" },
     defaultValue: { control: "text" },
     onChange: { action: "changed" },
+    disabled: { control: "boolean" },
   },
 };
 
@@ -31,6 +32,18 @@ export const Default: Story = {
   args: {
     options: ["Option 1", "Option 2", "Option 3"],
     defaultValue: "Option 1",
+    disabled: false,
+  },
+};
+
+/**
+ * **Disabled Dropdown**
+ */
+export const Disabled: Story = {
+  args: {
+    options: ["Option 1", "Option 2", "Option 3"],
+    defaultValue: "Option 1",
+    disabled: true,
   },
 };
 
@@ -41,5 +54,6 @@ export const Empty: Story = {
   args: {
     options: [],
     defaultValue: "",
+    disabled: false,
   },
 };

@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { useState } from "react"; // ✅ We need state for selection
 import { RadioButton } from "./RadioButton";
 
 /**
@@ -27,7 +28,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 /**
- * **Default Unchecked Radio Button**
+ * **Standalone Unchecked Radio Button**
  */
 export const Default: Story = {
   args: {
@@ -39,7 +40,7 @@ export const Default: Story = {
 };
 
 /**
- * **Checked Radio Button**
+ * **Standalone Checked Radio Button**
  */
 export const Checked: Story = {
   args: {
@@ -47,5 +48,35 @@ export const Checked: Story = {
     name: "example",
     value: "option2",
     checked: true,
+  },
+};
+
+/**
+ * **Radio Group (Multiple Options)**
+ *
+ * Demonstrates that only one radio button can be selected at a time.
+ */
+export const RadioGroup: Story = {
+  render: () => {
+    const [selected, setSelected] = useState("option1"); // ✅ Track selected option
+
+    return (
+      <div>
+        <RadioButton
+          label="Option 1"
+          name="radioGroup"
+          value="option1"
+          checked={selected === "option1"}
+          onChange={setSelected} // ✅ Updates state
+        />
+        <RadioButton
+          label="Option 2"
+          name="radioGroup"
+          value="option2"
+          checked={selected === "option2"}
+          onChange={setSelected} // ✅ Updates state
+        />
+      </div>
+    );
   },
 };

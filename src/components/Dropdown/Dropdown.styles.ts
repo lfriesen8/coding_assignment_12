@@ -1,11 +1,20 @@
 import styled from "styled-components";
 
 /**
+ * Defines the props that StyledDropdown accepts.
+ */
+interface StyledDropdownProps {
+  disabled?: boolean;
+}
+
+/**
  * Styled wrapper for the dropdown component.
  */
-export const StyledDropdown = styled.div`
+export const StyledDropdown = styled.div<StyledDropdownProps>`
   display: inline-block;
   width: 200px;
+  opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
+  pointer-events: ${({ disabled }) => (disabled ? "none" : "auto")};
 `;
 
 /**
@@ -17,10 +26,10 @@ export const StyledSelect = styled.select`
   font-size: 16px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  cursor: pointer;
+  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
 
   &:focus {
     outline: none;
-    border-color: #007bff;
+    border-color: ${({ disabled }) => (disabled ? "#ccc" : "#007bff")};
   }
 `;
