@@ -1,46 +1,131 @@
-# Getting Started with Create React App
+# React UI Component Library
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a **reusable UI component library** built using **React, TypeScript, Styled Components, and Storybook**.  
+It is designed for developers who want **pre-built UI elements** that can be used in different applications.  
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📌 Features
+- **Reusable UI Components:** Includes buttons, dropdowns, tables, labels, images, and more.
+- **Storybook Integration:** Visualize and test components in an isolated environment.
+- **Styled Components:** Components are styled dynamically based on props.
+- **TypeScript Support:** Provides strong typing for better maintainability.
+- **Jest + React Testing Library:** Ensures components work as expected.
+- **Dockerized Deployment:** Runs in a Docker container for easy setup.
+- **CI/CD Ready:** Can be extended for automated testing and deployments.
 
-### `npm start`
+README.md - React UI Component Library
+md
+Copy
+Edit
+# React UI Component Library
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This project is a **React-based UI component library** built using **TypeScript, Styled Components, and Storybook**. It provides reusable UI elements such as buttons, dropdowns, tables, images, and more.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## 📌 Dependencies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Before starting, ensure you have **Node.js** and **npm** installed.  
 
-### `npm run build`
+This project uses the following dependencies:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### **Main Dependencies**
+- `react` - Core library for building UI components.
+- `react-dom` - Required for rendering components.
+- `styled-components` - CSS-in-JS library for component styling.
+- `@types/react` - TypeScript type definitions for React.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### **Storybook (Component Testing)**
+- `@storybook/react` - Storybook framework for React.
+- `@storybook/addon-essentials` - Useful Storybook addons.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **Testing (Jest & React Testing Library)**
+- `jest` - JavaScript testing framework.
+- `@testing-library/react` - Utility for testing React components.
 
-### `npm run eject`
+### **Docker (For Deployment)**
+- `docker` - Used to containerize and run the application.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠 Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### **1️⃣ Clone the Repository**
+```sh
+git clone <repository-url>
+cd coding_assignment_12
+2️⃣ Install Dependencies
+sh
+Copy
+Edit
+npm install
+This will install all necessary packages.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+🚀 Running the Project1️⃣ Start the React App
+sh
+Copy
+Edit
+npm start
+Runs the app in development mode. Open http://localhost:3000.
 
-## Learn More
+2️⃣ Run Storybook
+sh
+Copy
+Edit
+npm run storybook
+Opens Storybook at http://localhost:6006 for testing UI components.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3️⃣ Run Tests
+sh
+Copy
+Edit
+npm test
+Runs all unit tests using Jest.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🏗️ Project Structure
+plaintext
+Copy
+Edit
+📂 src
+ ┣ 📂 components
+ ┃ ┣ 📂 Button
+ ┃ ┃ ┣ 📜 Button.tsx
+ ┃ ┃ ┣ 📜 Button.styles.ts
+ ┃ ┃ ┣ 📜 Button.types.ts
+ ┃ ┃ ┣ 📜 Button.stories.tsx
+ ┃ ┃ ┗ 📜 Button.tests.tsx
+ ┃ ┣ 📂 Dropdown
+ ┃ ┣ 📂 Table
+ ┃ ┣ 📂 RadioButton
+ ┃ ┣ 📂 HeroImage
+ ┃ ┗ 📂 Img
+ ┣ 📂 stories
+ ┣ 📜 App.tsx
+ ┣ 📜 index.tsx
+ ┗ 📜 README.md
+Each component folder contains:
+
+Component.tsx - The functional React component.
+Component.styles.ts - Styling with Styled Components.
+Component.types.ts - Type definitions for props.
+Component.stories.tsx - Storybook visualization file.
+Component.tests.tsx - Unit tests using Jest.
+🧩 Available Components
+✅ Button
+Supports primary, secondary, disabled states.
+Storybook allows modifying background color dynamically.
+✅ Dropdown
+Select dropdown with multiple options.
+Can be disabled.
+✅ Table
+Supports adding/removing rows dynamically.
+Can be disabled.
+✅ Radio Button
+Allows users to select one option from a set.
+✅ Img
+Displays an image with alt text.
+✅ Hero Image
+A large banner image with optional overlay and text.
+✅ Card
+A styled container for grouping content.
