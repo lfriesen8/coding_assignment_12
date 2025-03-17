@@ -89,3 +89,4 @@ Runs all unit tests using Jest.
 To learn React, check out the [React documentation](https://reactjs.org/).
 test
 Testing Lint-Staged
+Test Husky
