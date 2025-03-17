@@ -1,5 +1,9 @@
 import React from "react";
-import { StyledRadioWrapper, StyledRadio, StyledLabel } from "./RadioButton.styles";
+import {
+  StyledRadioWrapper,
+  StyledRadio,
+  StyledLabel,
+} from "./RadioButton.styles";
 import { RadioButtonProps } from "./RadioButton.types";
 
 /**
@@ -14,15 +18,21 @@ import { RadioButtonProps } from "./RadioButton.types";
  * @param {boolean} [checked] - Whether the radio button is selected.
  * @param {(value: string) => void} [onChange] - Callback when selection changes.
  */
-export const RadioButton: React.FC<RadioButtonProps> = ({ label, name, value, checked, onChange }) => {
+export const RadioButton: React.FC<RadioButtonProps> = ({
+  label,
+  name,
+  value,
+  checked,
+  onChange,
+}) => {
   return (
     <StyledRadioWrapper>
-      <StyledRadio 
-        type="radio" 
-        name={name} 
-        value={value} 
-        checked={checked} 
-        onChange={(e) => onChange && onChange(e.target.value)} 
+      <StyledRadio
+        type="radio"
+        name={name}
+        value={value}
+        checked={checked}
+        onChange={(e) => onChange && onChange(e.target.value)}
       />
       <StyledLabel>{label}</StyledLabel>
     </StyledRadioWrapper>

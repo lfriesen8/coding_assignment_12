@@ -1,5 +1,10 @@
 import React from "react";
-import { StyledHeroImage, Overlay, HeroText, HiddenImg } from "./HeroImage.styles";
+import {
+  StyledHeroImage,
+  Overlay,
+  HeroText,
+  HiddenImg,
+} from "./HeroImage.styles";
 import type { HeroImageProps } from "./HeroImage.types";
 
 /**
@@ -15,13 +20,13 @@ import type { HeroImageProps } from "./HeroImage.types";
  * @param {string} [text] - Optional text over the image.
  * @param {string} [textColor] - Color of the text.
  */
-export const HeroImage: React.FC<HeroImageProps> = ({ 
-  src, 
-  alt, 
-  height = "300px", 
-  overlayColor = "rgba(0,0,0,0.5)", 
-  text, 
-  textColor = "#fff" 
+export const HeroImage: React.FC<HeroImageProps> = ({
+  src,
+  alt,
+  height = "300px",
+  overlayColor = "rgba(0,0,0,0.5)",
+  text,
+  textColor = "#fff",
 }) => {
   return (
     <StyledHeroImage height={height} style={{ backgroundImage: `url(${src})` }}>

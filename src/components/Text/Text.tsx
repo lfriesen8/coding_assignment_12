@@ -14,7 +14,13 @@ import { TextProps } from "./Text.types";
  * @param {boolean} [italic] - Whether the text is italic.
  * @param {string} [color] - Custom text color.
  */
-export const Text: React.FC<TextProps> = ({ children, size = "medium", bold, italic, color }) => {
+export const Text: React.FC<TextProps> = ({
+  children,
+  size = "medium",
+  bold,
+  italic,
+  color,
+}) => {
   return (
     <StyledText size={size} bold={bold} italic={italic} color={color}>
       {children}

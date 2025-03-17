@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -21,6 +17,21 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "src",
+    ".storybook",
+    "liam-husky-project",
+    "liam-husky-project/src",
+    "liam-husky-project/src/app",
+    "liam-husky-project/next.config.ts",
+    "liam-husky-project/storybook-static/**/*.ts",
+    "liam-husky-project/storybook-static/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "storybook-static",
+    "liam-husky-project/storybook-static/**/*.js"
   ]
 }
+

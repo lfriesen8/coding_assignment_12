@@ -43,4 +43,3 @@ export const HeroText = styled.h1<{ color: string }>`
   color: ${({ color }) => color};
   text-align: center;
 `;
-

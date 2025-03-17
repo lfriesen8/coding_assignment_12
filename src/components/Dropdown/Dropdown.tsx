@@ -13,18 +13,18 @@ import { DropdownProps } from "./Dropdown.types";
  * @param {(value: string) => void} [onChange] - Callback when selection changes.
  * @param {boolean} [disabled] - Whether the dropdown is disabled.
  */
-export const Dropdown: React.FC<DropdownProps> = ({ 
-  options, 
-  defaultValue, 
-  onChange, 
-  disabled = false 
+export const Dropdown: React.FC<DropdownProps> = ({
+  options,
+  defaultValue,
+  onChange,
+  disabled = false,
 }) => {
   return (
     <StyledDropdown>
-      <StyledSelect 
-        defaultValue={defaultValue} 
+      <StyledSelect
+        defaultValue={defaultValue}
         onChange={(e) => onChange && onChange(e.target.value)}
-        disabled={disabled} // ✅ Properly pass disabled to <select>
+        disabled={disabled} //  Properly pass disabled to <select>
       >
         {options.map((option, index) => (
           <option key={index} value={option}>

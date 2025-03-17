@@ -11,20 +11,25 @@ import { TableProps } from "./Table.types";
  * - A header and footer that remain visible.
  * - A `disabled` state that prevents interaction.
  *
- * 
  *
  *
- * 
+ *
+ *
  */
 
-export const Table: React.FC<TableProps & { disabled?: boolean }> = ({ disabled = false }) => {
+export const Table: React.FC<TableProps & { disabled?: boolean }> = ({
+  disabled = false,
+}) => {
   const [rows, setRows] = useState([
     { id: 1, name: "John Doe", age: 30, country: "Canada" },
     { id: 2, name: "Jane Smith", age: 25, country: "USA" },
   ]);
 
   const addRow = () => {
-    setRows([...rows, { id: Date.now(), name: "New User", age: 0, country: "Unknown" }]);
+    setRows([
+      ...rows,
+      { id: Date.now(), name: "New User", age: 0, country: "Unknown" },
+    ]);
   };
 
   const removeRow = (id: number) => {
@@ -32,7 +37,12 @@ export const Table: React.FC<TableProps & { disabled?: boolean }> = ({ disabled 
   };
 
   return (
-    <S.StyledTable style={{ opacity: disabled ? 0.5 : 1, pointerEvents: disabled ? "none" : "auto" }}>
+    <S.StyledTable
+      style={{
+        opacity: disabled ? 0.5 : 1,
+        pointerEvents: disabled ? "none" : "auto",
+      }}
+    >
       <S.StyledTableHeader>
         <S.StyledTableRow>
           <S.StyledTableCell>Name</S.StyledTableCell>
@@ -48,7 +58,10 @@ export const Table: React.FC<TableProps & { disabled?: boolean }> = ({ disabled 
             <S.StyledTableCell>{row.age}</S.StyledTableCell>
             <S.StyledTableCell>{row.country}</S.StyledTableCell>
             <S.StyledTableCell>
-              <S.StyledButton onClick={() => removeRow(row.id)} disabled={disabled}>
+              <S.StyledButton
+                onClick={() => removeRow(row.id)}
+                disabled={disabled}
+              >
                 Remove
               </S.StyledButton>
             </S.StyledTableCell>
@@ -58,7 +71,9 @@ export const Table: React.FC<TableProps & { disabled?: boolean }> = ({ disabled 
       <S.StyledTableFooter>
         <S.StyledTableRow>
           <S.StyledTableCell>Total</S.StyledTableCell>
-          <S.StyledTableCell colSpan={2}>{rows.length} people</S.StyledTableCell>
+          <S.StyledTableCell colSpan={2}>
+            {rows.length} people
+          </S.StyledTableCell>
           <S.StyledTableCell>
             <S.StyledButton onClick={addRow} disabled={disabled}>
               Add Row

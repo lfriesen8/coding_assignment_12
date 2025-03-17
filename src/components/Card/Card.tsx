@@ -1,5 +1,11 @@
 import React from "react";
-import { StyledCard, CardImage, CardTitle, CardDescription, CardButton } from "./Card.styles";
+import {
+  StyledCard,
+  CardImage,
+  CardTitle,
+  CardDescription,
+  CardButton,
+} from "./Card.styles";
 import { CardProps } from "./Card.types";
 
 /**
@@ -14,19 +20,23 @@ import { CardProps } from "./Card.types";
  * @param {string} [buttonLabel] - Optional button text.
  * @param {() => void} [onButtonClick] - Click handler for the button.
  */
-export const Card: React.FC<CardProps> = ({ 
-  title, 
-  description, 
-  image, 
-  buttonLabel, 
-  onButtonClick 
+export const Card: React.FC<CardProps> = ({
+  title,
+  description,
+  image,
+  buttonLabel,
+  onButtonClick,
 }) => {
   return (
     <StyledCard>
       {image && <CardImage src={image} alt={title} />}
       <CardTitle>{title}</CardTitle>
       <CardDescription>{description}</CardDescription>
-      {buttonLabel && <CardButton onClick={() => onButtonClick && onButtonClick()}>{buttonLabel}</CardButton>}
+      {buttonLabel && (
+        <CardButton onClick={() => onButtonClick && onButtonClick()}>
+          {buttonLabel}
+        </CardButton>
+      )}
     </StyledCard>
   );
 };

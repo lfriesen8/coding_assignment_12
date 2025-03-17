@@ -12,7 +12,11 @@ import { LabelProps } from "./Label.types";
  * @param {boolean} [disabled] - Whether the label is disabled.
  * @param {string} [htmlFor] - The `for` attribute (associates label with an input).
  */
-export const Label: React.FC<LabelProps> = ({ text, disabled = false, htmlFor }) => {
+export const Label: React.FC<LabelProps> = ({
+  text,
+  disabled = false,
+  htmlFor,
+}) => {
   return (
     <StyledLabel htmlFor={htmlFor} disabled={disabled}>
       {text}

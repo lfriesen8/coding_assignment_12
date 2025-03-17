@@ -158,5 +158,12 @@ git push origin main
 - All components are built, tested, and displayed using **Storybook**.
 - The production build is **Dockerized** and runs on **localhost:8083**.
 
-If you encounter any issues, feel free to reach out. 🚀
+for a fresh docker"
+Rebuild the Docker Image: Run:
+
+
+docker build -t friesen_liam_coding_assignment12 .
+
+docker run -d -p 8083:8083 --name friesen_liam_coding_assignment12 friesen_liam_coding_assignment12
+
 

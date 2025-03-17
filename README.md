@@ -86,49 +86,6 @@ Edit
 npm test
 Runs all unit tests using Jest.
 
-🏗️ Project Structure
-plaintext
-Copy
-Edit
-📂 src
- ┣ 📂 components
- ┃ ┣ 📂 Button
- ┃ ┃ ┣ 📜 Button.tsx
- ┃ ┃ ┣ 📜 Button.styles.ts
- ┃ ┃ ┣ 📜 Button.types.ts
- ┃ ┃ ┣ 📜 Button.stories.tsx
- ┃ ┃ ┗ 📜 Button.tests.tsx
- ┃ ┣ 📂 Dropdown
- ┃ ┣ 📂 Table
- ┃ ┣ 📂 RadioButton
- ┃ ┣ 📂 HeroImage
- ┃ ┗ 📂 Img
- ┣ 📂 stories
- ┣ 📜 App.tsx
- ┣ 📜 index.tsx
- ┗ 📜 README.md
-Each component folder contains:
-
-Component.tsx - The functional React component.
-Component.styles.ts - Styling with Styled Components.
-Component.types.ts - Type definitions for props.
-Component.stories.tsx - Storybook visualization file.
-Component.tests.tsx - Unit tests using Jest.
-🧩 Available Components
-✅ Button
-Supports primary, secondary, disabled states.
-Storybook allows modifying background color dynamically.
-✅ Dropdown
-Select dropdown with multiple options.
-Can be disabled.
-✅ Table
-Supports adding/removing rows dynamically.
-Can be disabled.
-✅ Radio Button
-Allows users to select one option from a set.
-✅ Img
-Displays an image with alt text.
-✅ Hero Image
-A large banner image with optional overlay and text.
-✅ Card
-A styled container for grouping content.
+To learn React, check out the [React documentation](https://reactjs.org/).
+test
+Testing Lint-Staged

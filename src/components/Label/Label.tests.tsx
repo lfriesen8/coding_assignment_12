@@ -15,6 +15,9 @@ describe("Label Component", () => {
 
   test("associates label with input", () => {
     render(<Label text="Associated Label" htmlFor="input-id" />);
-    expect(screen.getByText("Associated Label")).toHaveAttribute("for", "input-id");
+    expect(screen.getByText("Associated Label")).toHaveAttribute(
+      "for",
+      "input-id",
+    );
   });
 });

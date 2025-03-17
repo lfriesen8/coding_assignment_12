@@ -19,13 +19,26 @@ export type ButtonProps = {
   primary?: boolean;
   disabled?: boolean;
   size?: "small" | "medium" | "large";
-  backgroundColor?: string; // ✅ Ensuring backgroundColor prop is properly passed
+  backgroundColor?: string;
   onClick?: () => void;
 };
 
-export const Button: React.FC<ButtonProps> = ({ label, primary, disabled, size = "medium", backgroundColor, onClick }) => {
+export const Button: React.FC<ButtonProps> = ({
+  label,
+  primary = false,
+  disabled = false,
+  size = "medium",
+  backgroundColor,
+  onClick,
+}) => {
   return (
-    <StyledButton primary={primary} disabled={disabled} size={size} onClick={onClick}>
+    <StyledButton
+      primary={primary}
+      disabled={disabled}
+      size={size}
+      backgroundColor={backgroundColor}
+      onClick={disabled ? undefined : onClick}
+    >
       {label}
     </StyledButton>
   );

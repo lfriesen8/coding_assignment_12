@@ -21,7 +21,7 @@ describe("Table Component", () => {
             <td>Footer</td>
           </tr>
         </tfoot>
-      </Table>
+      </Table>,
     );
     expect(screen.getByText("Header 1")).toBeInTheDocument();
     expect(screen.getByText("Header 2")).toBeInTheDocument();
@@ -40,4 +40,3 @@ describe("Table Component", () => {
     expect(screen.getByText("Total")).toBeInTheDocument();
   });
 });
-

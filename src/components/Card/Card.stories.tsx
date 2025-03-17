@@ -32,7 +32,8 @@ export const Default: Story = {
   args: {
     title: "PK SPEAKERS",
     description: "White PK 15 Speakers",
-    image: "https://canada.crutchfieldonline.com/ImageHandler/trim/750/457/products/2019/16/310/g310YU2MW-F.jpg",
+    image:
+      "https://canada.crutchfieldonline.com/ImageHandler/trim/750/457/products/2019/16/310/g310YU2MW-F.jpg",
     buttonLabel: "More info",
     onButtonClick: () => alert("Button clicked!"),
   },

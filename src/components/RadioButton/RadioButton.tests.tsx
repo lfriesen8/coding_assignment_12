@@ -9,8 +9,15 @@ describe("RadioButton Component", () => {
 
   test("changes value when clicked", () => {
     const onChangeMock = jest.fn();
-    render(<RadioButton label="Option 2" name="test" value="2" onChange={onChangeMock} />);
-    
+    render(
+      <RadioButton
+        label="Option 2"
+        name="test"
+        value="2"
+        onChange={onChangeMock}
+      />,
+    );
+
     const radio = screen.getByLabelText("Option 2");
     fireEvent.click(radio);
 

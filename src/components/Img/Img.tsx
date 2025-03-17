@@ -14,6 +14,20 @@ import { ImgProps } from "./Img.types";
  * @param {string | number} [height] - Height of the image.
  * @param {string} [borderRadius] - Rounds the corners of the image.
  */
-export const Img: React.FC<ImgProps> = ({ src, alt, width, height, borderRadius }) => {
-  return <StyledImage src={src} alt={alt} width={width} height={height} borderRadius={borderRadius} />;
+export const Img: React.FC<ImgProps> = ({
+  src,
+  alt,
+  width,
+  height,
+  borderRadius,
+}) => {
+  return (
+    <StyledImage
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      borderRadius={borderRadius}
+    />
+  );
 };

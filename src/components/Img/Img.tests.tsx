@@ -10,7 +10,15 @@ describe("Img Component", () => {
   });
 
   test("applies custom width, height, and borderRadius", () => {
-    render(<Img src="https://via.placeholder.com/150" alt="Styled Image" width={200} height={200} borderRadius="10px" />);
+    render(
+      <Img
+        src="https://via.placeholder.com/150"
+        alt="Styled Image"
+        width={200}
+        height={200}
+        borderRadius="10px"
+      />,
+    );
     const image = screen.getByAltText("Styled Image");
     expect(image).toHaveAttribute("width", "200");
     expect(image).toHaveAttribute("height", "200");

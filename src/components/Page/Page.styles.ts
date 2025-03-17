@@ -8,7 +8,7 @@ export const StyledPage = styled.article`
   margin: 0 auto;
   padding: 20px;
   font-family: Arial, sans-serif;
-  
+
   h2 {
     color: #333;
   }
@@ -28,12 +28,12 @@ export const StyledPage = styled.article`
  * Styled tip section in the page component.
  */
 export const TipWrapper = styled.div`
-  background-color:rgba(192, 228, 243, 0.42);
+  background-color: rgba(192, 228, 243, 0.42);
   padding: 10px;
   border-left: 4px solid #007bff;
   font-size: 14px;
   margin-top: 20px;
-  
+
   .tip {
     font-weight: bold;
     color: #007bff;
