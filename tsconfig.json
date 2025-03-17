@@ -16,22 +16,13 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": [
-    "src",
-    ".storybook",
-    "liam-husky-project",
-    "liam-husky-project/src",
-    "liam-husky-project/src/app",
-    "liam-husky-project/next.config.ts",
-    "liam-husky-project/storybook-static/**/*.ts",
-    "liam-husky-project/storybook-static/**/*.tsx"
-  ],
+  
+  "include": ["src", "src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx"],
   "exclude": [
     "node_modules",
     "dist",
     "build",
     "storybook-static",
-    "liam-husky-project/storybook-static/**/*.js"
+    "liam-husky-project/storybook-static",
   ]
 }
-
