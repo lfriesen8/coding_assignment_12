@@ -17,6 +17,10 @@
     "typescript-eslint": "^8.26.1"
   },
   "scripts": {
-    "prepare": "husky"
-  }
+  "test": "echo \"No tests defined\" && exit 0",
+  "lint": "eslint . --fix",
+  "format": "prettier --write .",
+  "prepare": "husky install",
+  "precommit": "lint-staged"
+}
 }
