@@ -44,7 +44,13 @@
       "prettier"
     ],
     "rules": {
-      "quotes": ["error", "single", { "avoidEscape": true }],
+      "quotes": [
+        "error",
+        "single",
+        {
+          "avoidEscape": true
+        }
+      ],
       "react/react-in-jsx-scope": "off",
       "camelcase": "error",
       "spaced-comment": "error",
@@ -81,13 +87,12 @@
     }
   },
   "lint-staged": {
-  "*.{js,jsx,ts,tsx,json}": [
-    "eslint --fix",
-    "prettier --write",
-    "git add"
-  ]
-}
-  ,
+    "*.{js,jsx,ts,tsx,json}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.4",
     "@storybook/addon-essentials": "^8.5.8",
@@ -100,9 +105,9 @@
     "@storybook/test": "^8.5.8",
     "@types/styled-components": "^5.1.34",
     "eslint": "^8.57.1",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-storybook": "^0.11.3",
     "husky": "^8.0.3",
     "jest": "^27.5.1",
