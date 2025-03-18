@@ -2,7 +2,7 @@
 FROM node:18-alpine
 
 # Set the working directory inside the container
-WORKDIR /lastName_firstName_ui_garden_build_checks
+WORKDIR friesen_liam_ui_garden_build_checks
 
 # Copy package files first (for better caching)
 COPY package*.json ./

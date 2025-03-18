@@ -16,13 +16,19 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  
-  "include": ["src", "src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx"],
+
+  "include": [
+    "src",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.js",
+    "src/**/*.jsx"
+  ],
   "exclude": [
     "node_modules",
     "dist",
     "build",
     "storybook-static",
-    "liam-husky-project/storybook-static",
+    "liam-husky-project/storybook-static"
   ]
 }

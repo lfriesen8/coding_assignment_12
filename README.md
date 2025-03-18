@@ -1,11 +1,12 @@
 # React UI Component Library
 
 This project is a **reusable UI component library** built using **React, TypeScript, Styled Components, and Storybook**.  
-It is designed for developers who want **pre-built UI elements** that can be used in different applications.  
+It is designed for developers who want **pre-built UI elements** that can be used in different applications.
 
 ---
 
 ## 📌 Features
+
 - **Reusable UI Components:** Includes buttons, dropdowns, tables, labels, images, and more.
 - **Storybook Integration:** Visualize and test components in an isolated environment.
 - **Styled Components:** Components are styled dynamically based on props.
@@ -18,6 +19,7 @@ README.md - React UI Component Library
 md
 Copy
 Edit
+
 # React UI Component Library
 
 This project is a **React-based UI component library** built using **TypeScript, Styled Components, and Storybook**. It provides reusable UI elements such as buttons, dropdowns, tables, images, and more.
@@ -26,25 +28,29 @@ This project is a **React-based UI component library** built using **TypeScript,
 
 ## 📌 Dependencies
 
-Before starting, ensure you have **Node.js** and **npm** installed.  
+Before starting, ensure you have **Node.js** and **npm** installed.
 
 This project uses the following dependencies:
 
 ### **Main Dependencies**
+
 - `react` - Core library for building UI components.
 - `react-dom` - Required for rendering components.
 - `styled-components` - CSS-in-JS library for component styling.
 - `@types/react` - TypeScript type definitions for React.
 
 ### **Storybook (Component Testing)**
+
 - `@storybook/react` - Storybook framework for React.
 - `@storybook/addon-essentials` - Useful Storybook addons.
 
 ### **Testing (Jest & React Testing Library)**
+
 - `jest` - JavaScript testing framework.
 - `@testing-library/react` - Utility for testing React components.
 
 ### **Docker (For Deployment)**
+
 - `docker` - Used to containerize and run the application.
 
 ---
@@ -52,6 +58,7 @@ This project uses the following dependencies:
 ## 🛠 Installation
 
 ### **1️⃣ Clone the Repository**
+
 ```sh
 git clone <repository-url>
 cd coding_assignment_12
@@ -90,3 +97,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 test
 Testing Lint-Staged
 Test Husky
+```

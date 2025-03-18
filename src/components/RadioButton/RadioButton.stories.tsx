@@ -58,25 +58,30 @@ export const Checked: Story = {
  */
 export const RadioGroup: Story = {
   render: () => {
-    const [selected, setSelected] = useState("option1"); // ✅ Track selected option
+    function RadioGroupComponent() {
+      const [selected, setSelected] = useState("option1");
 
-    return (
-      <div>
-        <RadioButton
-          label="Option 1"
-          name="radioGroup"
-          value="option1"
-          checked={selected === "option1"}
-          onChange={setSelected} // ✅ Updates state
-        />
-        <RadioButton
-          label="Option 2"
-          name="radioGroup"
-          value="option2"
-          checked={selected === "option2"}
-          onChange={setSelected} // ✅ Updates state
-        />
-      </div>
-    );
+      return (
+        <div>
+          <RadioButton
+            label="Option 1"
+            name="radioGroup"
+            value="option1"
+            checked={selected === "option1"}
+            onChange={() => setSelected("option1")} // ✅ Updates state properly
+          />
+          <RadioButton
+            label="Option 2"
+            name="radioGroup"
+            value="option2"
+            checked={selected === "option2"}
+            onChange={() => setSelected("option2")} // ✅ Updates state properly
+          />
+        </div>
+      );
+    }
+
+    return <RadioGroupComponent />;
   },
 };
+
