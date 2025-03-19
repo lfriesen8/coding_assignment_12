@@ -2,10 +2,10 @@
   self.webpackChunkcoding_assignment_12 || []).push([
   [215],
   {
-    "./src/components/Dropdown/Dropdown.stories.tsx": (
+    './src/components/Dropdown/Dropdown.stories.tsx': (
       __unused_webpack_module,
       __webpack_exports__,
-      __webpack_require__,
+      __webpack_require__
     ) => {
       __webpack_require__.r(__webpack_exports__),
         __webpack_require__.d(__webpack_exports__, {
@@ -15,9 +15,9 @@
           __namedExportsOrder: () => __namedExportsOrder,
           default: () => Dropdown_stories,
         });
-      __webpack_require__("./node_modules/react/index.js");
+      __webpack_require__('./node_modules/react/index.js');
       var styled_components_browser_esm = __webpack_require__(
-        "./node_modules/styled-components/dist/styled-components.browser.esm.js",
+        './node_modules/styled-components/dist/styled-components.browser.esm.js'
       );
       const StyledDropdown = styled_components_browser_esm.Ay.div`
   display: inline-block;
@@ -28,7 +28,7 @@
   }};
   pointer-events: ${(_ref2) => {
     let { disabled } = _ref2;
-    return disabled ? "none" : "auto";
+    return disabled ? 'none' : 'auto';
   }};
 `,
         StyledSelect = styled_components_browser_esm.Ay.select`
@@ -39,19 +39,19 @@
   border: 1px solid #ccc;
   cursor: ${(_ref3) => {
     let { disabled } = _ref3;
-    return disabled ? "not-allowed" : "pointer";
+    return disabled ? 'not-allowed' : 'pointer';
   }};
 
   &:focus {
     outline: none;
     border-color: ${(_ref4) => {
       let { disabled } = _ref4;
-      return disabled ? "#ccc" : "#007bff";
+      return disabled ? '#ccc' : '#007bff';
     }};
   }
 `;
       var jsx_runtime = __webpack_require__(
-        "./node_modules/react/jsx-runtime.js",
+        './node_modules/react/jsx-runtime.js'
       );
       const Dropdown = (_ref) => {
         let { options, defaultValue, onChange, disabled = !1 } = _ref;
@@ -62,91 +62,91 @@
             disabled,
             children: options.map((option, index) =>
               (0, jsx_runtime.jsx)(
-                "option",
+                'option',
                 { value: option, children: option },
-                index,
-              ),
+                index
+              )
             ),
           }),
         });
       };
       Dropdown.__docgenInfo = {
         description:
-          "**Dropdown Component**\n\nA reusable dropdown/select component that supports a disabled state.\n\n@component\n@param {string[]} options - Array of dropdown options.\n@param {string} [defaultValue] - Default selected option.\n@param {(value: string) => void} [onChange] - Callback when selection changes.\n@param {boolean} [disabled] - Whether the dropdown is disabled.",
+          '**Dropdown Component**\n\nA reusable dropdown/select component that supports a disabled state.\n\n@component\n@param {string[]} options - Array of dropdown options.\n@param {string} [defaultValue] - Default selected option.\n@param {(value: string) => void} [onChange] - Callback when selection changes.\n@param {boolean} [disabled] - Whether the dropdown is disabled.',
         methods: [],
-        displayName: "Dropdown",
+        displayName: 'Dropdown',
         props: {
           options: {
             required: !0,
             tsType: {
-              name: "Array",
-              elements: [{ name: "string" }],
-              raw: "string[]",
+              name: 'Array',
+              elements: [{ name: 'string' }],
+              raw: 'string[]',
             },
-            description: "",
+            description: '',
           },
           defaultValue: {
             required: !1,
-            tsType: { name: "string" },
-            description: "",
+            tsType: { name: 'string' },
+            description: '',
           },
           onChange: {
             required: !1,
             tsType: {
-              name: "signature",
-              type: "function",
-              raw: "(value: string) => void",
+              name: 'signature',
+              type: 'function',
+              raw: '(value: string) => void',
               signature: {
-                arguments: [{ type: { name: "string" }, name: "value" }],
-                return: { name: "void" },
+                arguments: [{ type: { name: 'string' }, name: 'value' }],
+                return: { name: 'void' },
               },
             },
-            description: "",
+            description: '',
           },
           disabled: {
             required: !1,
-            tsType: { name: "boolean" },
-            description: "",
-            defaultValue: { value: "false", computed: !1 },
+            tsType: { name: 'boolean' },
+            description: '',
+            defaultValue: { value: 'false', computed: !1 },
           },
         },
       };
       const Dropdown_stories = {
-          title: "Components/Dropdown",
+          title: 'Components/Dropdown',
           component: Dropdown,
           parameters: {
-            layout: "centered",
+            layout: 'centered',
             docs: {
               description: {
                 component:
-                  "**Dropdown Component - Storybook**\r\n\nShowcases different variations of the `Dropdown` component, including a disabled state.",
+                  '**Dropdown Component - Storybook**\r\n\nShowcases different variations of the `Dropdown` component, including a disabled state.',
               },
             },
           },
-          tags: ["autodocs"],
+          tags: ['autodocs'],
           argTypes: {
-            options: { control: "object" },
-            defaultValue: { control: "text" },
-            onChange: { action: "changed" },
-            disabled: { control: "boolean" },
+            options: { control: 'object' },
+            defaultValue: { control: 'text' },
+            onChange: { action: 'changed' },
+            disabled: { control: 'boolean' },
           },
         },
         Default = {
           args: {
-            options: ["Option 1", "Option 2", "Option 3"],
-            defaultValue: "Option 1",
+            options: ['Option 1', 'Option 2', 'Option 3'],
+            defaultValue: 'Option 1',
             disabled: !1,
           },
         },
         Disabled = {
           args: {
-            options: ["Option 1", "Option 2", "Option 3"],
-            defaultValue: "Option 1",
+            options: ['Option 1', 'Option 2', 'Option 3'],
+            defaultValue: 'Option 1',
             disabled: !0,
           },
         },
-        Empty = { args: { options: [], defaultValue: "", disabled: !1 } },
-        __namedExportsOrder = ["Default", "Disabled", "Empty"];
+        Empty = { args: { options: [], defaultValue: '', disabled: !1 } },
+        __namedExportsOrder = ['Default', 'Disabled', 'Empty'];
       (Default.parameters = {
         ...Default.parameters,
         docs: {
@@ -157,7 +157,7 @@
             ...Default.parameters?.docs?.source,
           },
           description: {
-            story: "**Default Dropdown**",
+            story: '**Default Dropdown**',
             ...Default.parameters?.docs?.description,
           },
         },
@@ -172,7 +172,7 @@
               ...Disabled.parameters?.docs?.source,
             },
             description: {
-              story: "**Disabled Dropdown**",
+              story: '**Disabled Dropdown**',
               ...Disabled.parameters?.docs?.description,
             },
           },
@@ -187,7 +187,7 @@
               ...Empty.parameters?.docs?.source,
             },
             description: {
-              story: "**Empty Dropdown**",
+              story: '**Empty Dropdown**',
               ...Empty.parameters?.docs?.description,
             },
           },

@@ -3,21 +3,21 @@
   self.webpackChunkcoding_assignment_12 || []).push([
   [479],
   {
-    "./node_modules/react/cjs/react-jsx-runtime.production.js": (
+    './node_modules/react/cjs/react-jsx-runtime.production.js': (
       __unused_webpack_module,
-      exports,
+      exports
     ) => {
-      var REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"),
-        REACT_FRAGMENT_TYPE = Symbol.for("react.fragment");
+      var REACT_ELEMENT_TYPE = Symbol.for('react.transitional.element'),
+        REACT_FRAGMENT_TYPE = Symbol.for('react.fragment');
       function jsxProd(type, config, maybeKey) {
         var key = null;
         if (
-          (void 0 !== maybeKey && (key = "" + maybeKey),
-          void 0 !== config.key && (key = "" + config.key),
-          "key" in config)
+          (void 0 !== maybeKey && (key = '' + maybeKey),
+          void 0 !== config.key && (key = '' + config.key),
+          'key' in config)
         )
           for (var propName in ((maybeKey = {}), config))
-            "key" !== propName && (maybeKey[propName] = config[propName]);
+            'key' !== propName && (maybeKey[propName] = config[propName]);
         else maybeKey = config;
         return (
           (config = maybeKey.ref),
@@ -34,29 +34,29 @@
         (exports.jsx = jsxProd),
         (exports.jsxs = jsxProd);
     },
-    "./node_modules/react/jsx-runtime.js": (
+    './node_modules/react/jsx-runtime.js': (
       module,
       __unused_webpack_exports,
-      __webpack_require__,
+      __webpack_require__
     ) => {
       module.exports = __webpack_require__(
-        "./node_modules/react/cjs/react-jsx-runtime.production.js",
+        './node_modules/react/cjs/react-jsx-runtime.production.js'
       );
     },
-    "./node_modules/shallowequal/index.js": (module) => {
+    './node_modules/shallowequal/index.js': (module) => {
       module.exports = function shallowEqual(
         objA,
         objB,
         compare,
-        compareContext,
+        compareContext
       ) {
         var ret = compare ? compare.call(compareContext, objA, objB) : void 0;
         if (void 0 !== ret) return !!ret;
         if (objA === objB) return !0;
         if (
-          "object" != typeof objA ||
+          'object' != typeof objA ||
           !objA ||
-          "object" != typeof objB ||
+          'object' != typeof objB ||
           !objB
         )
           return !1;
@@ -85,10 +85,10 @@
         return !0;
       };
     },
-    "./node_modules/styled-components/dist/styled-components.browser.esm.js": (
+    './node_modules/styled-components/dist/styled-components.browser.esm.js': (
       __unused_webpack_module,
       __webpack_exports__,
-      __webpack_require__,
+      __webpack_require__
     ) => {
       __webpack_require__.d(__webpack_exports__, { Ay: () => dt });
       var __assign = function () {
@@ -114,15 +114,15 @@
         return to.concat(ar || Array.prototype.slice.call(from));
       }
       Object.create;
-      "function" == typeof SuppressedError && SuppressedError;
-      var react = __webpack_require__("./node_modules/react/index.js"),
+      'function' == typeof SuppressedError && SuppressedError;
+      var react = __webpack_require__('./node_modules/react/index.js'),
         shallowequal = __webpack_require__(
-          "./node_modules/shallowequal/index.js",
+          './node_modules/shallowequal/index.js'
         ),
         shallowequal_default = __webpack_require__.n(shallowequal),
-        MS = "-ms-",
-        MOZ = "-moz-",
-        WEBKIT = "-webkit-",
+        MS = '-ms-',
+        MOZ = '-moz-',
+        WEBKIT = '-webkit-',
         abs = Math.abs,
         Utility_from = String.fromCharCode,
         Utility_assign = Object.assign;
@@ -163,7 +163,7 @@
         Tokenizer_length = 0,
         position = 0,
         character = 0,
-        characters = "";
+        characters = '';
       function node(
         value,
         root,
@@ -172,7 +172,7 @@
         props,
         children,
         length,
-        siblings,
+        siblings
       ) {
         return {
           value,
@@ -184,16 +184,16 @@
           line,
           column,
           length,
-          return: "",
+          return: '',
           siblings,
         };
       }
       function copy(root, props) {
         return Utility_assign(
-          node("", null, null, "", null, null, 0, root.siblings),
+          node('', null, null, '', null, null, 0, root.siblings),
           root,
           { length: -root.length },
-          props,
+          props
         );
       }
       function lift(root) {
@@ -270,19 +270,19 @@
         );
       }
       function dealloc(value) {
-        return (characters = ""), value;
+        return (characters = ''), value;
       }
       function delimit(type) {
         return trim(
           slice(
             position - 1,
-            delimiter(91 === type ? type + 2 : 40 === type ? type + 1 : type),
-          ),
+            delimiter(91 === type ? type + 2 : 40 === type ? type + 1 : type)
+          )
         );
       }
       function whitespace(type) {
         for (; (character = peek()) && character < 33; ) next();
-        return token(type) > 2 || token(character) > 3 ? "" : " ";
+        return token(type) > 2 || token(character) > 3 ? '' : ' ';
       }
       function escaping(index, count) {
         for (
@@ -299,7 +299,7 @@
         );
         return slice(
           index,
-          caret() + (count < 6 && 32 == peek() && 32 == next()),
+          caret() + (count < 6 && 32 == peek() && 32 == next())
         );
       }
       function delimiter(type) {
@@ -328,9 +328,9 @@
 
         );
         return (
-          "/*" +
+          '/*' +
           slice(index, position - 1) +
-          "*" +
+          '*' +
           Utility_from(47 === type ? type : next())
         );
       }
@@ -339,34 +339,34 @@
         return slice(index, position);
       }
       function serialize(children, callback) {
-        for (var output = "", i = 0; i < children.length; i++)
-          output += callback(children[i], i, children, callback) || "";
+        for (var output = '', i = 0; i < children.length; i++)
+          output += callback(children[i], i, children, callback) || '';
         return output;
       }
       function stringify(element, index, children, callback) {
         switch (element.type) {
-          case "@layer":
+          case '@layer':
             if (element.children.length) break;
-          case "@import":
-          case "decl":
+          case '@import':
+          case 'decl':
             return (element.return = element.return || element.value);
-          case "comm":
-            return "";
-          case "@keyframes":
+          case 'comm':
+            return '';
+          case '@keyframes':
             return (element.return =
               element.value +
-              "{" +
+              '{' +
               serialize(element.children, callback) +
-              "}");
-          case "rule":
-            if (!Utility_strlen((element.value = element.props.join(","))))
-              return "";
+              '}');
+          case 'rule':
+            if (!Utility_strlen((element.value = element.props.join(','))))
+              return '';
         }
         return Utility_strlen(
-          (children = serialize(element.children, callback)),
+          (children = serialize(element.children, callback))
         )
-          ? (element.return = element.value + "{" + children + "}")
-          : "";
+          ? (element.return = element.value + '{' + children + '}')
+          : '';
       }
       function prefix(value, length, children) {
         switch (
@@ -382,7 +382,7 @@
           })(value, length)
         ) {
           case 5103:
-            return WEBKIT + "print-" + value + value;
+            return WEBKIT + 'print-' + value + value;
           case 5737:
           case 4201:
           case 3177:
@@ -424,7 +424,7 @@
                   WEBKIT +
                   value +
                   MS +
-                  replace(value, /[svh]\w+-[tblr]{2}/, "tb") +
+                  replace(value, /[svh]\w+-[tblr]{2}/, 'tb') +
                   value
                 );
               case 108:
@@ -432,7 +432,7 @@
                   WEBKIT +
                   value +
                   MS +
-                  replace(value, /[svh]\w+-[tblr]{2}/, "tb-rl") +
+                  replace(value, /[svh]\w+-[tblr]{2}/, 'tb-rl') +
                   value
                 );
               case 45:
@@ -440,7 +440,7 @@
                   WEBKIT +
                   value +
                   MS +
-                  replace(value, /[svh]\w+-[tblr]{2}/, "lr") +
+                  replace(value, /[svh]\w+-[tblr]{2}/, 'lr') +
                   value
                 );
             }
@@ -449,7 +449,7 @@
           case 2903:
             return WEBKIT + value + MS + value + value;
           case 6165:
-            return WEBKIT + value + MS + "flex-" + value + value;
+            return WEBKIT + value + MS + 'flex-' + value + value;
           case 5187:
             return (
               WEBKIT +
@@ -457,7 +457,7 @@
               replace(
                 value,
                 /(\w+).+(:[^]+)/,
-                "-webkit-box-$1$2-ms-flex-$1$2",
+                '-webkit-box-$1$2-ms-flex-$1$2'
               ) +
               value
             );
@@ -466,11 +466,11 @@
               WEBKIT +
               value +
               MS +
-              "flex-item-" +
-              replace(value, /flex-|-self/g, "") +
+              'flex-item-' +
+              replace(value, /flex-|-self/g, '') +
               (match(value, /flex-|baseline/)
-                ? ""
-                : MS + "grid-row-" + replace(value, /flex-|-self/g, "")) +
+                ? ''
+                : MS + 'grid-row-' + replace(value, /flex-|-self/g, '')) +
               value
             );
           case 4675:
@@ -478,64 +478,64 @@
               WEBKIT +
               value +
               MS +
-              "flex-line-pack" +
-              replace(value, /align-content|flex-|-self/g, "") +
+              'flex-line-pack' +
+              replace(value, /align-content|flex-|-self/g, '') +
               value
             );
           case 5548:
             return (
-              WEBKIT + value + MS + replace(value, "shrink", "negative") + value
+              WEBKIT + value + MS + replace(value, 'shrink', 'negative') + value
             );
           case 5292:
             return (
               WEBKIT +
               value +
               MS +
-              replace(value, "basis", "preferred-size") +
+              replace(value, 'basis', 'preferred-size') +
               value
             );
           case 6060:
             return (
               WEBKIT +
-              "box-" +
-              replace(value, "-grow", "") +
+              'box-' +
+              replace(value, '-grow', '') +
               WEBKIT +
               value +
               MS +
-              replace(value, "grow", "positive") +
+              replace(value, 'grow', 'positive') +
               value
             );
           case 4554:
             return (
               WEBKIT +
-              replace(value, /([^-])(transform)/g, "$1-webkit-$2") +
+              replace(value, /([^-])(transform)/g, '$1-webkit-$2') +
               value
             );
           case 6187:
             return (
               replace(
                 replace(
-                  replace(value, /(zoom-|grab)/, WEBKIT + "$1"),
+                  replace(value, /(zoom-|grab)/, WEBKIT + '$1'),
                   /(image-set)/,
-                  WEBKIT + "$1",
+                  WEBKIT + '$1'
                 ),
                 value,
-                "",
+                ''
               ) + value
             );
           case 5495:
           case 3959:
-            return replace(value, /(image-set\([^]*)/, WEBKIT + "$1$`$1");
+            return replace(value, /(image-set\([^]*)/, WEBKIT + '$1$`$1');
           case 4968:
             return (
               replace(
                 replace(
                   value,
                   /(.+:)(flex-)?(.*)/,
-                  "-webkit-box-pack:$3-ms-flex-pack:$3",
+                  '-webkit-box-pack:$3-ms-flex-pack:$3'
                 ),
                 /s.+-b[^;]+/,
-                "justify",
+                'justify'
               ) +
               WEBKIT +
               value +
@@ -544,30 +544,30 @@
           case 4200:
             if (!match(value, /flex-|baseline/))
               return (
-                MS + "grid-column-align" + Utility_substr(value, length) + value
+                MS + 'grid-column-align' + Utility_substr(value, length) + value
               );
             break;
           case 2592:
           case 3360:
-            return MS + replace(value, "template-", "") + value;
+            return MS + replace(value, 'template-', '') + value;
           case 4384:
           case 3616:
             return children &&
               children.some(function (element, index) {
                 return (length = index), match(element.props, /grid-\w+-end/);
               })
-              ? ~indexof(value + (children = children[length].value), "span", 0)
+              ? ~indexof(value + (children = children[length].value), 'span', 0)
                 ? value
                 : MS +
-                  replace(value, "-start", "") +
+                  replace(value, '-start', '') +
                   value +
                   MS +
-                  "grid-row-span:" +
-                  (~indexof(children, "span", 0)
+                  'grid-row-span:' +
+                  (~indexof(children, 'span', 0)
                     ? match(children, /\d+/)
                     : +match(children, /\d+/) - +match(value, /\d+/)) +
-                  ";"
-              : MS + replace(value, "-start", "") + value;
+                  ';'
+              : MS + replace(value, '-start', '') + value;
           case 4896:
           case 4128:
             return children &&
@@ -576,13 +576,13 @@
               })
               ? value
               : MS +
-                  replace(replace(value, "-end", "-span"), "span ", "") +
+                  replace(replace(value, '-end', '-span'), 'span ', '') +
                   value;
           case 4095:
           case 3583:
           case 4068:
           case 2532:
-            return replace(value, /(.+)-inline(.+)/, WEBKIT + "$1$2") + value;
+            return replace(value, /(.+)-inline(.+)/, WEBKIT + '$1$2') + value;
           case 8116:
           case 7059:
           case 5753:
@@ -604,19 +604,19 @@
                     replace(
                       value,
                       /(.+:)(.+)-([^]+)/,
-                      "$1-webkit-$2-$3$1" +
+                      '$1-webkit-$2-$3$1' +
                         MOZ +
                         (108 == Utility_charat(value, length + 3)
-                          ? "$3"
-                          : "$2-$3"),
+                          ? '$3'
+                          : '$2-$3')
                     ) + value
                   );
                 case 115:
-                  return ~indexof(value, "stretch", 0)
+                  return ~indexof(value, 'stretch', 0)
                     ? prefix(
-                        replace(value, "stretch", "fill-available"),
+                        replace(value, 'stretch', 'fill-available'),
                         length,
-                        children,
+                        children
                       ) + value
                     : value;
               }
@@ -630,17 +630,17 @@
                 return (
                   MS +
                   a +
-                  ":" +
+                  ':' +
                   b +
                   f +
-                  (c ? MS + a + "-span:" + (d ? e : +e - +b) + f : "") +
+                  (c ? MS + a + '-span:' + (d ? e : +e - +b) + f : '') +
                   value
                 );
-              },
+              }
             );
           case 4949:
             if (121 === Utility_charat(value, length + 6))
-              return replace(value, ":", ":" + WEBKIT) + value;
+              return replace(value, ':', ':' + WEBKIT) + value;
             break;
           case 6444:
             switch (
@@ -651,18 +651,18 @@
                   replace(
                     value,
                     /(.+:)([^;\s!]+)(;|(\s+)?!.+)?/,
-                    "$1" +
+                    '$1' +
                       WEBKIT +
-                      (45 === Utility_charat(value, 14) ? "inline-" : "") +
-                      "box$3$1" +
+                      (45 === Utility_charat(value, 14) ? 'inline-' : '') +
+                      'box$3$1' +
                       WEBKIT +
-                      "$2$3$1" +
+                      '$2$3$1' +
                       MS +
-                      "$2box$3",
+                      '$2box$3'
                   ) + value
                 );
               case 100:
-                return replace(value, ":", ":" + MS) + value;
+                return replace(value, ':', ':' + MS) + value;
             }
             break;
           case 5719:
@@ -670,88 +670,88 @@
           case 2135:
           case 3927:
           case 2391:
-            return replace(value, "scroll-", "scroll-snap-") + value;
+            return replace(value, 'scroll-', 'scroll-snap-') + value;
         }
         return value;
       }
       function prefixer(element, index, children, callback) {
         if (element.length > -1 && !element.return)
           switch (element.type) {
-            case "decl":
+            case 'decl':
               return void (element.return = prefix(
                 element.value,
                 element.length,
-                children,
+                children
               ));
-            case "@keyframes":
+            case '@keyframes':
               return serialize(
                 [
                   copy(element, {
-                    value: replace(element.value, "@", "@" + WEBKIT),
+                    value: replace(element.value, '@', '@' + WEBKIT),
                   }),
                 ],
-                callback,
+                callback
               );
-            case "rule":
+            case 'rule':
               if (element.length)
                 return (function Utility_combine(array, callback) {
-                  return array.map(callback).join("");
+                  return array.map(callback).join('');
                 })((children = element.props), function (value) {
                   switch (match(value, (callback = /(::plac\w+|:read-\w+)/))) {
-                    case ":read-only":
-                    case ":read-write":
+                    case ':read-only':
+                    case ':read-write':
                       lift(
                         copy(element, {
-                          props: [replace(value, /:(read-\w+)/, ":-moz-$1")],
-                        }),
+                          props: [replace(value, /:(read-\w+)/, ':-moz-$1')],
+                        })
                       ),
                         lift(copy(element, { props: [value] })),
                         Utility_assign(element, {
                           props: filter(children, callback),
                         });
                       break;
-                    case "::placeholder":
+                    case '::placeholder':
                       lift(
                         copy(element, {
                           props: [
-                            replace(value, /:(plac\w+)/, ":-webkit-input-$1"),
+                            replace(value, /:(plac\w+)/, ':-webkit-input-$1'),
                           ],
-                        }),
+                        })
                       ),
                         lift(
                           copy(element, {
-                            props: [replace(value, /:(plac\w+)/, ":-moz-$1")],
-                          }),
+                            props: [replace(value, /:(plac\w+)/, ':-moz-$1')],
+                          })
                         ),
                         lift(
                           copy(element, {
                             props: [
-                              replace(value, /:(plac\w+)/, MS + "input-$1"),
+                              replace(value, /:(plac\w+)/, MS + 'input-$1'),
                             ],
-                          }),
+                          })
                         ),
                         lift(copy(element, { props: [value] })),
                         Utility_assign(element, {
                           props: filter(children, callback),
                         });
                   }
-                  return "";
+                  return '';
                 });
           }
       }
       function compile(value) {
         return dealloc(
           parse(
-            "",
+            '',
             null,
             null,
             null,
-            [""],
+            [''],
             (value = alloc(value)),
             0,
             [0],
-            value,
-          ),
+            value
+          )
         );
       }
       function parse(
@@ -763,7 +763,7 @@
         rulesets,
         pseudo,
         points,
-        declarations,
+        declarations
       ) {
         for (
           var index = 0,
@@ -776,7 +776,7 @@
             scanning = 1,
             ampersand = 1,
             character = 0,
-            type = "",
+            type = '',
             props = rules,
             children = rulesets,
             reference = rule,
@@ -792,9 +792,9 @@
               ) {
                 -1 !=
                   indexof(
-                    (characters += replace(delimit(character), "&", "&\f")),
-                    "&\f",
-                    abs(index ? points[index - 1] : 0),
+                    (characters += replace(delimit(character), '&', '&\f')),
+                    '&\f',
+                    abs(index ? points[index - 1] : 0)
                   ) && (ampersand = -1);
                 break;
               }
@@ -821,13 +821,13 @@
                       commenter(next(), caret()),
                       root,
                       parent,
-                      declarations,
+                      declarations
                     ),
-                    declarations,
+                    declarations
                   );
                   break;
                 default:
-                  characters += "/";
+                  characters += '/';
               }
               break;
             case 123 * variable:
@@ -841,30 +841,30 @@
                   scanning = 0;
                 case 59 + offset:
                   -1 == ampersand &&
-                    (characters = replace(characters, /\f/g, "")),
+                    (characters = replace(characters, /\f/g, '')),
                     property > 0 &&
                       Utility_strlen(characters) - length &&
                       Utility_append(
                         property > 32
                           ? declaration(
-                              characters + ";",
+                              characters + ';',
                               rule,
                               parent,
                               length - 1,
-                              declarations,
+                              declarations
                             )
                           : declaration(
-                              replace(characters, " ", "") + ";",
+                              replace(characters, ' ', '') + ';',
                               rule,
                               parent,
                               length - 2,
-                              declarations,
+                              declarations
                             ),
-                        declarations,
+                        declarations
                       );
                   break;
                 case 59:
-                  characters += ";";
+                  characters += ';';
                 default:
                   if (
                     (Utility_append(
@@ -880,9 +880,9 @@
                         (props = []),
                         (children = []),
                         length,
-                        rulesets,
+                        rulesets
                       )),
-                      rulesets,
+                      rulesets
                     ),
                     123 === character)
                   )
@@ -896,7 +896,7 @@
                         rulesets,
                         length,
                         points,
-                        children,
+                        children
                       );
                     else
                       switch (
@@ -926,15 +926,15 @@
                                   rules,
                                   (props = []),
                                   length,
-                                  children,
+                                  children
                                 ),
-                                children,
+                                children
                               ),
                             rules,
                             children,
                             length,
                             points,
-                            rule ? props : children,
+                            rule ? props : children
                           );
                           break;
                         default:
@@ -943,17 +943,17 @@
                             reference,
                             reference,
                             reference,
-                            [""],
+                            [''],
                             children,
                             0,
                             points,
-                            children,
+                            children
                           );
                       }
               }
               (index = offset = property = 0),
                 (variable = ampersand = 1),
-                (type = characters = ""),
+                (type = characters = ''),
                 (length = pseudo);
               break;
             case 58:
@@ -967,7 +967,7 @@
                 ((characters += Utility_from(character)), character * variable)
               ) {
                 case 38:
-                  ampersand = offset > 0 ? 1 : ((characters += "\f"), -1);
+                  ampersand = offset > 0 ? 1 : ((characters += '\f'), -1);
                   break;
                 case 44:
                   (points[index++] =
@@ -979,7 +979,7 @@
                     (atrule = peek()),
                     (offset = length =
                       Utility_strlen(
-                        (type = characters += identifier(caret())),
+                        (type = characters += identifier(caret()))
                       )),
                     character++;
                   break;
@@ -1003,11 +1003,11 @@
         props,
         children,
         length,
-        siblings,
+        siblings
       ) {
         for (
           var post = offset - 1,
-            rule = 0 === offset ? rules : [""],
+            rule = 0 === offset ? rules : [''],
             size = Utility_sizeof(rule),
             i = 0,
             j = 0,
@@ -1020,24 +1020,24 @@
               y = Utility_substr(
                 value,
                 post + 1,
-                (post = abs((j = points[i]))),
+                (post = abs((j = points[i])))
               ),
               z = value;
             x < size;
             ++x
           )
             (z = trim(
-              j > 0 ? rule[x] + " " + y : replace(y, /&\f/g, rule[x]),
+              j > 0 ? rule[x] + ' ' + y : replace(y, /&\f/g, rule[x])
             )) && (props[k++] = z);
         return node(
           value,
           root,
           parent,
-          0 === offset ? "rule" : type,
+          0 === offset ? 'rule' : type,
           props,
           children,
           length,
-          siblings,
+          siblings
         );
       }
       function comment(value, root, parent, siblings) {
@@ -1045,15 +1045,15 @@
           value,
           root,
           parent,
-          "comm",
+          'comm',
           Utility_from(
             (function Tokenizer_char() {
               return character;
-            })(),
+            })()
           ),
           Utility_substr(value, 2, -2),
           0,
-          siblings,
+          siblings
         );
       }
       function declaration(value, root, parent, length, siblings) {
@@ -1061,11 +1061,11 @@
           value,
           root,
           parent,
-          "decl",
+          'decl',
           Utility_substr(value, 0, length),
           Utility_substr(value, length + 1, -1),
           length,
-          siblings,
+          siblings
         );
       }
       var unitlessKeys = {
@@ -1116,32 +1116,32 @@
           strokeOpacity: 1,
           strokeWidth: 1,
         },
-        process = __webpack_require__("./node_modules/process/browser.js"),
+        process = __webpack_require__('./node_modules/process/browser.js'),
         f =
           (void 0 !== process &&
             void 0 !== process.env &&
             (process.env.REACT_APP_SC_ATTR || process.env.SC_ATTR)) ||
-          "data-styled",
-        m = "active",
-        y = "data-styled-version",
-        v = "6.1.15",
-        g = "/*!sc*/\n",
-        S = "undefined" != typeof window && "HTMLElement" in window,
+          'data-styled',
+        m = 'active',
+        y = 'data-styled-version',
+        v = '6.1.15',
+        g = '/*!sc*/\n',
+        S = 'undefined' != typeof window && 'HTMLElement' in window,
         w = Boolean(
-          "boolean" == typeof SC_DISABLE_SPEEDY
+          'boolean' == typeof SC_DISABLE_SPEEDY
             ? SC_DISABLE_SPEEDY
             : void 0 !== process &&
                 void 0 !== process.env &&
                 void 0 !== process.env.REACT_APP_SC_DISABLE_SPEEDY &&
-                "" !== process.env.REACT_APP_SC_DISABLE_SPEEDY
-              ? "false" !== process.env.REACT_APP_SC_DISABLE_SPEEDY &&
+                '' !== process.env.REACT_APP_SC_DISABLE_SPEEDY
+              ? 'false' !== process.env.REACT_APP_SC_DISABLE_SPEEDY &&
                 process.env.REACT_APP_SC_DISABLE_SPEEDY
               : void 0 !== process &&
                 void 0 !== process.env &&
                 void 0 !== process.env.SC_DISABLE_SPEEDY &&
-                "" !== process.env.SC_DISABLE_SPEEDY &&
-                "false" !== process.env.SC_DISABLE_SPEEDY &&
-                process.env.SC_DISABLE_SPEEDY,
+                '' !== process.env.SC_DISABLE_SPEEDY &&
+                'false' !== process.env.SC_DISABLE_SPEEDY &&
+                process.env.SC_DISABLE_SPEEDY
         ),
         _ = (new Set(), Object.freeze([])),
         C = Object.freeze({});
@@ -1152,144 +1152,144 @@
         );
       }
       var A = new Set([
-          "a",
-          "abbr",
-          "address",
-          "area",
-          "article",
-          "aside",
-          "audio",
-          "b",
-          "base",
-          "bdi",
-          "bdo",
-          "big",
-          "blockquote",
-          "body",
-          "br",
-          "button",
-          "canvas",
-          "caption",
-          "cite",
-          "code",
-          "col",
-          "colgroup",
-          "data",
-          "datalist",
-          "dd",
-          "del",
-          "details",
-          "dfn",
-          "dialog",
-          "div",
-          "dl",
-          "dt",
-          "em",
-          "embed",
-          "fieldset",
-          "figcaption",
-          "figure",
-          "footer",
-          "form",
-          "h1",
-          "h2",
-          "h3",
-          "h4",
-          "h5",
-          "h6",
-          "header",
-          "hgroup",
-          "hr",
-          "html",
-          "i",
-          "iframe",
-          "img",
-          "input",
-          "ins",
-          "kbd",
-          "keygen",
-          "label",
-          "legend",
-          "li",
-          "link",
-          "main",
-          "map",
-          "mark",
-          "menu",
-          "menuitem",
-          "meta",
-          "meter",
-          "nav",
-          "noscript",
-          "object",
-          "ol",
-          "optgroup",
-          "option",
-          "output",
-          "p",
-          "param",
-          "picture",
-          "pre",
-          "progress",
-          "q",
-          "rp",
-          "rt",
-          "ruby",
-          "s",
-          "samp",
-          "script",
-          "section",
-          "select",
-          "small",
-          "source",
-          "span",
-          "strong",
-          "style",
-          "sub",
-          "summary",
-          "sup",
-          "table",
-          "tbody",
-          "td",
-          "textarea",
-          "tfoot",
-          "th",
-          "thead",
-          "time",
-          "tr",
-          "track",
-          "u",
-          "ul",
-          "use",
-          "var",
-          "video",
-          "wbr",
-          "circle",
-          "clipPath",
-          "defs",
-          "ellipse",
-          "foreignObject",
-          "g",
-          "image",
-          "line",
-          "linearGradient",
-          "marker",
-          "mask",
-          "path",
-          "pattern",
-          "polygon",
-          "polyline",
-          "radialGradient",
-          "rect",
-          "stop",
-          "svg",
-          "text",
-          "tspan",
+          'a',
+          'abbr',
+          'address',
+          'area',
+          'article',
+          'aside',
+          'audio',
+          'b',
+          'base',
+          'bdi',
+          'bdo',
+          'big',
+          'blockquote',
+          'body',
+          'br',
+          'button',
+          'canvas',
+          'caption',
+          'cite',
+          'code',
+          'col',
+          'colgroup',
+          'data',
+          'datalist',
+          'dd',
+          'del',
+          'details',
+          'dfn',
+          'dialog',
+          'div',
+          'dl',
+          'dt',
+          'em',
+          'embed',
+          'fieldset',
+          'figcaption',
+          'figure',
+          'footer',
+          'form',
+          'h1',
+          'h2',
+          'h3',
+          'h4',
+          'h5',
+          'h6',
+          'header',
+          'hgroup',
+          'hr',
+          'html',
+          'i',
+          'iframe',
+          'img',
+          'input',
+          'ins',
+          'kbd',
+          'keygen',
+          'label',
+          'legend',
+          'li',
+          'link',
+          'main',
+          'map',
+          'mark',
+          'menu',
+          'menuitem',
+          'meta',
+          'meter',
+          'nav',
+          'noscript',
+          'object',
+          'ol',
+          'optgroup',
+          'option',
+          'output',
+          'p',
+          'param',
+          'picture',
+          'pre',
+          'progress',
+          'q',
+          'rp',
+          'rt',
+          'ruby',
+          's',
+          'samp',
+          'script',
+          'section',
+          'select',
+          'small',
+          'source',
+          'span',
+          'strong',
+          'style',
+          'sub',
+          'summary',
+          'sup',
+          'table',
+          'tbody',
+          'td',
+          'textarea',
+          'tfoot',
+          'th',
+          'thead',
+          'time',
+          'tr',
+          'track',
+          'u',
+          'ul',
+          'use',
+          'var',
+          'video',
+          'wbr',
+          'circle',
+          'clipPath',
+          'defs',
+          'ellipse',
+          'foreignObject',
+          'g',
+          'image',
+          'line',
+          'linearGradient',
+          'marker',
+          'mask',
+          'path',
+          'pattern',
+          'polygon',
+          'polyline',
+          'radialGradient',
+          'rect',
+          'stop',
+          'svg',
+          'text',
+          'tspan',
         ]),
         O = /[!"#$%&'()*+,./:;<=>?@[\\\]^`{|}~-]+/g,
         D = /(^-|-$)/g;
       function R(e) {
-        return e.replace(O, "-").replace(D, "");
+        return e.replace(O, '-').replace(D, '');
       }
       var T = /(a)(d)/gi,
         j = function (e) {
@@ -1297,9 +1297,9 @@
         };
       function x(e) {
         var t,
-          n = "";
+          n = '';
         for (t = Math.abs(e); t > 52; t = (t / 52) | 0) n = j(t % 52) + n;
-        return (j(t % 52) + n).replace(T, "$1-$2");
+        return (j(t % 52) + n).replace(T, '$1-$2');
       }
       var V,
         M = function (e, t) {
@@ -1313,14 +1313,14 @@
         return x(z(e) >>> 0);
       }
       function B(e) {
-        return e.displayName || e.name || "Component";
+        return e.displayName || e.name || 'Component';
       }
       function L(e) {
-        return "string" == typeof e && !0;
+        return 'string' == typeof e && !0;
       }
-      var G = "function" == typeof Symbol && Symbol.for,
-        Y = G ? Symbol.for("react.memo") : 60115,
-        W = G ? Symbol.for("react.forward_ref") : 60112,
+      var G = 'function' == typeof Symbol && Symbol.for,
+        Y = G ? Symbol.for('react.memo') : 60115,
+        W = G ? Symbol.for('react.forward_ref') : 60112,
         q = {
           childContextTypes: !0,
           contextType: !0,
@@ -1362,9 +1362,9 @@
           (V[Y] = U),
           V);
       function X(e) {
-        return ("type" in (t = e) && t.type.$$typeof) === Y
+        return ('type' in (t = e) && t.type.$$typeof) === Y
           ? U
-          : "$$typeof" in e
+          : '$$typeof' in e
             ? J[e.$$typeof]
             : q;
         var t;
@@ -1376,7 +1376,7 @@
         te = Object.getPrototypeOf,
         ne = Object.prototype;
       function oe(e, t, n) {
-        if ("string" != typeof t) {
+        if ('string' != typeof t) {
           if (ne) {
             var o = te(t);
             o && o !== ne && oe(e, o, n);
@@ -1396,25 +1396,25 @@
         return e;
       }
       function re(e) {
-        return "function" == typeof e;
+        return 'function' == typeof e;
       }
       function se(e) {
-        return "object" == typeof e && "styledComponentId" in e;
+        return 'object' == typeof e && 'styledComponentId' in e;
       }
       function ie(e, t) {
-        return e && t ? "".concat(e, " ").concat(t) : e || t || "";
+        return e && t ? ''.concat(e, ' ').concat(t) : e || t || '';
       }
       function ae(e, t) {
-        if (0 === e.length) return "";
+        if (0 === e.length) return '';
         for (var n = e[0], o = 1; o < e.length; o++) n += t ? t + e[o] : e[o];
         return n;
       }
       function ce(e) {
         return (
           null !== e &&
-          "object" == typeof e &&
+          'object' == typeof e &&
           e.constructor.name === Object.name &&
-          !("props" in e && e.$$typeof)
+          !('props' in e && e.$$typeof)
         );
       }
       function le(e, t, n) {
@@ -1426,15 +1426,15 @@
         return e;
       }
       function ue(e, t) {
-        Object.defineProperty(e, "toString", { value: t });
+        Object.defineProperty(e, 'toString', { value: t });
       }
       function he(t) {
         for (var n = [], o = 1; o < arguments.length; o++)
           n[o - 1] = arguments[o];
         return new Error(
-          "An error occurred. See https://github.com/styled-components/styled-components/blob/main/packages/styled-components/src/utils/errors.md#"
-            .concat(t, " for more information.")
-            .concat(n.length > 0 ? " Args: ".concat(n.join(", ")) : ""),
+          'An error occurred. See https://github.com/styled-components/styled-components/blob/main/packages/styled-components/src/utils/errors.md#'
+            .concat(t, ' for more information.')
+            .concat(n.length > 0 ? ' Args: '.concat(n.join(', ')) : '')
         );
       }
       var fe = (function () {
@@ -1451,7 +1451,7 @@
             (e.prototype.insertRules = function (e, t) {
               if (e >= this.groupSizes.length) {
                 for (var n = this.groupSizes, o = n.length, r = o; e >= r; )
-                  if ((r <<= 1) < 0) throw he(16, "".concat(e));
+                  if ((r <<= 1) < 0) throw he(16, ''.concat(e));
                 (this.groupSizes = new Uint32Array(r)),
                   this.groupSizes.set(n),
                   (this.length = r);
@@ -1474,7 +1474,7 @@
               }
             }),
             (e.prototype.getGroup = function (e) {
-              var t = "";
+              var t = '';
               if (e >= this.length || 0 === this.groupSizes[e]) return t;
               for (
                 var n = this.groupSizes[e],
@@ -1484,7 +1484,7 @@
                 s < r;
                 s++
               )
-                t += "".concat(this.tag.getRule(s)).concat(g);
+                t += ''.concat(this.tag.getRule(s)).concat(g);
               return t;
             }),
             e
@@ -1502,19 +1502,19 @@
         we = function (e, t) {
           (ge = t + 1), ye.set(e, t), ve.set(t, e);
         },
-        be = "style[".concat(f, "][").concat(y, '="').concat(v, '"]'),
+        be = 'style['.concat(f, '][').concat(y, '="').concat(v, '"]'),
         Ee = new RegExp(
-          "^".concat(f, '\\.g(\\d+)\\[id="([\\w\\d-]+)"\\].*?"([^"]*)'),
+          '^'.concat(f, '\\.g(\\d+)\\[id="([\\w\\d-]+)"\\].*?"([^"]*)')
         ),
         Ne = function (e, t, n) {
-          for (var o, r = n.split(","), s = 0, i = r.length; s < i; s++)
+          for (var o, r = n.split(','), s = 0, i = r.length; s < i; s++)
             (o = r[s]) && e.registerName(t, o);
         },
         Pe = function (e, t) {
           for (
             var n,
-              o = (null !== (n = t.textContent) && void 0 !== n ? n : "").split(
-                g,
+              o = (null !== (n = t.textContent) && void 0 !== n ? n : '').split(
+                g
               ),
               r = [],
               s = 0,
@@ -1553,20 +1553,20 @@
       var Ie = function (e) {
           var t = document.head,
             n = e || t,
-            o = document.createElement("style"),
+            o = document.createElement('style'),
             r = (function (e) {
-              var t = Array.from(e.querySelectorAll("style[".concat(f, "]")));
+              var t = Array.from(e.querySelectorAll('style['.concat(f, ']')));
               return t[t.length - 1];
             })(n),
             s = void 0 !== r ? r.nextSibling : null;
           o.setAttribute(f, m), o.setAttribute(y, v);
           var i = Ce();
-          return i && o.setAttribute("nonce", i), n.insertBefore(o, s), o;
+          return i && o.setAttribute('nonce', i), n.insertBefore(o, s), o;
         },
         Ae = (function () {
           function e(e) {
             (this.element = Ie(e)),
-              this.element.appendChild(document.createTextNode("")),
+              this.element.appendChild(document.createTextNode('')),
               (this.sheet = (function (e) {
                 if (e.sheet) return e.sheet;
                 for (
@@ -1594,7 +1594,7 @@
             }),
             (e.prototype.getRule = function (e) {
               var t = this.sheet.cssRules[e];
-              return t && t.cssText ? t.cssText : "";
+              return t && t.cssText ? t.cssText : '';
             }),
             e
           );
@@ -1621,7 +1621,7 @@
               this.element.removeChild(this.nodes[e]), this.length--;
             }),
             (e.prototype.getRule = function (e) {
-              return e < this.length ? this.nodes[e].textContent : "";
+              return e < this.length ? this.nodes[e].textContent : '';
             }),
             e
           );
@@ -1641,7 +1641,7 @@
               this.rules.splice(e, 1), this.length--;
             }),
             (e.prototype.getRule = function (e) {
-              return e < this.length ? this.rules[e] : "";
+              return e < this.length ? this.rules[e] : '';
             }),
             e
           );
@@ -1662,26 +1662,26 @@
                   for (
                     var t = e.getTag(),
                       n = t.length,
-                      o = "",
+                      o = '',
                       r = function (n) {
                         var r = (function (e) {
                           return ve.get(e);
                         })(n);
-                        if (void 0 === r) return "continue";
+                        if (void 0 === r) return 'continue';
                         var s = e.names.get(r),
                           i = t.getGroup(n);
                         if (void 0 === s || !s.size || 0 === i.length)
-                          return "continue";
-                        var a = ""
-                            .concat(f, ".g")
+                          return 'continue';
+                        var a = ''
+                            .concat(f, '.g')
                             .concat(n, '[id="')
                             .concat(r, '"]'),
-                          c = "";
+                          c = '';
                         void 0 !== s &&
                           s.forEach(function (e) {
-                            e.length > 0 && (c += "".concat(e, ","));
+                            e.length > 0 && (c += ''.concat(e, ','));
                           }),
-                          (o += ""
+                          (o += ''
                             .concat(i)
                             .concat(a, '{content:"')
                             .concat(c, '"}')
@@ -1709,7 +1709,7 @@
                 new e(
                   __assign(__assign({}, this.options), n),
                   this.gs,
-                  (o && this.names) || void 0,
+                  (o && this.names) || void 0
                 )
               );
             }),
@@ -1759,14 +1759,14 @@
       function Ve(e, t) {
         return e.map(function (e) {
           return (
-            "rule" === e.type &&
-              ((e.value = "".concat(t, " ").concat(e.value)),
-              (e.value = e.value.replaceAll(",", ",".concat(t, " "))),
+            'rule' === e.type &&
+              ((e.value = ''.concat(t, ' ').concat(e.value)),
+              (e.value = e.value.replaceAll(',', ','.concat(t, ' '))),
               (e.props = e.props.map(function (e) {
-                return "".concat(t, " ").concat(e);
+                return ''.concat(t, ' ').concat(e);
               }))),
             Array.isArray(e.children) &&
-              "@keyframes" !== e.type &&
+              '@keyframes' !== e.type &&
               (e.children = Ve(e.children, t)),
             e
           );
@@ -1784,28 +1784,28 @@
           l = function (e, o, r) {
             return r.startsWith(n) &&
               r.endsWith(n) &&
-              r.replaceAll(n, "").length > 0
-              ? ".".concat(t)
+              r.replaceAll(n, '').length > 0
+              ? '.'.concat(t)
               : e;
           },
           u = c.slice();
         u.push(function (e) {
-          "rule" === e.type &&
-            e.value.includes("&") &&
+          'rule' === e.type &&
+            e.value.includes('&') &&
             (e.props[0] = e.props[0].replace(je, n).replace(o, l));
         }),
           i.prefix && u.push(prefixer),
           u.push(stringify);
         var p = function (e, r, s, a) {
-          void 0 === r && (r = ""),
-            void 0 === s && (s = ""),
-            void 0 === a && (a = "&"),
+          void 0 === r && (r = ''),
+            void 0 === s && (s = ''),
+            void 0 === a && (a = '&'),
             (t = a),
             (n = r),
-            (o = new RegExp("\\".concat(n, "\\b"), "g"));
-          var c = e.replace(xe, ""),
+            (o = new RegExp('\\'.concat(n, '\\b'), 'g'));
+          var c = e.replace(xe, ''),
             l = compile(
-              s || r ? "".concat(s, " ").concat(r, " { ").concat(c, " }") : c,
+              s || r ? ''.concat(s, ' ').concat(r, ' { ').concat(c, ' }') : c
             );
           i.namespace && (l = Ve(l, i.namespace));
           var p = [];
@@ -1815,9 +1815,9 @@
               (function middleware(collection) {
                 var length = Utility_sizeof(collection);
                 return function (element, index, children, callback) {
-                  for (var output = "", i = 0; i < length; i++)
+                  for (var output = '', i = 0; i < length; i++)
                     output +=
-                      collection[i](element, index, children, callback) || "";
+                      collection[i](element, index, children, callback) || '';
                   return output;
                 };
               })(
@@ -1829,9 +1829,9 @@
                     };
                   })(function (e) {
                     return p.push(e);
-                  }),
-                ),
-              ),
+                  })
+                )
+              )
             ),
             p
           );
@@ -1843,7 +1843,7 @@
                   return t.name || he(15), M(e, t.name);
                 }, 5381)
                 .toString()
-            : ""),
+            : ''),
           p
         );
       }
@@ -1876,7 +1876,7 @@
                 t
               );
             },
-            [e.disableCSSOMInjection, e.sheet, e.target, c],
+            [e.disableCSSOMInjection, e.sheet, e.target, c]
           ),
           u = (0, react.useMemo)(
             function () {
@@ -1888,13 +1888,13 @@
                 plugins: n,
               });
             },
-            [e.enableVendorPrefixes, e.namespace, n],
+            [e.enableVendorPrefixes, e.namespace, n]
           );
         (0, react.useEffect)(
           function () {
             shallowequal_default()(n, e.stylisPlugins) || r(e.stylisPlugins);
           },
-          [e.stylisPlugins],
+          [e.stylisPlugins]
         );
         var d = (0, react.useMemo)(
           function () {
@@ -1904,12 +1904,12 @@
               stylis: u,
             };
           },
-          [e.shouldForwardProp, l, u],
+          [e.shouldForwardProp, l, u]
         );
         return react.createElement(
           $e.Provider,
           { value: d },
-          react.createElement(Le.Provider, { value: u }, e.children),
+          react.createElement(Le.Provider, { value: u }, e.children)
         );
       }
       var We = (function () {
@@ -1919,10 +1919,10 @@
               void 0 === t && (t = ze);
               var o = n.name + t.hash;
               e.hasNameForId(n.id, o) ||
-                e.insertRules(n.id, o, t(n.rules, o, "@keyframes"));
+                e.insertRules(n.id, o, t(n.rules, o, '@keyframes'));
             }),
               (this.name = e),
-              (this.id = "sc-keyframes-".concat(e)),
+              (this.id = 'sc-keyframes-'.concat(e)),
               (this.rules = t),
               ue(this, function () {
                 throw he(12, String(n.name));
@@ -1936,18 +1936,18 @@
           );
         })(),
         qe = function (e) {
-          return e >= "A" && e <= "Z";
+          return e >= 'A' && e <= 'Z';
         };
       function He(e) {
-        for (var t = "", n = 0; n < e.length; n++) {
+        for (var t = '', n = 0; n < e.length; n++) {
           var o = e[n];
-          if (1 === n && "-" === o && "-" === e[0]) return e;
-          qe(o) ? (t += "-" + o.toLowerCase()) : (t += o);
+          if (1 === n && '-' === o && '-' === e[0]) return e;
+          qe(o) ? (t += '-' + o.toLowerCase()) : (t += o);
         }
-        return t.startsWith("ms-") ? "-" + t : t;
+        return t.startsWith('ms-') ? '-' + t : t;
       }
       var Ue = function (e) {
-          return null == e || !1 === e || "" === e;
+          return null == e || !1 === e || '' === e;
         },
         Je = function (t) {
           var n,
@@ -1958,31 +1958,31 @@
             t.hasOwnProperty(s) &&
               !Ue(i) &&
               ((Array.isArray(i) && i.isCss) || re(i)
-                ? r.push("".concat(He(s), ":"), i, ";")
+                ? r.push(''.concat(He(s), ':'), i, ';')
                 : ce(i)
                   ? r.push.apply(
                       r,
                       __spreadArray(
-                        __spreadArray(["".concat(s, " {")], Je(i), !1),
-                        ["}"],
-                        !1,
-                      ),
+                        __spreadArray([''.concat(s, ' {')], Je(i), !1),
+                        ['}'],
+                        !1
+                      )
                     )
                   : r.push(
-                      ""
-                        .concat(He(s), ": ")
+                      ''
+                        .concat(He(s), ': ')
                         .concat(
                           ((n = s),
-                          null == (o = i) || "boolean" == typeof o || "" === o
-                            ? ""
-                            : "number" != typeof o ||
+                          null == (o = i) || 'boolean' == typeof o || '' === o
+                            ? ''
+                            : 'number' != typeof o ||
                                 0 === o ||
                                 n in unitlessKeys ||
-                                n.startsWith("--")
+                                n.startsWith('--')
                               ? String(o).trim()
-                              : "".concat(o, "px")),
-                          ";",
-                        ),
+                              : ''.concat(o, 'px')),
+                          ';'
+                        )
                     ));
           }
           return r;
@@ -1991,7 +1991,7 @@
         return Ue(e)
           ? []
           : se(e)
-            ? [".".concat(e.styledComponentId)]
+            ? ['.'.concat(e.styledComponentId)]
             : re(e)
               ? !re((s = e)) ||
                 (s.prototype && s.prototype.isReactComponent) ||
@@ -2009,7 +2009,7 @@
                         _,
                         e.map(function (e) {
                           return Xe(e, t, n, o);
-                        }),
+                        })
                       )
                     : [e.toString()];
         var s;
@@ -2025,7 +2025,7 @@
         Qe = (function () {
           function e(e, t, n) {
             (this.rules = e),
-              (this.staticRulesId = ""),
+              (this.staticRulesId = ''),
               (this.isStatic = (void 0 === n || n.isStatic) && Ze(e)),
               (this.componentId = t),
               (this.baseHash = M(Ke, t)),
@@ -2036,7 +2036,7 @@
             (e.prototype.generateAndInjectStyles = function (e, t, n) {
               var o = this.baseStyle
                 ? this.baseStyle.generateAndInjectStyles(e, t, n)
-                : "";
+                : '';
               if (this.isStatic && !n.hash)
                 if (
                   this.staticRulesId &&
@@ -2047,19 +2047,19 @@
                   var r = ae(Xe(this.rules, e, t, n)),
                     s = x(M(this.baseHash, r) >>> 0);
                   if (!t.hasNameForId(this.componentId, s)) {
-                    var i = n(r, ".".concat(s), void 0, this.componentId);
+                    var i = n(r, '.'.concat(s), void 0, this.componentId);
                     t.insertRules(this.componentId, s, i);
                   }
                   (o = ie(o, s)), (this.staticRulesId = s);
                 }
               else {
                 for (
-                  var a = M(this.baseHash, n.hash), c = "", l = 0;
+                  var a = M(this.baseHash, n.hash), c = '', l = 0;
                   l < this.rules.length;
                   l++
                 ) {
                   var u = this.rules[l];
-                  if ("string" == typeof u) c += u;
+                  if ('string' == typeof u) c += u;
                   else if (u) {
                     var p = ae(Xe(u, e, t, n));
                     (a = M(a, p + l)), (c += p);
@@ -2071,7 +2071,7 @@
                     t.insertRules(
                       this.componentId,
                       d,
-                      n(c, ".".concat(d), void 0, this.componentId),
+                      n(c, '.'.concat(d), void 0, this.componentId)
                     ),
                     (o = ie(o, d));
                 }
@@ -2095,10 +2095,10 @@
           f =
             void 0 === h
               ? (function (e, t) {
-                  var n = "string" != typeof e ? "sc" : R(e);
+                  var n = 'string' != typeof e ? 'sc' : R(e);
                   rt[n] = (rt[n] || 0) + 1;
-                  var o = "".concat(n, "-").concat($(v + n + rt[n]));
-                  return t ? "".concat(t, "-").concat(o) : o;
+                  var o = ''.concat(n, '-').concat($(v + n + rt[n]));
+                  return t ? ''.concat(t, '-').concat(o) : o;
                 })(r.displayName, r.parentComponentId)
               : h,
           m = r.displayName,
@@ -2106,13 +2106,13 @@
             void 0 === m
               ? (function (e) {
                   return L(e)
-                    ? "styled.".concat(e)
-                    : "Styled(".concat(B(e), ")");
+                    ? 'styled.'.concat(e)
+                    : 'Styled('.concat(B(e), ')');
                 })(e)
               : m,
           g =
             r.displayName && r.componentId
-              ? "".concat(R(r.displayName), "-").concat(r.componentId)
+              ? ''.concat(R(r.displayName), '-').concat(r.componentId)
               : r.componentId || f,
           S = i && a.attrs ? a.attrs.concat(d).filter(Boolean) : d,
           w = r.shouldForwardProp;
@@ -2152,9 +2152,9 @@
                   var a = re((r = e[i])) ? r(s) : r;
                   for (var c in a)
                     s[c] =
-                      "className" === c
+                      'className' === c
                         ? ie(s[c], a[c])
-                        : "style" === c
+                        : 'style' === c
                           ? __assign(__assign({}, s[c]), a[c])
                           : a[c];
                 }
@@ -2166,10 +2166,10 @@
               w = {};
             for (var b in g)
               void 0 === g[b] ||
-                "$" === b[0] ||
-                "as" === b ||
-                ("theme" === b && g.theme === v) ||
-                ("forwardedAs" === b
+                '$' === b[0] ||
+                'as' === b ||
+                ('theme' === b && g.theme === v) ||
+                ('forwardedAs' === b
                   ? (w.as = g.forwardedAs)
                   : (y && !y(b, S)) || (w[b] = g[b]));
             var E = (function (e, t) {
@@ -2178,9 +2178,9 @@
               })(a, g),
               N = ie(p, d);
             return (
-              E && (N += " " + E),
-              g.className && (N += " " + g.className),
-              (w[L(S) && !A.has(S) ? "class" : "className"] = N),
+              E && (N += ' ' + E),
+              g.className && (N += ' ' + g.className),
+              (w[L(S) && !A.has(S) ? 'class' : 'className'] = N),
               s && (w.ref = s),
               (0, react.createElement)(S, w)
             );
@@ -2195,10 +2195,10 @@
           (D.shouldForwardProp = w),
           (D.foldedComponentIds = i
             ? ie(a.foldedComponentIds, a.styledComponentId)
-            : ""),
+            : ''),
           (D.styledComponentId = g),
           (D.target = i ? a.target : e),
-          Object.defineProperty(D, "defaultProps", {
+          Object.defineProperty(D, 'defaultProps', {
             get: function () {
               return this._foldedDefaultProps;
             },
@@ -2214,7 +2214,7 @@
             },
           }),
           ue(D, function () {
-            return ".".concat(D.styledComponentId);
+            return '.'.concat(D.styledComponentId);
           }),
           c &&
             oe(D, e, {
@@ -2242,7 +2242,7 @@
           n[o - 1] = arguments[o];
         if (re(t) || ce(t)) return ct(Xe(at(_, __spreadArray([t], n, !0))));
         var r = t;
-        return 0 === n.length && 1 === r.length && "string" == typeof r[0]
+        return 0 === n.length && 1 === r.length && 'string' == typeof r[0]
           ? Xe(r)
           : ct(Xe(at(r, n)));
       }
@@ -2260,7 +2260,7 @@
               o,
               __assign(__assign({}, r), {
                 attrs: Array.prototype.concat(r.attrs, e).filter(Boolean),
-              }),
+              })
             );
           }),
           (s.withConfig = function (e) {
@@ -2284,7 +2284,7 @@
             ke.registerId(this.componentId + 1);
         }
         (e.prototype.createStyles = function (e, t, n, o) {
-          var r = o(ae(Xe(this.rules, t, n, o)), ""),
+          var r = o(ae(Xe(this.rules, t, n, o)), ''),
             s = this.componentId + e;
           n.insertRules(s, s, r);
         }),
@@ -2302,17 +2302,17 @@
           var e = this;
           (this._emitSheetCSS = function () {
             var t = e.instance.toString();
-            if (!t) return "";
+            if (!t) return '';
             var n = Ce(),
               o = ae(
                 [
                   n && 'nonce="'.concat(n, '"'),
-                  "".concat(f, '="true"'),
-                  "".concat(y, '="').concat(v, '"'),
+                  ''.concat(f, '="true"'),
+                  ''.concat(y, '="').concat(v, '"'),
                 ].filter(Boolean),
-                " ",
+                ' '
               );
-            return "<style ".concat(o, ">").concat(t, "</style>");
+            return '<style '.concat(o, '>').concat(t, '</style>');
           }),
             (this.getStyleTags = function () {
               if (e.sealed) throw he(2);
@@ -2324,7 +2324,7 @@
               var r = e.instance.toString();
               if (!r) return [];
               var s =
-                  (((n = {})[f] = ""),
+                  (((n = {})[f] = ''),
                   (n[y] = v),
                   (n.dangerouslySetInnerHTML = { __html: r }),
                   n),
@@ -2333,8 +2333,8 @@
                 i && (s.nonce = i),
                 [
                   react.createElement(
-                    "style",
-                    __assign({}, s, { key: "sc-0-0" }),
+                    'style',
+                    __assign({}, s, { key: 'sc-0-0' })
                   ),
                 ]
               );
@@ -2353,7 +2353,7 @@
             throw he(3);
           });
       })(),
-        "__sc-".concat(f, "__");
+        '__sc-'.concat(f, '__');
     },
   },
 ]);

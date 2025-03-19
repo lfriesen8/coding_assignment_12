@@ -1,10 +1,10 @@
-import React from "react";
-import { Button } from "./components/Button"; // Import your Button component
-import { Header } from "./components/Header"; // Import Header if needed
+import React from 'react';
+import { Button } from './components/Button'; // Import your Button component
+import { Header } from './components/Header'; // Import Header if needed
 
 function App() {
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
+    <div style={{ textAlign: 'center', marginTop: '50px' }}>
       <h1>My Component Library</h1>
 
       {/* Example Button Usage */}

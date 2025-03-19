@@ -18,7 +18,7 @@
         module.exports,
         module,
         module.exports,
-        __webpack_require__,
+        __webpack_require__
       ),
       (module.loaded = !0),
       module.exports
@@ -37,7 +37,7 @@
           for (var fulfilled = !0, j = 0; j < chunkIds.length; j++)
             (!1 & priority || notFulfilled >= priority) &&
             Object.keys(__webpack_require__.O).every((key) =>
-              __webpack_require__.O[key](chunkIds[j]),
+              __webpack_require__.O[key](chunkIds[j])
             )
               ? chunkIds.splice(j--, 1)
               : ((fulfilled = !1),
@@ -65,9 +65,9 @@
       : (obj) => obj.__proto__),
     (__webpack_require__.t = function (value, mode) {
       if ((1 & mode && (value = this(value)), 8 & mode)) return value;
-      if ("object" == typeof value && value) {
+      if ('object' == typeof value && value) {
         if (4 & mode && value.__esModule) return value;
-        if (16 & mode && "function" == typeof value.then) return value;
+        if (16 & mode && 'function' == typeof value.then) return value;
       }
       var ns = Object.create(null);
       __webpack_require__.r(ns);
@@ -80,11 +80,11 @@
       ];
       for (
         var current = 2 & mode && value;
-        "object" == typeof current && !~leafPrototypes.indexOf(current);
+        'object' == typeof current && !~leafPrototypes.indexOf(current);
         current = getProto(current)
       )
         Object.getOwnPropertyNames(current).forEach(
-          (key) => (def[key] = () => value[key]),
+          (key) => (def[key] = () => value[key])
         );
       return (def.default = () => value), __webpack_require__.d(ns, def), ns;
     }),
@@ -104,65 +104,65 @@
           (promises, key) => (
             __webpack_require__.f[key](chunkId, promises), promises
           ),
-          [],
-        ),
+          []
+        )
       )),
     (__webpack_require__.u = (chunkId) =>
       (({
-        15: "components-Img-Img-stories",
-        103: "components-Text-Text-stories",
-        187: "components-Page-Page-stories",
-        215: "components-Dropdown-Dropdown-stories",
-        279: "components-Header-Header-stories",
-        391: "components-RadioButton-RadioButton-stories",
-        407: "components-HeroImage-HeroImage-stories",
-        513: "components-Card-Card-stories",
-        568: "stories-Configure-mdx",
-        623: "components-Table-Table-stories",
-        721: "components-Button-Button-stories",
-        747: "components-Label-Label-stories",
+        15: 'components-Img-Img-stories',
+        103: 'components-Text-Text-stories',
+        187: 'components-Page-Page-stories',
+        215: 'components-Dropdown-Dropdown-stories',
+        279: 'components-Header-Header-stories',
+        391: 'components-RadioButton-RadioButton-stories',
+        407: 'components-HeroImage-HeroImage-stories',
+        513: 'components-Card-Card-stories',
+        568: 'stories-Configure-mdx',
+        623: 'components-Table-Table-stories',
+        721: 'components-Button-Button-stories',
+        747: 'components-Label-Label-stories',
       })[chunkId] || chunkId) +
-      "." +
+      '.' +
       {
-        15: "4d95f3e3",
-        103: "c83b53fd",
-        167: "40b15393",
-        187: "d43638eb",
-        215: "1a720ba6",
-        279: "0f65f066",
-        294: "42efc7d2",
-        364: "68341ea3",
-        391: "f71c99ce",
-        407: "2a017353",
-        479: "62a490e1",
-        513: "fabd1752",
-        568: "ddd852f6",
-        623: "9a8c0ccf",
-        721: "4628f349",
-        735: "7b23befb",
-        747: "640b98b1",
-        844: "8b13fe73",
-        936: "624dba82",
-        961: "b840b366",
+        15: '4d95f3e3',
+        103: 'c83b53fd',
+        167: '40b15393',
+        187: 'd43638eb',
+        215: '1a720ba6',
+        279: '0f65f066',
+        294: '42efc7d2',
+        364: '68341ea3',
+        391: 'f71c99ce',
+        407: '2a017353',
+        479: '62a490e1',
+        513: 'fabd1752',
+        568: 'ddd852f6',
+        623: '9a8c0ccf',
+        721: '4628f349',
+        735: '7b23befb',
+        747: '640b98b1',
+        844: '8b13fe73',
+        936: '624dba82',
+        961: 'b840b366',
       }[chunkId] +
-      ".iframe.bundle.js"),
+      '.iframe.bundle.js'),
     (__webpack_require__.miniCssF = (chunkId) => {}),
     (__webpack_require__.g = (function () {
-      if ("object" == typeof globalThis) return globalThis;
+      if ('object' == typeof globalThis) return globalThis;
       try {
-        return this || new Function("return this")();
+        return this || new Function('return this')();
       } catch (e) {
-        if ("object" == typeof window) return window;
+        if ('object' == typeof window) return window;
       }
     })()),
     (__webpack_require__.hmd = (module) => (
       (module = Object.create(module)).children || (module.children = []),
-      Object.defineProperty(module, "exports", {
+      Object.defineProperty(module, 'exports', {
         enumerable: !0,
         set: () => {
           throw new Error(
-            "ES Modules may not assign module.exports or exports.*, Use ESM export syntax, instead: " +
-              module.id,
+            'ES Modules may not assign module.exports or exports.*, Use ESM export syntax, instead: ' +
+              module.id
           );
         },
       }),
@@ -177,14 +177,14 @@
         var script, needAttach;
         if (void 0 !== key)
           for (
-            var scripts = document.getElementsByTagName("script"), i = 0;
+            var scripts = document.getElementsByTagName('script'), i = 0;
             i < scripts.length;
             i++
           ) {
             var s = scripts[i];
             if (
-              s.getAttribute("src") == url ||
-              s.getAttribute("data-webpack") == "coding_assignment_12:" + key
+              s.getAttribute('src') == url ||
+              s.getAttribute('data-webpack') == 'coding_assignment_12:' + key
             ) {
               script = s;
               break;
@@ -192,11 +192,11 @@
           }
         script ||
           ((needAttach = !0),
-          ((script = document.createElement("script")).charset = "utf-8"),
+          ((script = document.createElement('script')).charset = 'utf-8'),
           (script.timeout = 120),
           __webpack_require__.nc &&
-            script.setAttribute("nonce", __webpack_require__.nc),
-          script.setAttribute("data-webpack", "coding_assignment_12:" + key),
+            script.setAttribute('nonce', __webpack_require__.nc),
+          script.setAttribute('data-webpack', 'coding_assignment_12:' + key),
           (script.src = url)),
           (inProgress[url] = [done]);
         var onScriptComplete = (prev, event) => {
@@ -212,10 +212,10 @@
           },
           timeout = setTimeout(
             onScriptComplete.bind(null, void 0, {
-              type: "timeout",
+              type: 'timeout',
               target: script,
             }),
-            12e4,
+            12e4
           );
         (script.onerror = onScriptComplete.bind(null, script.onerror)),
           (script.onload = onScriptComplete.bind(null, script.onload)),
@@ -223,12 +223,12 @@
       }
     }),
     (__webpack_require__.r = (exports) => {
-      "undefined" != typeof Symbol &&
+      'undefined' != typeof Symbol &&
         Symbol.toStringTag &&
-        Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" }),
-        Object.defineProperty(exports, "__esModule", { value: !0 });
+        Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' }),
+        Object.defineProperty(exports, '__esModule', { value: !0 });
     }),
-    (__webpack_require__.p = ""),
+    (__webpack_require__.p = ''),
     (() => {
       var installedChunks = { 354: 0 };
       (__webpack_require__.f.j = (chunkId, promises) => {
@@ -241,7 +241,7 @@
             var promise = new Promise(
               (resolve, reject) =>
                 (installedChunkData = installedChunks[chunkId] =
-                  [resolve, reject]),
+                  [resolve, reject])
             );
             promises.push((installedChunkData[2] = promise));
             var url = __webpack_require__.p + __webpack_require__.u(chunkId),
@@ -256,24 +256,24 @@
                   installedChunkData)
                 ) {
                   var errorType =
-                      event && ("load" === event.type ? "missing" : event.type),
+                      event && ('load' === event.type ? 'missing' : event.type),
                     realSrc = event && event.target && event.target.src;
                   (error.message =
-                    "Loading chunk " +
+                    'Loading chunk ' +
                     chunkId +
-                    " failed.\n(" +
+                    ' failed.\n(' +
                     errorType +
-                    ": " +
+                    ': ' +
                     realSrc +
-                    ")"),
-                    (error.name = "ChunkLoadError"),
+                    ')'),
+                    (error.name = 'ChunkLoadError'),
                     (error.type = errorType),
                     (error.request = realSrc),
                     installedChunkData[1](error);
                 }
               },
-              "chunk-" + chunkId,
-              chunkId,
+              'chunk-' + chunkId,
+              chunkId
             );
           } else installedChunks[chunkId] = 0;
       }),
@@ -308,7 +308,7 @@
       chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0)),
         (chunkLoadingGlobal.push = webpackJsonpCallback.bind(
           null,
-          chunkLoadingGlobal.push.bind(chunkLoadingGlobal),
+          chunkLoadingGlobal.push.bind(chunkLoadingGlobal)
         ));
     })(),
     (__webpack_require__.nc = void 0);

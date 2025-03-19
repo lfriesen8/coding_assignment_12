@@ -388,7 +388,7 @@ try {
         ZoomResetIcon: LI,
         iconList: EI,
       } = __STORYBOOK_ICONS__;
-    var s = "storybook/measure-addon",
+    var s = 'storybook/measure-addon',
       A = `${s}/tool`,
       b = () => {
         let [r, c] = p(),
@@ -398,32 +398,32 @@ try {
         return (
           d(() => {
             i.setAddonShortcut(s, {
-              label: "Toggle Measure [M]",
-              defaultShortcut: ["M"],
-              actionName: "measure",
+              label: 'Toggle Measure [M]',
+              defaultShortcut: ['M'],
+              actionName: 'measure',
               showInMenu: !1,
               action: a,
             });
           }, [a, i]),
           t.createElement(
             C,
-            { key: A, active: I, title: "Enable measure", onClick: a },
-            t.createElement(h, null),
+            { key: A, active: I, title: 'Enable measure', onClick: a },
+            t.createElement(h, null)
           )
         );
       };
     l.register(s, () => {
       l.add(A, {
         type: m.TOOL,
-        title: "Measure",
-        match: ({ viewMode: r, tabId: c }) => r === "story" && !c,
+        title: 'Measure',
+        match: ({ viewMode: r, tabId: c }) => r === 'story' && !c,
         render: () => t.createElement(b, null),
       });
     });
   })();
 } catch (e) {
   console.error(
-    "[Storybook] One of your manager-entries failed: " + import.meta.url,
-    e,
+    '[Storybook] One of your manager-entries failed: ' + import.meta.url,
+    e
   );
 }

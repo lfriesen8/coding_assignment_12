@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
-import { Header } from "./Header";
+import type { Meta, StoryObj } from '@storybook/react';
+import { fn } from '@storybook/test';
+import { Header } from './Header';
 
 /**
  * **Header Component Storybook**
@@ -17,11 +17,11 @@ import { Header } from "./Header";
  */
 
 const meta: Meta<typeof Header> = {
-  title: "Components/Header", // ✅ Updated title to match the assignment
+  title: 'Components/Header', // ✅ Updated title to match the assignment
   component: Header,
-  tags: ["autodocs"], // ✅ Keep this for automatic documentation
+  tags: ['autodocs'], // ✅ Keep this for automatic documentation
   parameters: {
-    layout: "fullscreen", // ✅ Keeping 'fullscreen' from original
+    layout: 'fullscreen', // ✅ Keeping 'fullscreen' from original
   },
   args: {
     onLogin: fn(),
@@ -40,7 +40,7 @@ type Story = StoryObj<typeof meta>;
 export const LoggedIn: Story = {
   args: {
     user: {
-      name: "Jane Doe",
+      name: 'Jane Doe',
     },
   },
 };

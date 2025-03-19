@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 /**
  * **StyledHeroImage**
@@ -7,7 +7,7 @@ import styled from "styled-components";
 export const StyledHeroImage = styled.div<{ height: string | number }>`
   background-size: cover;
   background-position: center;
-  height: ${({ height }) => height || "300px"};
+  height: ${({ height }) => height || '300px'};
   display: flex;
   align-items: center;
   justify-content: center;

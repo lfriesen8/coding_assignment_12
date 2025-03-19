@@ -1,7 +1,7 @@
-import React from "react";
-import { Header } from "../Header";
-import { StyledPage, TipWrapper } from "./Page.styles"; // ✅ Use StyledComponents instead of CSS
-import { Button } from "../Button";
+import React from 'react';
+import { Header } from '../Header';
+import { StyledPage, TipWrapper } from './Page.styles'; // ✅ Use StyledComponents instead of CSS
+import { Button } from '../Button';
 
 /**
  * **Page Component**
@@ -22,22 +22,22 @@ export const Page: React.FC = () => {
     <StyledPage>
       <Header
         user={user}
-        onLogin={() => setUser({ name: "Jane Doe" })}
+        onLogin={() => setUser({ name: 'Jane Doe' })}
         onLogout={() => setUser(undefined)}
-        onCreateAccount={() => setUser({ name: "Jane Doe" })}
+        onCreateAccount={() => setUser({ name: 'Jane Doe' })}
       />
 
       <section>
         <h2>Pages in Storybook</h2>
         <p>
-          We recommend building UIs with a{" "}
+          We recommend building UIs with a{' '}
           <a
             href="https://componentdriven.org"
             target="_blank"
             rel="noopener noreferrer"
           >
             <strong>component-driven</strong>
-          </a>{" "}
+          </a>{' '}
           process starting with atomic components and ending with pages.
         </p>
         <p>
@@ -51,7 +51,7 @@ export const Page: React.FC = () => {
         </ul>
 
         <p>
-          Get a guided tutorial on component-driven development at{" "}
+          Get a guided tutorial on component-driven development at{' '}
           <a
             href="https://storybook.js.org/tutorials/"
             target="_blank"
@@ -59,7 +59,7 @@ export const Page: React.FC = () => {
           >
             Storybook tutorials
           </a>
-          . Read more in the{" "}
+          . Read more in the{' '}
           <a
             href="https://storybook.js.org/docs"
             target="_blank"
@@ -72,7 +72,7 @@ export const Page: React.FC = () => {
 
         <TipWrapper>
           <span className="tip">Tip</span> Adjust the width of the canvas with
-          the{" "}
+          the{' '}
           <svg
             width="10"
             height="10"
@@ -93,7 +93,7 @@ export const Page: React.FC = () => {
         <Button
           label="Learn More"
           primary
-          onClick={() => alert("Learn more clicked!")}
+          onClick={() => alert('Learn more clicked!')}
         />
       </section>
     </StyledPage>

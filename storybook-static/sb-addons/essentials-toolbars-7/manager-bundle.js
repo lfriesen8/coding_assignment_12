@@ -145,7 +145,7 @@ try {
         resetComponents: Ro,
         withReset: Lo,
       } = __STORYBOOK_COMPONENTS__;
-    var K = { type: "item", value: "" },
+    var K = { type: 'item', value: '' },
       Y = (o, t) => ({
         ...t,
         name: t.name || o,
@@ -153,9 +153,9 @@ try {
         toolbar: {
           ...t.toolbar,
           items: t.toolbar.items.map((e) => {
-            let r = typeof e == "string" ? { value: e, title: e } : e;
+            let r = typeof e == 'string' ? { value: e, title: e } : e;
             return (
-              r.type === "reset" &&
+              r.type === 'reset' &&
                 t.toolbar.icon &&
                 ((r.icon = t.toolbar.icon), (r.hideIcon = !0)),
               { ...K, ...r }
@@ -163,9 +163,9 @@ try {
           }),
         },
       }),
-      $ = ["reset"],
+      $ = ['reset'],
       q = (o) => o.filter((t) => !$.includes(t.type)).map((t) => t.value),
-      S = "addon-toolbars",
+      S = 'addon-toolbars',
       z = async (o, t, e) => {
         e &&
           e.next &&
@@ -202,7 +202,7 @@ try {
           l = L([]),
           u = T[e],
           v = C(() => {
-            i({ [e]: "" });
+            i({ [e]: '' });
           }, [i]),
           I = C(() => {
             let s = l.current,
@@ -235,7 +235,7 @@ try {
         );
       },
       W = ({ currentValue: o, items: t }) =>
-        o != null && t.find((e) => e.value === o && e.type !== "reset"),
+        o != null && t.find((e) => e.value === o && e.type !== 'reset'),
       j = ({ currentValue: o, items: t }) => {
         let e = W({ currentValue: o, items: t });
         if (e) return e.icon;
@@ -257,7 +257,7 @@ try {
           { active: o, title: a, disabled: t, onClick: t ? () => {} : c },
           r &&
             n.createElement(A, { icon: r, __suppressDeprecationWarning: !0 }),
-          e ? `\xA0${e}` : null,
+          e ? `\xA0${e}` : null
         ),
       Q = ({
         right: o,
@@ -277,7 +277,7 @@ try {
               __suppressDeprecationWarning: !0,
             }),
           u = {
-            id: e ?? "_reset",
+            id: e ?? '_reset',
             active: i === e,
             right: o,
             title: t,
@@ -313,17 +313,17 @@ try {
             (x) => {
               u({ [o]: x });
             },
-            [o, u],
+            [o, u]
           );
           return n.createElement(
             H,
             {
-              placement: "top",
+              placement: 'top',
               tooltip: ({ onHide: x }) => {
                 let G = a
                   .filter(({ type: E }) => {
                     let R = !0;
-                    return E === "reset" && !s && (R = !1), R;
+                    return E === 'reset' && !s && (R = !1), R;
                   })
                   .map((E) =>
                     Q({
@@ -333,7 +333,7 @@ try {
                       onClick: () => {
                         F(E.value), x();
                       },
-                    }),
+                    })
                   );
                 return n.createElement(V, { links: G });
               },
@@ -343,12 +343,12 @@ try {
             n.createElement(J, {
               active: I || m,
               disabled: d,
-              description: e || "",
+              description: e || '',
               icon: p,
-              title: b || "",
-            }),
+              title: b || '',
+            })
           );
-        },
+        }
       ),
       ee = () => {
         let o = M(),
@@ -361,7 +361,7 @@ try {
               t.map((e) => {
                 let r = Y(e, o[e]);
                 return n.createElement(X, { key: e, id: e, ...r });
-              }),
+              })
             )
           : null;
       };
@@ -371,12 +371,12 @@ try {
         type: P.TOOL,
         match: ({ tabId: o }) => !o,
         render: () => n.createElement(ee, null),
-      }),
+      })
     );
   })();
 } catch (e) {
   console.error(
-    "[Storybook] One of your manager-entries failed: " + import.meta.url,
-    e,
+    '[Storybook] One of your manager-entries failed: ' + import.meta.url,
+    e
   );
 }

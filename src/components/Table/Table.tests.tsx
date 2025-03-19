@@ -1,8 +1,8 @@
-import { render, screen } from "@testing-library/react";
-import { Table } from "./index";
+import { render, screen } from '@testing-library/react';
+import { Table } from './index';
 
-describe("Table Component", () => {
-  test("renders the table with children correctly", () => {
+describe('Table Component', () => {
+  test('renders the table with children correctly', () => {
     render(
       <Table>
         <thead>
@@ -21,22 +21,22 @@ describe("Table Component", () => {
             <td>Footer</td>
           </tr>
         </tfoot>
-      </Table>,
+      </Table>
     );
-    expect(screen.getByText("Header 1")).toBeInTheDocument();
-    expect(screen.getByText("Header 2")).toBeInTheDocument();
-    expect(screen.getByText("Row 1")).toBeInTheDocument();
-    expect(screen.getByText("Footer")).toBeInTheDocument();
+    expect(screen.getByText('Header 1')).toBeInTheDocument();
+    expect(screen.getByText('Header 2')).toBeInTheDocument();
+    expect(screen.getByText('Row 1')).toBeInTheDocument();
+    expect(screen.getByText('Footer')).toBeInTheDocument();
   });
 
-  test("renders default rows when no children are provided", () => {
+  test('renders default rows when no children are provided', () => {
     render(<Table />);
-    expect(screen.getByText("John Doe")).toBeInTheDocument();
-    expect(screen.getByText("Jane Smith")).toBeInTheDocument();
+    expect(screen.getByText('John Doe')).toBeInTheDocument();
+    expect(screen.getByText('Jane Smith')).toBeInTheDocument();
   });
 
-  test("renders table footer", () => {
+  test('renders table footer', () => {
     render(<Table />);
-    expect(screen.getByText("Total")).toBeInTheDocument();
+    expect(screen.getByText('Total')).toBeInTheDocument();
   });
 });

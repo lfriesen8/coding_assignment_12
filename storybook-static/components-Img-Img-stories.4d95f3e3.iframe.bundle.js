@@ -2,10 +2,10 @@
   self.webpackChunkcoding_assignment_12 || []).push([
   [15],
   {
-    "./src/components/Img/Img.stories.tsx": (
+    './src/components/Img/Img.stories.tsx': (
       __unused_webpack_module,
       __webpack_exports__,
-      __webpack_require__,
+      __webpack_require__
     ) => {
       __webpack_require__.r(__webpack_exports__),
         __webpack_require__.d(__webpack_exports__, {
@@ -15,27 +15,27 @@
           __namedExportsOrder: () => __namedExportsOrder,
           default: () => Img_stories,
         });
-      __webpack_require__("./node_modules/react/index.js");
+      __webpack_require__('./node_modules/react/index.js');
       const StyledImage = __webpack_require__(
-        "./node_modules/styled-components/dist/styled-components.browser.esm.js",
+        './node_modules/styled-components/dist/styled-components.browser.esm.js'
       ).Ay.img`
   width: ${(_ref) => {
     let { width } = _ref;
-    return "number" == typeof width ? `${width}px` : width || "auto";
+    return 'number' == typeof width ? `${width}px` : width || 'auto';
   }};
   height: ${(_ref2) => {
     let { height } = _ref2;
-    return "number" == typeof height ? `${height}px` : height || "auto";
+    return 'number' == typeof height ? `${height}px` : height || 'auto';
   }};
   border-radius: ${(_ref3) => {
     let { borderRadius } = _ref3;
-    return borderRadius || "0px";
+    return borderRadius || '0px';
   }};
   object-fit: cover;
   display: block;
 `;
       var jsx_runtime = __webpack_require__(
-        "./node_modules/react/jsx-runtime.js",
+        './node_modules/react/jsx-runtime.js'
       );
       const Img = (_ref) => {
         let { src, alt, width, height, borderRadius } = _ref;
@@ -49,86 +49,86 @@
       };
       Img.__docgenInfo = {
         description:
-          "**Img Component**\n\nA reusable image component that supports various sizes and styling.\n\n@component\n@param {string} src - Image source URL.\n@param {string} alt - Alternative text for the image.\n@param {string | number} [width] - Width of the image.\n@param {string | number} [height] - Height of the image.\n@param {string} [borderRadius] - Rounds the corners of the image.",
+          '**Img Component**\n\nA reusable image component that supports various sizes and styling.\n\n@component\n@param {string} src - Image source URL.\n@param {string} alt - Alternative text for the image.\n@param {string | number} [width] - Width of the image.\n@param {string | number} [height] - Height of the image.\n@param {string} [borderRadius] - Rounds the corners of the image.',
         methods: [],
-        displayName: "Img",
+        displayName: 'Img',
         props: {
-          src: { required: !0, tsType: { name: "string" }, description: "" },
-          alt: { required: !0, tsType: { name: "string" }, description: "" },
+          src: { required: !0, tsType: { name: 'string' }, description: '' },
+          alt: { required: !0, tsType: { name: 'string' }, description: '' },
           width: {
             required: !1,
             tsType: {
-              name: "union",
-              raw: "string | number",
-              elements: [{ name: "string" }, { name: "number" }],
+              name: 'union',
+              raw: 'string | number',
+              elements: [{ name: 'string' }, { name: 'number' }],
             },
-            description: "",
+            description: '',
           },
           height: {
             required: !1,
             tsType: {
-              name: "union",
-              raw: "string | number",
-              elements: [{ name: "string" }, { name: "number" }],
+              name: 'union',
+              raw: 'string | number',
+              elements: [{ name: 'string' }, { name: 'number' }],
             },
-            description: "",
+            description: '',
           },
           borderRadius: {
             required: !1,
-            tsType: { name: "string" },
-            description: "",
+            tsType: { name: 'string' },
+            description: '',
           },
         },
       };
       const Img_stories = {
-          title: "Components/Img",
+          title: 'Components/Img',
           component: Img,
           parameters: {
-            layout: "centered",
+            layout: 'centered',
             docs: {
               description: {
                 component:
-                  "**Img Component - Storybook**\r\n\nShowcases different variations of the `Img` component.",
+                  '**Img Component - Storybook**\r\n\nShowcases different variations of the `Img` component.',
               },
             },
           },
-          tags: ["autodocs"],
+          tags: ['autodocs'],
           argTypes: {
-            src: { control: "text" },
-            alt: { control: "text" },
-            width: { control: "text" },
-            height: { control: "text" },
-            borderRadius: { control: "text" },
+            src: { control: 'text' },
+            alt: { control: 'text' },
+            width: { control: 'text' },
+            height: { control: 'text' },
+            borderRadius: { control: 'text' },
           },
         },
         Default = {
           args: {
-            src: "https://www.thomann.de/blog/wp-content/uploads/2024/08/Djtransitions_header_770x425.png",
-            alt: "Placeholder Image",
+            src: 'https://www.thomann.de/blog/wp-content/uploads/2024/08/Djtransitions_header_770x425.png',
+            alt: 'Placeholder Image',
             width: 150,
             height: 150,
-            borderRadius: "5px",
+            borderRadius: '5px',
           },
         },
         Rounded = {
           args: {
-            src: "https://www.thomann.de/blog/wp-content/uploads/2024/08/Djtransitions_header_770x425.png",
-            alt: "Rounded Image",
+            src: 'https://www.thomann.de/blog/wp-content/uploads/2024/08/Djtransitions_header_770x425.png',
+            alt: 'Rounded Image',
             width: 150,
             height: 150,
-            borderRadius: "50%",
+            borderRadius: '50%',
           },
         },
         FullWidth = {
           args: {
-            src: "https://www.thomann.de/blog/wp-content/uploads/2024/08/Djtransitions_header_770x425.png",
-            alt: "Full-Width Image",
-            width: "100%",
+            src: 'https://www.thomann.de/blog/wp-content/uploads/2024/08/Djtransitions_header_770x425.png',
+            alt: 'Full-Width Image',
+            width: '100%',
             height: 300,
-            borderRadius: "0px",
+            borderRadius: '0px',
           },
         },
-        __namedExportsOrder = ["Default", "Rounded", "FullWidth"];
+        __namedExportsOrder = ['Default', 'Rounded', 'FullWidth'];
       (Default.parameters = {
         ...Default.parameters,
         docs: {
@@ -139,7 +139,7 @@
             ...Default.parameters?.docs?.source,
           },
           description: {
-            story: "**Default Image**",
+            story: '**Default Image**',
             ...Default.parameters?.docs?.description,
           },
         },
@@ -154,7 +154,7 @@
               ...Rounded.parameters?.docs?.source,
             },
             description: {
-              story: "**Rounded Image**",
+              story: '**Rounded Image**',
               ...Rounded.parameters?.docs?.description,
             },
           },
@@ -169,7 +169,7 @@
               ...FullWidth.parameters?.docs?.source,
             },
             description: {
-              story: "**Full-Width Image**",
+              story: '**Full-Width Image**',
               ...FullWidth.parameters?.docs?.description,
             },
           },

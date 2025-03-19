@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Table } from "./index";
+import type { Meta, StoryObj } from '@storybook/react';
+import { Table } from './index';
 
 const meta: Meta<typeof Table> = {
-  title: "Components/Table",
+  title: 'Components/Table',
   component: Table,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 };
 
 export default meta;

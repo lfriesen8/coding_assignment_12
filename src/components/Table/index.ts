@@ -1,2 +1,2 @@
 // index.ts (Updated)
-export { Table } from "./Table";
+export { Table } from './Table';

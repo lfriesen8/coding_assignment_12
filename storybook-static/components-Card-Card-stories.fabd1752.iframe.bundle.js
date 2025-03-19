@@ -2,10 +2,10 @@
   self.webpackChunkcoding_assignment_12 || []).push([
   [513],
   {
-    "./src/components/Card/Card.stories.tsx": (
+    './src/components/Card/Card.stories.tsx': (
       __unused_webpack_module,
       __webpack_exports__,
-      __webpack_require__,
+      __webpack_require__
     ) => {
       __webpack_require__.r(__webpack_exports__),
         __webpack_require__.d(__webpack_exports__, {
@@ -14,9 +14,9 @@
           __namedExportsOrder: () => __namedExportsOrder,
           default: () => Card_stories,
         });
-      __webpack_require__("./node_modules/react/index.js");
+      __webpack_require__('./node_modules/react/index.js');
       var styled_components_browser_esm = __webpack_require__(
-        "./node_modules/styled-components/dist/styled-components.browser.esm.js",
+        './node_modules/styled-components/dist/styled-components.browser.esm.js'
       );
       const StyledCard = styled_components_browser_esm.Ay.div`
   width: 300px;
@@ -58,7 +58,7 @@
   }
 `;
       var jsx_runtime = __webpack_require__(
-        "./node_modules/react/jsx-runtime.js",
+        './node_modules/react/jsx-runtime.js'
       );
       const Card = (_ref) => {
         let { title, description, image, buttonLabel, onButtonClick } = _ref;
@@ -78,68 +78,68 @@
       };
       Card.__docgenInfo = {
         description:
-          "**Card Component**\n\nA versatile, reusable card that can display an image, title, description, and button.\n\n@component\n@param {string} title - The title of the card.\n@param {string} description - The card description text.\n@param {string} [image] - Optional image URL.\n@param {string} [buttonLabel] - Optional button text.\n@param {() => void} [onButtonClick] - Click handler for the button.",
+          '**Card Component**\n\nA versatile, reusable card that can display an image, title, description, and button.\n\n@component\n@param {string} title - The title of the card.\n@param {string} description - The card description text.\n@param {string} [image] - Optional image URL.\n@param {string} [buttonLabel] - Optional button text.\n@param {() => void} [onButtonClick] - Click handler for the button.',
         methods: [],
-        displayName: "Card",
+        displayName: 'Card',
         props: {
-          title: { required: !0, tsType: { name: "string" }, description: "" },
+          title: { required: !0, tsType: { name: 'string' }, description: '' },
           description: {
             required: !0,
-            tsType: { name: "string" },
-            description: "",
+            tsType: { name: 'string' },
+            description: '',
           },
-          image: { required: !1, tsType: { name: "string" }, description: "" },
+          image: { required: !1, tsType: { name: 'string' }, description: '' },
           buttonLabel: {
             required: !1,
-            tsType: { name: "string" },
-            description: "",
+            tsType: { name: 'string' },
+            description: '',
           },
           onButtonClick: {
             required: !1,
             tsType: {
-              name: "signature",
-              type: "function",
-              raw: "() => void",
-              signature: { arguments: [], return: { name: "void" } },
+              name: 'signature',
+              type: 'function',
+              raw: '() => void',
+              signature: { arguments: [], return: { name: 'void' } },
             },
-            description: "",
+            description: '',
           },
         },
       };
       const Card_stories = {
-          title: "Components/Card",
+          title: 'Components/Card',
           component: Card,
           parameters: {
-            layout: "centered",
+            layout: 'centered',
             docs: {
               description: {
                 component:
-                  "**Card Component - Storybook**\r\n\nShowcases different variations of the `Card` component.",
+                  '**Card Component - Storybook**\r\n\nShowcases different variations of the `Card` component.',
               },
             },
           },
-          tags: ["autodocs"],
+          tags: ['autodocs'],
           argTypes: {
-            title: { control: "text" },
-            description: { control: "text" },
-            image: { control: "text" },
-            buttonLabel: { control: "text" },
+            title: { control: 'text' },
+            description: { control: 'text' },
+            image: { control: 'text' },
+            buttonLabel: { control: 'text' },
           },
         },
         Default = {
           args: {
-            title: "PK SPEAKERS",
-            description: "White PK 15 Speakers",
+            title: 'PK SPEAKERS',
+            description: 'White PK 15 Speakers',
             image:
-              "https://canada.crutchfieldonline.com/ImageHandler/trim/750/457/products/2019/16/310/g310YU2MW-F.jpg",
-            buttonLabel: "More info",
-            onButtonClick: () => alert("Button clicked!"),
+              'https://canada.crutchfieldonline.com/ImageHandler/trim/750/457/products/2019/16/310/g310YU2MW-F.jpg',
+            buttonLabel: 'More info',
+            onButtonClick: () => alert('Button clicked!'),
           },
         },
         NoImage = {
-          args: { title: "Out of stock", description: "Sorry about that." },
+          args: { title: 'Out of stock', description: 'Sorry about that.' },
         },
-        __namedExportsOrder = ["Default", "NoImage"];
+        __namedExportsOrder = ['Default', 'NoImage'];
       (Default.parameters = {
         ...Default.parameters,
         docs: {
@@ -150,7 +150,7 @@
             ...Default.parameters?.docs?.source,
           },
           description: {
-            story: "**Default Card**",
+            story: '**Default Card**',
             ...Default.parameters?.docs?.description,
           },
         },
@@ -165,7 +165,7 @@
               ...NoImage.parameters?.docs?.source,
             },
             description: {
-              story: "**Card Without Image**",
+              story: '**Card Without Image**',
               ...NoImage.parameters?.docs?.description,
             },
           },

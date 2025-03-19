@@ -7,14 +7,14 @@ try {
     var ge = Object.getPrototypeOf,
       we = Object.prototype.hasOwnProperty;
     var O = ((e) =>
-      typeof require < "u"
+      typeof require < 'u'
         ? require
-        : typeof Proxy < "u"
+        : typeof Proxy < 'u'
           ? new Proxy(e, {
-              get: (t, a) => (typeof require < "u" ? require : t)[a],
+              get: (t, a) => (typeof require < 'u' ? require : t)[a],
             })
           : e)(function (e) {
-      if (typeof require < "u") return require.apply(this, arguments);
+      if (typeof require < 'u') return require.apply(this, arguments);
       throw Error('Dynamic require of "' + e + '" is not supported');
     });
     var H = (e, t) => () => (e && (t = e((e = 0))), t);
@@ -22,7 +22,7 @@ try {
       t || e((t = { exports: {} }).exports, t), t.exports
     );
     var ye = (e, t, a, s) => {
-      if ((t && typeof t == "object") || typeof t == "function")
+      if ((t && typeof t == 'object') || typeof t == 'function')
         for (let c of fe(t))
           !we.call(e, c) &&
             c !== a &&
@@ -36,9 +36,9 @@ try {
       (a = e != null ? he(ge(e)) : {}),
       ye(
         t || !e || !e.__esModule
-          ? J(a, "default", { value: e, enumerable: !0 })
+          ? J(a, 'default', { value: e, enumerable: !0 })
           : a,
-        e,
+        e
       )
     );
     var f = H(() => {});
@@ -49,13 +49,13 @@ try {
       g();
       w();
       (function (e) {
-        if (typeof ce == "object" && typeof Z < "u") Z.exports = e();
-        else if (typeof define == "function" && define.amd) define([], e);
+        if (typeof ce == 'object' && typeof Z < 'u') Z.exports = e();
+        else if (typeof define == 'function' && define.amd) define([], e);
         else {
           var t;
-          typeof window < "u" || typeof window < "u"
+          typeof window < 'u' || typeof window < 'u'
             ? (t = window)
-            : typeof self < "u"
+            : typeof self < 'u'
               ? (t = self)
               : (t = this),
             (t.memoizerific = e());
@@ -66,11 +66,11 @@ try {
           function o(n, d) {
             if (!b[n]) {
               if (!c[n]) {
-                var r = typeof O == "function" && O;
+                var r = typeof O == 'function' && O;
                 if (!d && r) return r(n, !0);
                 if (i) return i(n, !0);
                 var u = new Error("Cannot find module '" + n + "'");
-                throw ((u.code = "MODULE_NOT_FOUND"), u);
+                throw ((u.code = 'MODULE_NOT_FOUND'), u);
               }
               var I = (b[n] = { exports: {} });
               c[n][0].call(
@@ -84,12 +84,12 @@ try {
                 s,
                 c,
                 b,
-                p,
+                p
               );
             }
             return b[n].exports;
           }
-          for (var i = typeof O == "function" && O, h = 0; h < p.length; h++)
+          for (var i = typeof O == 'function' && O, h = 0; h < p.length; h++)
             o(p[h]);
           return o;
         })(
@@ -97,13 +97,13 @@ try {
             1: [
               function (s, c, b) {
                 c.exports = function (p) {
-                  if (typeof Map != "function" || p) {
-                    var o = s("./similar");
+                  if (typeof Map != 'function' || p) {
+                    var o = s('./similar');
                     return new o();
                   } else return new Map();
                 };
               },
-              { "./similar": 2 },
+              { './similar': 2 },
             ],
             2: [
               function (s, c, b) {
@@ -161,7 +161,7 @@ try {
                         i || this,
                         this.list[h].val,
                         this.list[h].key,
-                        this,
+                        this
                       );
                   }),
                   (p.prototype.indexOf = function (o) {
@@ -179,7 +179,7 @@ try {
             ],
             3: [
               function (s, c, b) {
-                var p = s("map-or-similar");
+                var p = s('map-or-similar');
                 c.exports = function (n) {
                   var d = new p(!1),
                     r = [];
@@ -194,7 +194,7 @@ try {
                         C;
                       if ((I.numArgs || I.numArgs === 0) && I.numArgs !== S + 1)
                         throw new Error(
-                          "Memoizerific functions should always be called with the same number of arguments",
+                          'Memoizerific functions should always be called with the same number of arguments'
                         );
                       for (C = 0; C < S; C++) {
                         if (
@@ -268,11 +268,11 @@ try {
                   return n === d || (n !== n && d !== d);
                 }
               },
-              { "map-or-similar": 1 },
+              { 'map-or-similar': 1 },
             ],
           },
           {},
-          [3],
+          [3]
         )(3);
       });
     });
@@ -716,32 +716,32 @@ try {
         iconList: ml,
       } = __STORYBOOK_ICONS__;
     var $ = Se(le()),
-      B = "storybook/viewport",
-      x = "viewport",
+      B = 'storybook/viewport',
+      x = 'viewport',
       Ie = {
         mobile1: {
-          name: "Small mobile",
-          styles: { height: "568px", width: "320px" },
-          type: "mobile",
+          name: 'Small mobile',
+          styles: { height: '568px', width: '320px' },
+          type: 'mobile',
         },
         mobile2: {
-          name: "Large mobile",
-          styles: { height: "896px", width: "414px" },
-          type: "mobile",
+          name: 'Large mobile',
+          styles: { height: '896px', width: '414px' },
+          type: 'mobile',
         },
         tablet: {
-          name: "Tablet",
-          styles: { height: "1112px", width: "834px" },
-          type: "tablet",
+          name: 'Tablet',
+          styles: { height: '1112px', width: '834px' },
+          type: 'tablet',
         },
       },
       P = {
-        name: "Reset viewport",
-        styles: { height: "100%", width: "100%" },
-        type: "desktop",
+        name: 'Reset viewport',
+        styles: { height: '100%', width: '100%' },
+        type: 'desktop',
       },
       Ce = { [x]: { value: void 0, isRotated: !1 } },
-      Ee = { viewport: "reset", viewportRotated: !1 },
+      Ee = { viewport: 'reset', viewportRotated: !1 },
       Re = FEATURES?.viewportStoryGlobals ? Ce : Ee,
       pe = (e, t) => e.indexOf(t),
       Te = (e, t) => {
@@ -754,45 +754,45 @@ try {
       },
       de = async (e, t, a, s) => {
         await e.setAddonShortcut(B, {
-          label: "Previous viewport",
-          defaultShortcut: ["alt", "shift", "V"],
-          actionName: "previous",
+          label: 'Previous viewport',
+          defaultShortcut: ['alt', 'shift', 'V'],
+          actionName: 'previous',
           action: () => {
             a({ viewport: ke(s, t) });
           },
         }),
           await e.setAddonShortcut(B, {
-            label: "Next viewport",
-            defaultShortcut: ["alt", "V"],
-            actionName: "next",
+            label: 'Next viewport',
+            defaultShortcut: ['alt', 'V'],
+            actionName: 'next',
             action: () => {
               a({ viewport: Te(s, t) });
             },
           }),
           await e.setAddonShortcut(B, {
-            label: "Reset viewport",
-            defaultShortcut: ["alt", "control", "V"],
-            actionName: "reset",
+            label: 'Reset viewport',
+            defaultShortcut: ['alt', 'control', 'V'],
+            actionName: 'reset',
             action: () => {
               a(Re);
             },
           });
       },
-      Ae = v.div(() => ({ display: "inline-flex", alignItems: "center" })),
+      Ae = v.div(() => ({ display: 'inline-flex', alignItems: 'center' })),
       se = v.div(({ theme: e }) => ({
-        display: "inline-block",
-        textDecoration: "none",
+        display: 'inline-block',
+        textDecoration: 'none',
         padding: 10,
         fontWeight: e.typography.weight.bold,
         fontSize: e.typography.size.s2 - 1,
-        lineHeight: "1",
+        lineHeight: '1',
         height: 40,
-        border: "none",
-        borderTop: "3px solid transparent",
-        borderBottom: "3px solid transparent",
-        background: "transparent",
+        border: 'none',
+        borderTop: '3px solid transparent',
+        borderBottom: '3px solid transparent',
+        background: 'transparent',
       })),
-      xe = v(L)(() => ({ display: "inline-flex", alignItems: "center" })),
+      xe = v(L)(() => ({ display: 'inline-flex', alignItems: 'center' })),
       Oe = v.div(({ theme: e }) => ({
         fontSize: e.typography.size.s2 - 1,
         marginLeft: 10,
@@ -822,10 +822,10 @@ try {
           r.styles === null || !o || m < 1)
         )
           return null;
-        if (typeof r.styles == "function")
+        if (typeof r.styles == 'function')
           return (
             console.warn(
-              "Addon Viewport no longer supports dynamic styles using a function, use css calc() instead",
+              'Addon Viewport no longer supports dynamic styles using a function, use css calc() instead'
             ),
             null
           );
@@ -866,15 +866,15 @@ try {
           l.createElement(
             W,
             {
-              placement: "bottom",
+              placement: 'bottom',
               tooltip: ({ onHide: r }) =>
                 l.createElement(q, {
                   links: [
                     ...(length > 0 && t !== P
                       ? [
                           {
-                            id: "reset",
-                            title: "Reset viewport",
+                            id: 'reset',
+                            title: 'Reset viewport',
                             icon: l.createElement(ie, null),
                             onClick: () => {
                               d({ value: void 0, isRotated: !1 }), r();
@@ -900,8 +900,8 @@ try {
               xe,
               {
                 disabled: o,
-                key: "viewport",
-                title: "Change the size of the preview",
+                key: 'viewport',
+                title: 'Change the size of the preview',
                 active: i,
                 onDoubleClick: () => {
                   d({ value: void 0, isRotated: !1 });
@@ -909,9 +909,9 @@ try {
               },
               l.createElement(j, null),
               t !== P
-                ? l.createElement(Oe, null, t.name, " ", c ? "(L)" : "(P)")
-                : null,
-            ),
+                ? l.createElement(Oe, null, t.name, ' ', c ? '(L)' : '(P)')
+                : null
+            )
           ),
           l.createElement(Y, {
             styles: {
@@ -924,29 +924,29 @@ try {
                 null,
                 l.createElement(
                   se,
-                  { title: "Viewport width" },
-                  h.replace("px", ""),
+                  { title: 'Viewport width' },
+                  h.replace('px', '')
                 ),
                 o
-                  ? "/"
+                  ? '/'
                   : l.createElement(
                       L,
                       {
-                        key: "viewport-rotate",
-                        title: "Rotate viewport",
+                        key: 'viewport-rotate',
+                        title: 'Rotate viewport',
                         onClick: () => {
                           d({ value: s, isRotated: !c });
                         },
                       },
-                      l.createElement(K, null),
+                      l.createElement(K, null)
                     ),
                 l.createElement(
                   se,
-                  { title: "Viewport height" },
-                  n.replace("px", ""),
-                ),
+                  { title: 'Viewport height' },
+                  n.replace('px', '')
+                )
               )
-            : null,
+            : null
         );
       }),
       Pe = (0, $.default)(50)((e) => [
@@ -957,7 +957,7 @@ try {
           title: a,
         })),
       ]),
-      D = { id: "reset", title: "Reset viewport", styles: null, type: "other" },
+      D = { id: 'reset', title: 'Reset viewport', styles: null, type: 'other' },
       Me = [D],
       Ve = (0, $.default)(50)((e, t, a, s) =>
         e
@@ -967,31 +967,31 @@ try {
             onClick: () => {
               a({ viewport: c.id }), s();
             },
-          })),
+          }))
       ),
       De = ({ width: e, height: t, ...a }) => ({ ...a, height: e, width: t }),
-      He = v.div(() => ({ display: "inline-flex", alignItems: "center" })),
+      He = v.div(() => ({ display: 'inline-flex', alignItems: 'center' })),
       ue = v.div(({ theme: e }) => ({
-        display: "inline-block",
-        textDecoration: "none",
+        display: 'inline-block',
+        textDecoration: 'none',
         padding: 10,
         fontWeight: e.typography.weight.bold,
         fontSize: e.typography.size.s2 - 1,
-        lineHeight: "1",
+        lineHeight: '1',
         height: 40,
-        border: "none",
-        borderTop: "3px solid transparent",
-        borderBottom: "3px solid transparent",
-        background: "transparent",
+        border: 'none',
+        borderTop: '3px solid transparent',
+        borderBottom: '3px solid transparent',
+        background: 'transparent',
       })),
-      Ne = v(L)(() => ({ display: "inline-flex", alignItems: "center" })),
+      Ne = v(L)(() => ({ display: 'inline-flex', alignItems: 'center' })),
       ze = v.div(({ theme: e }) => ({
         fontSize: e.typography.size.s2 - 1,
         marginLeft: 10,
       })),
       Ge = (e, t, a) => {
         if (t === null) return;
-        let s = typeof t == "function" ? t(e) : t;
+        let s = typeof t == 'function' ? t(e) : t;
         return a ? De(s) : s;
       },
       Fe = Q(function () {
@@ -1008,13 +1008,13 @@ try {
         c &&
           !p.find((u) => u.id === c) &&
           console.warn(
-            `Cannot find "defaultViewport" of "${c}" in addon-viewport configs, please check the "viewports" setting in the configuration.`,
+            `Cannot find "defaultViewport" of "${c}" in addon-viewport configs, please check the "viewports" setting in the configuration.`
           ),
           _(() => {
             de(o, e, t, Object.keys(a));
           }, [a, e, e.viewport, t, o]),
           _(() => {
-            let u = s === "landscape";
+            let u = s === 'landscape';
             ((c && e.viewport !== c) || (s && e.viewportRotated !== u)) &&
               t({ viewport: c, viewportRotated: u });
           }, [s, c, t]);
@@ -1037,7 +1037,7 @@ try {
                 l.createElement(
                   W,
                   {
-                    placement: "top",
+                    placement: 'top',
                     tooltip: ({ onHide: u }) =>
                       l.createElement(q, { links: Ve(p, n, t, u) }),
                     closeOnOutsideClick: !0,
@@ -1046,8 +1046,8 @@ try {
                   l.createElement(
                     Ne,
                     {
-                      key: "viewport",
-                      title: "Change the size of the preview",
+                      key: 'viewport',
+                      title: 'Change the size of the preview',
                       active: i || !!r,
                       onDoubleClick: () => {
                         t({ viewport: D.id });
@@ -1060,10 +1060,10 @@ try {
                           null,
                           e.viewportRotated
                             ? `${n.title} (L)`
-                            : `${n.title} (P)`,
+                            : `${n.title} (P)`
                         )
-                      : null,
-                  ),
+                      : null
+                  )
                 ),
                 r
                   ? l.createElement(
@@ -1072,41 +1072,41 @@ try {
                       l.createElement(Y, {
                         styles: {
                           'iframe[data-is-storybook="true"]': {
-                            ...(r || { width: "100%", height: "100%" }),
+                            ...(r || { width: '100%', height: '100%' }),
                           },
                         },
                       }),
                       l.createElement(
                         ue,
-                        { title: "Viewport width" },
-                        r.width.replace("px", ""),
+                        { title: 'Viewport width' },
+                        r.width.replace('px', '')
                       ),
                       l.createElement(
                         L,
                         {
-                          key: "viewport-rotate",
-                          title: "Rotate viewport",
+                          key: 'viewport-rotate',
+                          title: 'Rotate viewport',
                           onClick: () => {
                             t({ viewportRotated: !e.viewportRotated });
                           },
                         },
-                        l.createElement(K, null),
+                        l.createElement(K, null)
                       ),
                       l.createElement(
                         ue,
-                        { title: "Viewport height" },
-                        r.height.replace("px", ""),
-                      ),
+                        { title: 'Viewport height' },
+                        r.height.replace('px', '')
+                      )
                     )
-                  : null,
+                  : null
               )
         );
       });
     G.register(B, (e) => {
       G.add(B, {
-        title: "viewport / media-queries",
+        title: 'viewport / media-queries',
         type: te.TOOL,
-        match: ({ viewMode: t, tabId: a }) => t === "story" && !a,
+        match: ({ viewMode: t, tabId: a }) => t === 'story' && !a,
         render: () =>
           FEATURES?.viewportStoryGlobals ? N(Le, { api: e }) : N(Fe, null),
       });
@@ -1114,7 +1114,7 @@ try {
   })();
 } catch (e) {
   console.error(
-    "[Storybook] One of your manager-entries failed: " + import.meta.url,
-    e,
+    '[Storybook] One of your manager-entries failed: ' + import.meta.url,
+    e
   );
 }

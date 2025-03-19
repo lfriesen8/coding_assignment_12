@@ -2,10 +2,10 @@
   self.webpackChunkcoding_assignment_12 || []).push([
   [936],
   {
-    "./node_modules/@storybook/blocks/dist/Color-YHDXOIA2.mjs": (
+    './node_modules/@storybook/blocks/dist/Color-YHDXOIA2.mjs': (
       __unused_webpack_module,
       __webpack_exports__,
-      __webpack_require__,
+      __webpack_require__
     ) => {
       __webpack_require__.r(__webpack_exports__),
         __webpack_require__.d(__webpack_exports__, {
@@ -14,25 +14,25 @@
         });
       var _chunk_2PTXLE6R_mjs__WEBPACK_IMPORTED_MODULE_1__ =
           __webpack_require__(
-            "./node_modules/@storybook/blocks/dist/chunk-2PTXLE6R.mjs",
+            './node_modules/@storybook/blocks/dist/chunk-2PTXLE6R.mjs'
           ),
         react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-          "./node_modules/react/index.js",
+          './node_modules/react/index.js'
         ),
         storybook_internal_components__WEBPACK_IMPORTED_MODULE_3__ =
           __webpack_require__(
-            "./node_modules/@storybook/core/dist/components/index.js",
+            './node_modules/@storybook/core/dist/components/index.js'
           ),
         storybook_internal_theming__WEBPACK_IMPORTED_MODULE_2__ =
           __webpack_require__(
-            "./node_modules/@storybook/core/dist/theming/index.js",
+            './node_modules/@storybook/core/dist/theming/index.js'
           ),
         _storybook_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-          "./node_modules/@storybook/icons/dist/index.mjs",
+          './node_modules/@storybook/icons/dist/index.mjs'
         ),
         require_color_name = (0,
         _chunk_2PTXLE6R_mjs__WEBPACK_IMPORTED_MODULE_1__.P$)({
-          "../../node_modules/color-name/index.js"(exports, module) {
+          '../../node_modules/color-name/index.js'(exports, module) {
             module.exports = {
               aliceblue: [240, 248, 255],
               antiquewhite: [250, 235, 215],
@@ -187,43 +187,43 @@
         }),
         require_conversions = (0,
         _chunk_2PTXLE6R_mjs__WEBPACK_IMPORTED_MODULE_1__.P$)({
-          "../../node_modules/color-convert/conversions.js"(exports, module) {
+          '../../node_modules/color-convert/conversions.js'(exports, module) {
             var cssKeywords = require_color_name(),
               reverseKeywords = {};
             for (let key of Object.keys(cssKeywords))
               reverseKeywords[cssKeywords[key]] = key;
             var convert2 = {
-              rgb: { channels: 3, labels: "rgb" },
-              hsl: { channels: 3, labels: "hsl" },
-              hsv: { channels: 3, labels: "hsv" },
-              hwb: { channels: 3, labels: "hwb" },
-              cmyk: { channels: 4, labels: "cmyk" },
-              xyz: { channels: 3, labels: "xyz" },
-              lab: { channels: 3, labels: "lab" },
-              lch: { channels: 3, labels: "lch" },
-              hex: { channels: 1, labels: ["hex"] },
-              keyword: { channels: 1, labels: ["keyword"] },
-              ansi16: { channels: 1, labels: ["ansi16"] },
-              ansi256: { channels: 1, labels: ["ansi256"] },
-              hcg: { channels: 3, labels: ["h", "c", "g"] },
-              apple: { channels: 3, labels: ["r16", "g16", "b16"] },
-              gray: { channels: 1, labels: ["gray"] },
+              rgb: { channels: 3, labels: 'rgb' },
+              hsl: { channels: 3, labels: 'hsl' },
+              hsv: { channels: 3, labels: 'hsv' },
+              hwb: { channels: 3, labels: 'hwb' },
+              cmyk: { channels: 4, labels: 'cmyk' },
+              xyz: { channels: 3, labels: 'xyz' },
+              lab: { channels: 3, labels: 'lab' },
+              lch: { channels: 3, labels: 'lch' },
+              hex: { channels: 1, labels: ['hex'] },
+              keyword: { channels: 1, labels: ['keyword'] },
+              ansi16: { channels: 1, labels: ['ansi16'] },
+              ansi256: { channels: 1, labels: ['ansi256'] },
+              hcg: { channels: 3, labels: ['h', 'c', 'g'] },
+              apple: { channels: 3, labels: ['r16', 'g16', 'b16'] },
+              gray: { channels: 1, labels: ['gray'] },
             };
             module.exports = convert2;
             for (let model of Object.keys(convert2)) {
-              if (!("channels" in convert2[model]))
-                throw new Error("missing channels property: " + model);
-              if (!("labels" in convert2[model]))
-                throw new Error("missing channel labels property: " + model);
+              if (!('channels' in convert2[model]))
+                throw new Error('missing channels property: ' + model);
+              if (!('labels' in convert2[model]))
+                throw new Error('missing channel labels property: ' + model);
               if (convert2[model].labels.length !== convert2[model].channels)
-                throw new Error("channel and label counts mismatch: " + model);
+                throw new Error('channel and label counts mismatch: ' + model);
               let { channels, labels } = convert2[model];
               delete convert2[model].channels,
                 delete convert2[model].labels,
-                Object.defineProperty(convert2[model], "channels", {
+                Object.defineProperty(convert2[model], 'channels', {
                   value: channels,
                 }),
-                Object.defineProperty(convert2[model], "labels", {
+                Object.defineProperty(convert2[model], 'labels', {
                   value: labels,
                 });
             }
@@ -647,7 +647,7 @@
                 )
                   .toString(16)
                   .toUpperCase();
-                return "000000".substring(string.length) + string;
+                return '000000'.substring(string.length) + string;
               }),
               (convert2.hex.rgb = function (args) {
                 let match = args.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
@@ -655,9 +655,9 @@
                 let colorString = match[0];
                 3 === match[0].length &&
                   (colorString = colorString
-                    .split("")
+                    .split('')
                     .map((char) => char + char)
-                    .join(""));
+                    .join(''));
                 let integer = parseInt(colorString, 16);
                 return [
                   (integer >> 16) & 255,
@@ -818,7 +818,7 @@
                   string = ((val << 16) + (val << 8) + val)
                     .toString(16)
                     .toUpperCase();
-                return "000000".substring(string.length) + string;
+                return '000000'.substring(string.length) + string;
               }),
               (convert2.rgb.gray = function (rgb) {
                 return [((rgb[0] + rgb[1] + rgb[2]) / 3 / 255) * 100];
@@ -827,7 +827,7 @@
         }),
         require_route = (0,
         _chunk_2PTXLE6R_mjs__WEBPACK_IMPORTED_MODULE_1__.P$)({
-          "../../node_modules/color-convert/route.js"(exports, module) {
+          '../../node_modules/color-convert/route.js'(exports, module) {
             var conversions = require_conversions();
             function deriveBFS(fromModel) {
               let graph = (function buildGraph() {
@@ -882,16 +882,16 @@
         }),
         require_color_convert = (0,
         _chunk_2PTXLE6R_mjs__WEBPACK_IMPORTED_MODULE_1__.P$)({
-          "../../node_modules/color-convert/index.js"(exports, module) {
+          '../../node_modules/color-convert/index.js'(exports, module) {
             var conversions = require_conversions(),
               route = require_route(),
               convert2 = {};
             Object.keys(conversions).forEach((fromModel) => {
               (convert2[fromModel] = {}),
-                Object.defineProperty(convert2[fromModel], "channels", {
+                Object.defineProperty(convert2[fromModel], 'channels', {
                   value: conversions[fromModel].channels,
                 }),
-                Object.defineProperty(convert2[fromModel], "labels", {
+                Object.defineProperty(convert2[fromModel], 'labels', {
                   value: conversions[fromModel].labels,
                 });
               let routes = route(fromModel);
@@ -903,13 +903,13 @@
                     if (null == arg0) return arg0;
                     arg0.length > 1 && (args = arg0);
                     let result = fn(args);
-                    if ("object" == typeof result)
+                    if ('object' == typeof result)
                       for (let len = result.length, i2 = 0; i2 < len; i2++)
                         result[i2] = Math.round(result[i2]);
                     return result;
                   };
                   return (
-                    "conversion" in fn &&
+                    'conversion' in fn &&
                       (wrappedFn.conversion = fn.conversion),
                     wrappedFn
                   );
@@ -922,7 +922,7 @@
                         : (arg0.length > 1 && (args = arg0), fn(args));
                     };
                     return (
-                      "conversion" in fn &&
+                      'conversion' in fn &&
                         (wrappedFn.conversion = fn.conversion),
                       wrappedFn
                     );
@@ -934,7 +934,7 @@
         }),
         import_color_convert = (0,
         _chunk_2PTXLE6R_mjs__WEBPACK_IMPORTED_MODULE_1__.f1)(
-          require_color_convert(),
+          require_color_convert()
         );
       function u() {
         return (u =
@@ -974,7 +974,7 @@
           );
         },
         f = function (e2) {
-          return "touches" in e2;
+          return 'touches' in e2;
         },
         v = function (e2) {
           return (e2 && e2.ownerDocument.defaultView) || self;
@@ -999,7 +999,7 @@
         m = react__WEBPACK_IMPORTED_MODULE_0__.memo(function (o2) {
           var a2 = o2.onMove,
             l2 = o2.onKey,
-            s2 = c(o2, ["onMove", "onKey"]),
+            s2 = c(o2, ['onMove', 'onKey']),
             m2 = (0, react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null),
             g2 = i(a2),
             p2 = i(l2),
@@ -1021,8 +1021,8 @@
                   var n2 = _2.current,
                     o3 = v(m2.current),
                     a3 = t3 ? o3.addEventListener : o3.removeEventListener;
-                  a3(n2 ? "touchmove" : "mousemove", e2),
-                    a3(n2 ? "touchend" : "mouseup", r2);
+                  a3(n2 ? 'touchmove' : 'mousemove', e2),
+                    a3(n2 ? 'touchend' : 'mouseup', r2);
                 }
                 return [
                   function (e3) {
@@ -1054,7 +1054,7 @@
                   t2,
                 ];
               },
-              [p2, g2],
+              [p2, g2]
             ),
             C2 = x2[0],
             E2 = x2[1],
@@ -1064,41 +1064,41 @@
               function () {
                 return H2;
               },
-              [H2],
+              [H2]
             ),
             react__WEBPACK_IMPORTED_MODULE_0__.createElement(
-              "div",
+              'div',
               u({}, s2, {
                 onTouchStart: C2,
                 onMouseDown: C2,
-                className: "react-colorful__interactive",
+                className: 'react-colorful__interactive',
                 ref: m2,
                 onKeyDown: E2,
                 tabIndex: 0,
-                role: "slider",
-              }),
+                role: 'slider',
+              })
             )
           );
         }),
         g = function (e2) {
-          return e2.filter(Boolean).join(" ");
+          return e2.filter(Boolean).join(' ');
         },
         p = function (r2) {
           var t2 = r2.color,
             n2 = r2.left,
             o2 = r2.top,
             a2 = void 0 === o2 ? 0.5 : o2,
-            l2 = g(["react-colorful__pointer", r2.className]);
+            l2 = g(['react-colorful__pointer', r2.className]);
           return react__WEBPACK_IMPORTED_MODULE_0__.createElement(
-            "div",
+            'div',
             {
               className: l2,
-              style: { top: 100 * a2 + "%", left: 100 * n2 + "%" },
+              style: { top: 100 * a2 + '%', left: 100 * n2 + '%' },
             },
-            react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-              className: "react-colorful__pointer-fill",
+            react__WEBPACK_IMPORTED_MODULE_0__.createElement('div', {
+              className: 'react-colorful__pointer-fill',
               style: { backgroundColor: t2 },
-            }),
+            })
           );
         },
         b = function (e2, r2, t2) {
@@ -1111,7 +1111,7 @@
         _ = { grad: 0.9, turn: 360, rad: 360 / (2 * Math.PI) },
         C = function (e2) {
           return (
-            "#" === e2[0] && (e2 = e2.substring(1)),
+            '#' === e2[0] && (e2 = e2.substring(1)),
             e2.length < 6
               ? {
                   r: parseInt(e2[0] + e2[0], 16),
@@ -1134,7 +1134,7 @@
           );
         },
         E = function (e2, r2) {
-          return void 0 === r2 && (r2 = "deg"), Number(e2) * (_[r2] || 1);
+          return void 0 === r2 && (r2 = 'deg'), Number(e2) * (_[r2] || 1);
         },
         N = function (e2) {
           var r2 = e2.s,
@@ -1159,7 +1159,7 @@
             s: b(
               o2 > 0 && o2 < 200
                 ? ((r2 * t2) / 100 / (o2 <= 100 ? o2 : 200 - o2)) * 100
-                : 0,
+                : 0
             ),
             l: b(o2 / 2),
             a: b(n2, 2),
@@ -1167,12 +1167,12 @@
         },
         q = function (e2) {
           var r2 = y(e2);
-          return "hsl(" + r2.h + ", " + r2.s + "%, " + r2.l + "%)";
+          return 'hsl(' + r2.h + ', ' + r2.s + '%, ' + r2.l + '%)';
         },
         k = function (e2) {
           var r2 = y(e2);
           return (
-            "hsla(" + r2.h + ", " + r2.s + "%, " + r2.l + "%, " + r2.a + ")"
+            'hsla(' + r2.h + ', ' + r2.s + '%, ' + r2.l + '%, ' + r2.a + ')'
           );
         },
         I = function (e2) {
@@ -1195,15 +1195,15 @@
         },
         D = function (e2) {
           var r2 = e2.toString(16);
-          return r2.length < 2 ? "0" + r2 : r2;
+          return r2.length < 2 ? '0' + r2 : r2;
         },
         K = function (e2) {
           var r2 = e2.r,
             t2 = e2.g,
             n2 = e2.b,
             o2 = e2.a,
-            a2 = o2 < 1 ? D(b(255 * o2)) : "";
-          return "#" + D(r2) + D(t2) + D(n2) + a2;
+            a2 = o2 < 1 ? D(b(255 * o2)) : '';
+          return '#' + D(r2) + D(t2) + D(n2) + a2;
         },
         L = function (e2) {
           var r2 = e2.r,
@@ -1229,9 +1229,9 @@
         S = react__WEBPACK_IMPORTED_MODULE_0__.memo(function (r2) {
           var t2 = r2.hue,
             n2 = r2.onChange,
-            o2 = g(["react-colorful__hue", r2.className]);
+            o2 = g(['react-colorful__hue', r2.className]);
           return react__WEBPACK_IMPORTED_MODULE_0__.createElement(
-            "div",
+            'div',
             { className: o2 },
             react__WEBPACK_IMPORTED_MODULE_0__.createElement(
               m,
@@ -1242,17 +1242,17 @@
                 onKey: function (e2) {
                   n2({ h: s(t2 + 360 * e2.left, 0, 360) });
                 },
-                "aria-label": "Hue",
-                "aria-valuenow": b(t2),
-                "aria-valuemax": "360",
-                "aria-valuemin": "0",
+                'aria-label': 'Hue',
+                'aria-valuenow': b(t2),
+                'aria-valuemax': '360',
+                'aria-valuemin': '0',
               },
               react__WEBPACK_IMPORTED_MODULE_0__.createElement(p, {
-                className: "react-colorful__hue-pointer",
+                className: 'react-colorful__hue-pointer',
                 left: t2 / 360,
                 color: q({ h: t2, s: 100, v: 100, a: 1 }),
-              }),
-            ),
+              })
+            )
           );
         }),
         T = react__WEBPACK_IMPORTED_MODULE_0__.memo(function (r2) {
@@ -1260,8 +1260,8 @@
             n2 = r2.onChange,
             o2 = { backgroundColor: q({ h: t2.h, s: 100, v: 100, a: 1 }) };
           return react__WEBPACK_IMPORTED_MODULE_0__.createElement(
-            "div",
-            { className: "react-colorful__saturation", style: o2 },
+            'div',
+            { className: 'react-colorful__saturation', style: o2 },
             react__WEBPACK_IMPORTED_MODULE_0__.createElement(
               m,
               {
@@ -1274,17 +1274,17 @@
                     v: s(t2.v - 100 * e2.top, 0, 100),
                   });
                 },
-                "aria-label": "Color",
-                "aria-valuetext":
-                  "Saturation " + b(t2.s) + "%, Brightness " + b(t2.v) + "%",
+                'aria-label': 'Color',
+                'aria-valuetext':
+                  'Saturation ' + b(t2.s) + '%, Brightness ' + b(t2.v) + '%',
               },
               react__WEBPACK_IMPORTED_MODULE_0__.createElement(p, {
-                className: "react-colorful__saturation-pointer",
+                className: 'react-colorful__saturation-pointer',
                 top: 1 - t2.v / 100,
                 left: t2.s / 100,
                 color: q(t2),
-              }),
-            ),
+              })
+            )
           );
         }),
         F = function (e2, r2) {
@@ -1293,7 +1293,7 @@
           return !0;
         },
         P = function (e2, r2) {
-          return e2.replace(/\s/g, "") === r2.replace(/\s/g, "");
+          return e2.replace(/\s/g, '') === r2.replace(/\s/g, '');
         };
       function Y(e2, t2, l2) {
         var u2 = i(l2),
@@ -1313,7 +1313,7 @@
               (v2.current = { hsva: r2, color: t2 }), f2(r2);
             }
           },
-          [t2, e2],
+          [t2, e2]
         ),
           (0, react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(
             function () {
@@ -1322,10 +1322,10 @@
                 e2.equal((r2 = e2.fromHsva(s2)), v2.current.color) ||
                 ((v2.current = { hsva: s2, color: r2 }), u2(r2));
             },
-            [s2, e2, u2],
+            [s2, e2, u2]
           );
         var d2 = (0, react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (
-          e3,
+          e3
         ) {
           f2(function (r2) {
             return Object.assign({}, r2, e3);
@@ -1335,7 +1335,7 @@
       }
       var ColorSpace2,
         V =
-          typeof window < "u"
+          typeof window < 'u'
             ? react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect
             : react__WEBPACK_IMPORTED_MODULE_0__.useEffect,
         J = new Map(),
@@ -1343,12 +1343,12 @@
           V(function () {
             var r2 = e2.current ? e2.current.ownerDocument : document;
             if (void 0 !== r2 && !J.has(r2)) {
-              var t2 = r2.createElement("style");
+              var t2 = r2.createElement('style');
               (t2.innerHTML =
                 '.react-colorful{position:relative;display:flex;flex-direction:column;width:200px;height:200px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default}.react-colorful__saturation{position:relative;flex-grow:1;border-color:transparent;border-bottom:12px solid #000;border-radius:8px 8px 0 0;background-image:linear-gradient(0deg,#000,transparent),linear-gradient(90deg,#fff,hsla(0,0%,100%,0))}.react-colorful__alpha-gradient,.react-colorful__pointer-fill{content:"";position:absolute;left:0;top:0;right:0;bottom:0;pointer-events:none;border-radius:inherit}.react-colorful__alpha-gradient,.react-colorful__saturation{box-shadow:inset 0 0 0 1px rgba(0,0,0,.05)}.react-colorful__alpha,.react-colorful__hue{position:relative;height:24px}.react-colorful__hue{background:linear-gradient(90deg,red 0,#ff0 17%,#0f0 33%,#0ff 50%,#00f 67%,#f0f 83%,red)}.react-colorful__last-control{border-radius:0 0 8px 8px}.react-colorful__interactive{position:absolute;left:0;top:0;right:0;bottom:0;border-radius:inherit;outline:none;touch-action:none}.react-colorful__pointer{position:absolute;z-index:1;box-sizing:border-box;width:28px;height:28px;transform:translate(-50%,-50%);background-color:#fff;border:2px solid #fff;border-radius:50%;box-shadow:0 2px 4px rgba(0,0,0,.2)}.react-colorful__interactive:focus .react-colorful__pointer{transform:translate(-50%,-50%) scale(1.1)}.react-colorful__alpha,.react-colorful__alpha-pointer{background-color:#fff;background-image:url(\'data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill-opacity=".05"><path d="M8 0h8v8H8zM0 8h8v8H0z"/></svg>\')}.react-colorful__saturation-pointer{z-index:3}.react-colorful__hue-pointer{z-index:2}'),
                 J.set(r2, t2);
               var n2 = __webpack_require__.nc;
-              n2 && t2.setAttribute("nonce", n2), r2.head.appendChild(t2);
+              n2 && t2.setAttribute('nonce', n2), r2.head.appendChild(t2);
             }
           }, []);
         },
@@ -1358,15 +1358,15 @@
             a2 = t2.color,
             l2 = void 0 === a2 ? o2.defaultColor : a2,
             i2 = t2.onChange,
-            s2 = c(t2, ["className", "colorModel", "color", "onChange"]),
+            s2 = c(t2, ['className', 'colorModel', 'color', 'onChange']),
             f2 = (0, react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
           Q(f2);
           var v2 = Y(o2, l2, i2),
             d2 = v2[0],
             h2 = v2[1],
-            m2 = g(["react-colorful", n2]);
+            m2 = g(['react-colorful', n2]);
           return react__WEBPACK_IMPORTED_MODULE_0__.createElement(
-            "div",
+            'div',
             u({}, s2, { ref: f2, className: m2 }),
             react__WEBPACK_IMPORTED_MODULE_0__.createElement(T, {
               hsva: d2,
@@ -1375,12 +1375,12 @@
             react__WEBPACK_IMPORTED_MODULE_0__.createElement(S, {
               hue: d2.h,
               onChange: h2,
-              className: "react-colorful__last-control",
-            }),
+              className: 'react-colorful__last-control',
+            })
           );
         },
         W = {
-          defaultColor: "000",
+          defaultColor: '000',
           toHsva: function (e2) {
             return L(C(e2));
           },
@@ -1399,19 +1399,19 @@
             o2 = r2.onChange,
             a2 = {
               backgroundImage:
-                "linear-gradient(90deg, " +
+                'linear-gradient(90deg, ' +
                 k(Object.assign({}, n2, { a: 0 })) +
-                ", " +
+                ', ' +
                 k(Object.assign({}, n2, { a: 1 })) +
-                ")",
+                ')',
             },
-            l2 = g(["react-colorful__alpha", t2]),
+            l2 = g(['react-colorful__alpha', t2]),
             u2 = b(100 * n2.a);
           return react__WEBPACK_IMPORTED_MODULE_0__.createElement(
-            "div",
+            'div',
             { className: l2 },
-            react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-              className: "react-colorful__alpha-gradient",
+            react__WEBPACK_IMPORTED_MODULE_0__.createElement('div', {
+              className: 'react-colorful__alpha-gradient',
               style: a2,
             }),
             react__WEBPACK_IMPORTED_MODULE_0__.createElement(
@@ -1423,18 +1423,18 @@
                 onKey: function (e2) {
                   o2({ a: s(n2.a + e2.left) });
                 },
-                "aria-label": "Alpha",
-                "aria-valuetext": u2 + "%",
-                "aria-valuenow": u2,
-                "aria-valuemin": "0",
-                "aria-valuemax": "100",
+                'aria-label': 'Alpha',
+                'aria-valuetext': u2 + '%',
+                'aria-valuenow': u2,
+                'aria-valuemin': '0',
+                'aria-valuemax': '100',
               },
               react__WEBPACK_IMPORTED_MODULE_0__.createElement(p, {
-                className: "react-colorful__alpha-pointer",
+                className: 'react-colorful__alpha-pointer',
                 left: n2.a,
                 color: k(n2),
-              }),
-            ),
+              })
+            )
           );
         },
         re = function (t2) {
@@ -1443,15 +1443,15 @@
             a2 = t2.color,
             l2 = void 0 === a2 ? o2.defaultColor : a2,
             i2 = t2.onChange,
-            s2 = c(t2, ["className", "colorModel", "color", "onChange"]),
+            s2 = c(t2, ['className', 'colorModel', 'color', 'onChange']),
             f2 = (0, react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
           Q(f2);
           var v2 = Y(o2, l2, i2),
             d2 = v2[0],
             h2 = v2[1],
-            m2 = g(["react-colorful", n2]);
+            m2 = g(['react-colorful', n2]);
           return react__WEBPACK_IMPORTED_MODULE_0__.createElement(
-            "div",
+            'div',
             u({}, s2, { ref: f2, className: m2 }),
             react__WEBPACK_IMPORTED_MODULE_0__.createElement(T, {
               hsva: d2,
@@ -1464,16 +1464,16 @@
             react__WEBPACK_IMPORTED_MODULE_0__.createElement(ee, {
               hsva: d2,
               onChange: h2,
-              className: "react-colorful__last-control",
-            }),
+              className: 'react-colorful__last-control',
+            })
           );
         },
         le = {
-          defaultColor: "hsla(0, 0%, 0%, 1)",
+          defaultColor: 'hsla(0, 0%, 0%, 1)',
           toHsva: function (e2) {
             var r2 =
               /hsla?\(?\s*(-?\d*\.?\d+)(deg|rad|grad|turn)?[,\s]+(-?\d*\.?\d+)%?[,\s]+(-?\d*\.?\d+)%?,?\s*[/\s]*(-?\d*\.?\d+)?(%)?\s*\)?/i.exec(
-                e2,
+                e2
               );
             return r2
               ? N({
@@ -1488,11 +1488,11 @@
           equal: P,
         },
         Ee = {
-          defaultColor: "rgba(0, 0, 0, 1)",
+          defaultColor: 'rgba(0, 0, 0, 1)',
           toHsva: function (e2) {
             var r2 =
               /rgba?\(?\s*(-?\d*\.?\d+)(%)?[,\s]+(-?\d*\.?\d+)(%)?[,\s]+(-?\d*\.?\d+)(%)?,?\s*[/\s]*(-?\d*\.?\d+)?(%)?\s*\)?/i.exec(
-                e2,
+                e2
               );
             return r2
               ? L({
@@ -1506,44 +1506,44 @@
           fromHsva: function (e2) {
             var r2 = I(e2);
             return (
-              "rgba(" + r2.r + ", " + r2.g + ", " + r2.b + ", " + r2.a + ")"
+              'rgba(' + r2.r + ', ' + r2.g + ', ' + r2.b + ', ' + r2.a + ')'
             );
           },
           equal: P,
         },
         Wrapper =
           storybook_internal_theming__WEBPACK_IMPORTED_MODULE_2__.I4.div({
-            position: "relative",
+            position: 'relative',
             maxWidth: 250,
             '&[aria-readonly="true"]': { opacity: 0.5 },
           }),
         PickerTooltip = (0,
         storybook_internal_theming__WEBPACK_IMPORTED_MODULE_2__.I4)(
-          storybook_internal_components__WEBPACK_IMPORTED_MODULE_3__.kR,
+          storybook_internal_components__WEBPACK_IMPORTED_MODULE_3__.kR
         )({
-          position: "absolute",
+          position: 'absolute',
           zIndex: 1,
           top: 4,
           left: 4,
-          "[aria-readonly=true] &": { cursor: "not-allowed" },
+          '[aria-readonly=true] &': { cursor: 'not-allowed' },
         }),
         TooltipContent =
           storybook_internal_theming__WEBPACK_IMPORTED_MODULE_2__.I4.div({
             width: 200,
             margin: 5,
-            ".react-colorful__saturation": { borderRadius: "4px 4px 0 0" },
-            ".react-colorful__hue": {
-              boxShadow: "inset 0 0 0 1px rgb(0 0 0 / 5%)",
+            '.react-colorful__saturation': { borderRadius: '4px 4px 0 0' },
+            '.react-colorful__hue': {
+              boxShadow: 'inset 0 0 0 1px rgb(0 0 0 / 5%)',
             },
-            ".react-colorful__last-control": { borderRadius: "0 0 4px 4px" },
+            '.react-colorful__last-control': { borderRadius: '0 0 4px 4px' },
           }),
         Note = (0, storybook_internal_theming__WEBPACK_IMPORTED_MODULE_2__.I4)(
-          storybook_internal_components__WEBPACK_IMPORTED_MODULE_3__._,
+          storybook_internal_components__WEBPACK_IMPORTED_MODULE_3__._
         )(({ theme }) => ({ fontFamily: theme.typography.fonts.base })),
         Swatches =
           storybook_internal_theming__WEBPACK_IMPORTED_MODULE_2__.I4.div({
-            display: "grid",
-            gridTemplateColumns: "repeat(9, 16px)",
+            display: 'grid',
+            gridTemplateColumns: 'repeat(9, 16px)',
             gap: 6,
             padding: 3,
             marginTop: 5,
@@ -1558,7 +1558,7 @@
                 ? `${theme.appBorderColor} 0 0 0 1px inset, ${theme.textMutedColor}50 0 0 0 4px`
                 : `${theme.appBorderColor} 0 0 0 1px inset`,
               borderRadius: theme.appBorderRadius,
-            }),
+            })
           ),
         Swatch = ({ value, style, ...props }) => {
           let backgroundImage = `linear-gradient(${value}, ${value}), url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill-opacity=".05"><path d="M8 0h8v8H8zM0 8h8v8H0z"/></svg>'), linear-gradient(#fff, #fff)`;
@@ -1568,33 +1568,33 @@
           });
         },
         Input = (0, storybook_internal_theming__WEBPACK_IMPORTED_MODULE_2__.I4)(
-          storybook_internal_components__WEBPACK_IMPORTED_MODULE_3__.lV.Input,
+          storybook_internal_components__WEBPACK_IMPORTED_MODULE_3__.lV.Input
         )(({ theme, readOnly }) => ({
-          width: "100%",
+          width: '100%',
           paddingLeft: 30,
           paddingRight: 30,
-          boxSizing: "border-box",
+          boxSizing: 'border-box',
           fontFamily: theme.typography.fonts.base,
         })),
         ToggleIcon = (0,
         storybook_internal_theming__WEBPACK_IMPORTED_MODULE_2__.I4)(
-          _storybook_icons__WEBPACK_IMPORTED_MODULE_4__.QDE,
+          _storybook_icons__WEBPACK_IMPORTED_MODULE_4__.QDE
         )(({ theme }) => ({
-          position: "absolute",
+          position: 'absolute',
           zIndex: 1,
           top: 6,
           right: 7,
           width: 20,
           height: 20,
           padding: 4,
-          boxSizing: "border-box",
-          cursor: "pointer",
+          boxSizing: 'border-box',
+          cursor: 'pointer',
           color: theme.input.color,
         })),
         ColorSpace =
-          (((ColorSpace2 = ColorSpace || {}).RGB = "rgb"),
-          (ColorSpace2.HSL = "hsl"),
-          (ColorSpace2.HEX = "hex"),
+          (((ColorSpace2 = ColorSpace || {}).RGB = 'rgb'),
+          (ColorSpace2.HSL = 'hsl'),
+          (ColorSpace2.HEX = 'hex'),
           ColorSpace2),
         COLOR_SPACES = Object.values(ColorSpace),
         COLOR_REGEXP =
@@ -1609,26 +1609,26 @@
           hex: function (r2) {
             return react__WEBPACK_IMPORTED_MODULE_0__.createElement(
               U,
-              u({}, r2, { colorModel: W }),
+              u({}, r2, { colorModel: W })
             );
           },
           rgb: function (r2) {
             return react__WEBPACK_IMPORTED_MODULE_0__.createElement(
               re,
-              u({}, r2, { colorModel: Ee }),
+              u({}, r2, { colorModel: Ee })
             );
           },
           hsl: function (r2) {
             return react__WEBPACK_IMPORTED_MODULE_0__.createElement(
               re,
-              u({}, r2, { colorModel: le }),
+              u({}, r2, { colorModel: le })
             );
           },
         },
         fallbackColor = {
-          hex: "transparent",
-          rgb: "rgba(0, 0, 0, 0)",
-          hsl: "hsla(0, 0%, 0%, 0)",
+          hex: 'transparent',
+          rgb: 'rgba(0, 0, 0, 0)',
+          hsl: 'hsla(0, 0%, 0%, 0)',
         },
         stringToArgs = (value) => {
           let match = value?.match(COLOR_REGEXP);
@@ -1650,7 +1650,7 @@
               valid,
               value,
               keyword: import_color_convert.default.rgb.keyword([r2, g2, b2]),
-              colorSpace: "rgb",
+              colorSpace: 'rgb',
               rgb: value,
               hsl: `hsla(${h2}, ${s2}%, ${l2}%, ${a2})`,
               hex: `#${import_color_convert.default.rgb.hex([r2, g2, b2]).toLowerCase()}`,
@@ -1667,13 +1667,13 @@
               valid,
               value,
               keyword: import_color_convert.default.hsl.keyword([h2, s2, l2]),
-              colorSpace: "hsl",
+              colorSpace: 'hsl',
               rgb: `rgba(${r2}, ${g2}, ${b2}, ${a2})`,
               hsl: value,
               hex: `#${import_color_convert.default.hsl.hex([h2, s2, l2]).toLowerCase()}`,
             };
           }
-          let plain = value.replace("#", ""),
+          let plain = value.replace('#', ''),
             rgb =
               import_color_convert.default.keyword.rgb(plain) ||
               import_color_convert.default.hex.rgb(plain),
@@ -1683,7 +1683,7 @@
             (/[^#a-f0-9]/i.test(value)
               ? (mapped = plain)
               : HEX_REGEXP.test(value) && (mapped = `#${plain}`),
-            mapped.startsWith("#"))
+            mapped.startsWith('#'))
           )
             valid = HEX_REGEXP.test(mapped);
           else
@@ -1696,7 +1696,7 @@
             valid,
             value: mapped,
             keyword: import_color_convert.default.rgb.keyword(rgb),
-            colorSpace: "hex",
+            colorSpace: 'hex',
             rgb: `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, 1)`,
             hsl: `hsla(${hsl[0]}, ${hsl[1]}%, ${hsl[2]}%, 1)`,
             hex: mapped,
@@ -1704,29 +1704,29 @@
         },
         useColorInput = (initialValue, onChange) => {
           let [value, setValue] = (0,
-            react__WEBPACK_IMPORTED_MODULE_0__.useState)(initialValue || ""),
+            react__WEBPACK_IMPORTED_MODULE_0__.useState)(initialValue || ''),
             [color, setColor] = (0,
             react__WEBPACK_IMPORTED_MODULE_0__.useState)(() =>
-              parseValue(value),
+              parseValue(value)
             ),
             [colorSpace, setColorSpace] = (0,
             react__WEBPACK_IMPORTED_MODULE_0__.useState)(
-              color?.colorSpace || "hex",
+              color?.colorSpace || 'hex'
             );
           (0, react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-            let nextValue = initialValue || "",
+            let nextValue = initialValue || '',
               nextColor = parseValue(nextValue);
             setValue(nextValue),
               setColor(nextColor),
-              setColorSpace(nextColor?.colorSpace || "hex");
+              setColorSpace(nextColor?.colorSpace || 'hex');
           }, [initialValue]);
           let realValue = (0, react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(
               () =>
                 ((value, color, colorSpace) => {
                   if (!value || !color?.valid) return fallbackColor[colorSpace];
-                  if ("hex" !== colorSpace)
+                  if ('hex' !== colorSpace)
                     return color?.[colorSpace] || fallbackColor[colorSpace];
-                  if (!color.hex.startsWith("#"))
+                  if (!color.hex.startsWith('#'))
                     try {
                       return `#${import_color_convert.default.keyword.hex(color.hex)}`;
                     } catch {
@@ -1737,30 +1737,30 @@
                     return HEX_REGEXP.test(color.hex)
                       ? color.hex
                       : fallbackColor.hex;
-                  let [r2, g2, b2] = short[1].split("");
+                  let [r2, g2, b2] = short[1].split('');
                   return `#${r2}${r2}${g2}${g2}${b2}${b2}`;
                 })(value, color, colorSpace).toLowerCase(),
-              [value, color, colorSpace],
+              [value, color, colorSpace]
             ),
             updateValue = (0, react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(
               (update) => {
                 let parsed = parseValue(update),
-                  v2 = parsed?.value || update || "";
+                  v2 = parsed?.value || update || '';
                 setValue(v2),
-                  "" === v2 && (setColor(void 0), onChange(void 0)),
+                  '' === v2 && (setColor(void 0), onChange(void 0)),
                   parsed &&
                     (setColor(parsed),
                     setColorSpace(parsed.colorSpace),
                     onChange(parsed.value));
               },
-              [onChange],
+              [onChange]
             ),
             cycleColorSpace = (0,
             react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
               let next = COLOR_SPACES.indexOf(colorSpace) + 1;
               next >= COLOR_SPACES.length && (next = 0),
                 setColorSpace(COLOR_SPACES[next]);
-              let update = color?.[COLOR_SPACES[next]] || "";
+              let update = color?.[COLOR_SPACES[next]] || '';
               setValue(update), onChange(update);
             }, [color, colorSpace, onChange]);
           return {
@@ -1772,7 +1772,7 @@
             cycleColorSpace,
           };
         },
-        id = (value) => value.replace(/\s*/, "").toLowerCase(),
+        id = (value) => value.replace(/\s*/, '').toLowerCase(),
         ColorControl = ({
           name,
           value: initialValue,
@@ -1787,9 +1787,9 @@
             react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(
               (0, _chunk_2PTXLE6R_mjs__WEBPACK_IMPORTED_MODULE_1__.sg)(
                 onChange,
-                200,
+                200
               ),
-              [onChange],
+              [onChange]
             ),
             {
               value,
@@ -1802,11 +1802,11 @@
             { presets, addPreset } = ((
               presetColors,
               currentColor,
-              colorSpace,
+              colorSpace
             ) => {
               let [selectedColors, setSelectedColors] = (0,
               react__WEBPACK_IMPORTED_MODULE_0__.useState)(
-                currentColor?.valid ? [currentColor] : [],
+                currentColor?.valid ? [currentColor] : []
               );
               (0, react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
                 void 0 === currentColor && setSelectedColors([]);
@@ -1815,30 +1815,30 @@
                   () =>
                     (presetColors || [])
                       .map((preset) =>
-                        "string" == typeof preset
+                        'string' == typeof preset
                           ? parseValue(preset)
                           : preset.title
                             ? {
                                 ...parseValue(preset.color),
                                 keyword: preset.title,
                               }
-                            : parseValue(preset.color),
+                            : parseValue(preset.color)
                       )
                       .concat(selectedColors)
                       .filter(Boolean)
                       .slice(-27),
-                  [presetColors, selectedColors],
+                  [presetColors, selectedColors]
                 ),
                 addPreset = (0, react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(
                   (color) => {
                     color?.valid &&
                       (presets.some(
                         (preset) =>
-                          id(preset[colorSpace]) === id(color[colorSpace]),
+                          id(preset[colorSpace]) === id(color[colorSpace])
                       ) ||
                         setSelectedColors((arr) => arr.concat(color)));
                   },
-                  [colorSpace, presets],
+                  [colorSpace, presets]
                 );
               return { presets, addPreset };
             })(presetColors, color, colorSpace),
@@ -1846,7 +1846,7 @@
             readonly = !!argType?.table?.readonly;
           return react__WEBPACK_IMPORTED_MODULE_0__.createElement(
             Wrapper,
-            { "aria-readonly": readonly },
+            { 'aria-readonly': readonly },
             react__WEBPACK_IMPORTED_MODULE_0__.createElement(
               PickerTooltip,
               {
@@ -1858,7 +1858,7 @@
                   TooltipContent,
                   null,
                   react__WEBPACK_IMPORTED_MODULE_0__.createElement(Picker, {
-                    color: "transparent" === realValue ? "#000000" : realValue,
+                    color: 'transparent' === realValue ? '#000000' : realValue,
                     onChange: updateValue,
                     onFocus,
                     onBlur,
@@ -1876,7 +1876,7 @@
                             tooltip:
                               react__WEBPACK_IMPORTED_MODULE_0__.createElement(
                                 Note,
-                                { note: preset.keyword || preset.value },
+                                { note: preset.keyword || preset.value }
                               ),
                           },
                           react__WEBPACK_IMPORTED_MODULE_0__.createElement(
@@ -1888,33 +1888,33 @@
                                 id(preset[colorSpace]) ===
                                   id(color[colorSpace]),
                               onClick: () => updateValue(preset.value),
-                            },
-                          ),
-                        ),
-                      ),
-                    ),
+                            }
+                          )
+                        )
+                      )
+                    )
                 ),
               },
               react__WEBPACK_IMPORTED_MODULE_0__.createElement(Swatch, {
                 value: realValue,
                 style: { margin: 4 },
-              }),
+              })
             ),
             react__WEBPACK_IMPORTED_MODULE_0__.createElement(Input, {
               id: (0, _chunk_2PTXLE6R_mjs__WEBPACK_IMPORTED_MODULE_1__.ZA)(
-                name,
+                name
               ),
               value,
               onChange: (e2) => updateValue(e2.target.value),
               onFocus: (e2) => e2.target.select(),
               readOnly: readonly,
-              placeholder: "Choose color...",
+              placeholder: 'Choose color...',
             }),
             value
               ? react__WEBPACK_IMPORTED_MODULE_0__.createElement(ToggleIcon, {
                   onClick: cycleColorSpace,
                 })
-              : null,
+              : null
           );
         },
         Color_default = ColorControl;

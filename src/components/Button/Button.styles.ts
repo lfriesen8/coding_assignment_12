@@ -1,32 +1,32 @@
-import styled from "styled-components";
-import { ButtonProps } from "./Button.types";
+import styled from 'styled-components';
+import { ButtonProps } from './Button.types';
 
 /**
  * Styled button component with dynamic styling based on props.
  */
-export const StyledButton = styled.button<Omit<ButtonProps, "label">>`
+export const StyledButton = styled.button<Omit<ButtonProps, 'label'>>`
   /* ✅ Removed label from styled props */
   padding: ${({ size }) =>
-    size === "small"
-      ? "5px 10px"
-      : size === "large"
-        ? "15px 30px"
-        : "10px 20px"};
+    size === 'small'
+      ? '5px 10px'
+      : size === 'large'
+        ? '15px 30px'
+        : '10px 20px'};
   font-size: ${({ size }) =>
-    size === "small" ? "12px" : size === "large" ? "18px" : "16px"};
+    size === 'small' ? '12px' : size === 'large' ? '18px' : '16px'};
   border-radius: 5px;
   border: none;
-  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
 
   /* ✅ Now uses backgroundColor prop if provided, otherwise falls back to primary color logic */
   background-color: ${({ backgroundColor, primary, disabled }) =>
     disabled
-      ? "#ccc"
+      ? '#ccc'
       : backgroundColor
         ? backgroundColor
         : primary
-          ? "#007bff"
-          : "#555"};
+          ? '#007bff'
+          : '#555'};
 
   color: white;
   transition:
@@ -36,18 +36,18 @@ export const StyledButton = styled.button<Omit<ButtonProps, "label">>`
   &:hover {
     background-color: ${({ backgroundColor, primary, disabled }) =>
       disabled
-        ? "#ccc"
+        ? '#ccc'
         : backgroundColor
           ? backgroundColor
           : primary
-            ? "#0056b3"
-            : "#333"};
+            ? '#0056b3'
+            : '#333'};
     transform: ${({ disabled }) =>
-      disabled ? "none" : "scale(1.05)"}; /* ✅ Adds slight hover effect */
+      disabled ? 'none' : 'scale(1.05)'}; /* ✅ Adds slight hover effect */
   }
 
   &:active {
     transform: ${({ disabled }) =>
-      disabled ? "none" : "scale(0.95)"}; /* ✅ Click effect */
+      disabled ? 'none' : 'scale(0.95)'}; /* ✅ Click effect */
   }
 `;

@@ -1,6 +1,6 @@
-import React from "react";
-import { StyledLabel } from "./Label.styles";
-import { LabelProps } from "./Label.types";
+import React from 'react';
+import { StyledLabel } from './Label.styles';
+import { LabelProps } from './Label.types';
 
 /**
  * **Label Component**

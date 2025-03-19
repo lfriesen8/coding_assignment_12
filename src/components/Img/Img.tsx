@@ -1,6 +1,6 @@
-import React from "react";
-import { StyledImage } from "./Img.styles";
-import { ImgProps } from "./Img.types";
+import React from 'react';
+import { StyledImage } from './Img.styles';
+import { ImgProps } from './Img.types';
 
 /**
  * **Img Component**

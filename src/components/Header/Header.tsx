@@ -1,6 +1,6 @@
-import React from "react";
-import { StyledHeader, Logo, Nav } from "./Header.styles";
-import { Button } from "../Button";
+import React from 'react';
+import { StyledHeader, Logo, Nav } from './Header.styles';
+import { Button } from '../Button';
 
 /**
  * **Header Component**
@@ -57,7 +57,7 @@ export const Header: React.FC<HeaderProps> = ({
             />
           </g>
         </svg>
-        {title && <h1>{title}</h1>}{" "}
+        {title && <h1>{title}</h1>}{' '}
         {/* ✅ Ensure title is displayed if provided */}
       </Logo>
 

@@ -388,19 +388,19 @@ try {
         ZoomResetIcon: LI,
         iconList: EI,
       } = __STORYBOOK_ICONS__;
-    var i = "storybook/outline",
-      T = "outline",
+    var i = 'storybook/outline',
+      T = 'outline',
       _ = u(function () {
         let [c, r] = S(),
           s = C(),
-          I = [!0, "true"].includes(c[T]),
+          I = [!0, 'true'].includes(c[T]),
           a = d(() => r({ [T]: !I }), [I]);
         return (
           p(() => {
             s.setAddonShortcut(i, {
-              label: "Toggle Outline",
-              defaultShortcut: ["alt", "O"],
-              actionName: "outline",
+              label: 'Toggle Outline',
+              defaultShortcut: ['alt', 'O'],
+              actionName: 'outline',
               showInMenu: !1,
               action: a,
             });
@@ -408,18 +408,18 @@ try {
           t.createElement(
             h,
             {
-              key: "outline",
+              key: 'outline',
               active: I,
-              title: "Apply outlines to the preview",
+              title: 'Apply outlines to the preview',
               onClick: a,
             },
-            t.createElement(A, null),
+            t.createElement(A, null)
           )
         );
       });
     l.register(i, () => {
       l.add(i, {
-        title: "Outline",
+        title: 'Outline',
         type: m.TOOL,
         match: ({ viewMode: c, tabId: r }) =>
           !!(c && c.match(/^(story|docs)$/)) && !r,
@@ -429,7 +429,7 @@ try {
   })();
 } catch (e) {
   console.error(
-    "[Storybook] One of your manager-entries failed: " + import.meta.url,
-    e,
+    '[Storybook] One of your manager-entries failed: ' + import.meta.url,
+    e
   );
 }

@@ -7,14 +7,14 @@ try {
     var ce = Object.getPrototypeOf,
       le = Object.prototype.hasOwnProperty;
     var E = ((e) =>
-      typeof require < "u"
+      typeof require < 'u'
         ? require
-        : typeof Proxy < "u"
+        : typeof Proxy < 'u'
           ? new Proxy(e, {
-              get: (o, c) => (typeof require < "u" ? require : o)[c],
+              get: (o, c) => (typeof require < 'u' ? require : o)[c],
             })
           : e)(function (e) {
-      if (typeof require < "u") return require.apply(this, arguments);
+      if (typeof require < 'u') return require.apply(this, arguments);
       throw Error('Dynamic require of "' + e + '" is not supported');
     });
     var M = (e, o) => () => (e && (o = e((e = 0))), o);
@@ -22,7 +22,7 @@ try {
       o || e((o = { exports: {} }).exports, o), o.exports
     );
     var ue = (e, o, c, r) => {
-      if ((o && typeof o == "object") || typeof o == "function")
+      if ((o && typeof o == 'object') || typeof o == 'function')
         for (let i of ae(o))
           !le.call(e, i) &&
             i !== c &&
@@ -36,9 +36,9 @@ try {
       (c = e != null ? re(ce(e)) : {}),
       ue(
         o || !e || !e.__esModule
-          ? Y(c, "default", { value: e, enumerable: !0 })
+          ? Y(c, 'default', { value: e, enumerable: !0 })
           : c,
-        e,
+        e
       )
     );
     var p = M(() => {});
@@ -49,13 +49,13 @@ try {
       h();
       f();
       (function (e) {
-        if (typeof Q == "object" && typeof V < "u") V.exports = e();
-        else if (typeof define == "function" && define.amd) define([], e);
+        if (typeof Q == 'object' && typeof V < 'u') V.exports = e();
+        else if (typeof define == 'function' && define.amd) define([], e);
         else {
           var o;
-          typeof window < "u" || typeof window < "u"
+          typeof window < 'u' || typeof window < 'u'
             ? (o = window)
-            : typeof self < "u"
+            : typeof self < 'u'
               ? (o = self)
               : (o = this),
             (o.memoizerific = e());
@@ -66,11 +66,11 @@ try {
           function t(a, I) {
             if (!d[a]) {
               if (!i[a]) {
-                var s = typeof E == "function" && E;
+                var s = typeof E == 'function' && E;
                 if (!I && s) return s(a, !0);
                 if (n) return n(a, !0);
                 var C = new Error("Cannot find module '" + a + "'");
-                throw ((C.code = "MODULE_NOT_FOUND"), C);
+                throw ((C.code = 'MODULE_NOT_FOUND'), C);
               }
               var m = (d[a] = { exports: {} });
               i[a][0].call(
@@ -84,12 +84,12 @@ try {
                 r,
                 i,
                 d,
-                l,
+                l
               );
             }
             return d[a].exports;
           }
-          for (var n = typeof E == "function" && E, u = 0; u < l.length; u++)
+          for (var n = typeof E == 'function' && E, u = 0; u < l.length; u++)
             t(l[u]);
           return t;
         })(
@@ -97,13 +97,13 @@ try {
             1: [
               function (r, i, d) {
                 i.exports = function (l) {
-                  if (typeof Map != "function" || l) {
-                    var t = r("./similar");
+                  if (typeof Map != 'function' || l) {
+                    var t = r('./similar');
                     return new t();
                   } else return new Map();
                 };
               },
-              { "./similar": 2 },
+              { './similar': 2 },
             ],
             2: [
               function (r, i, d) {
@@ -161,7 +161,7 @@ try {
                         n || this,
                         this.list[u].val,
                         this.list[u].key,
-                        this,
+                        this
                       );
                   }),
                   (l.prototype.indexOf = function (t) {
@@ -179,7 +179,7 @@ try {
             ],
             3: [
               function (r, i, d) {
-                var l = r("map-or-similar");
+                var l = r('map-or-similar');
                 i.exports = function (a) {
                   var I = new l(!1),
                     s = [];
@@ -194,7 +194,7 @@ try {
                         A;
                       if ((m.numArgs || m.numArgs === 0) && m.numArgs !== _ + 1)
                         throw new Error(
-                          "Memoizerific functions should always be called with the same number of arguments",
+                          'Memoizerific functions should always be called with the same number of arguments'
                         );
                       for (A = 0; A < _; A++) {
                         if (
@@ -268,11 +268,11 @@ try {
                   return a === I || (a !== a && I !== I);
                 }
               },
-              { "map-or-similar": 1 },
+              { 'map-or-similar': 1 },
             ],
           },
           {},
-          [3],
+          [3]
         )(3);
       });
     });
@@ -732,8 +732,8 @@ try {
     function oe(e) {
       for (var o = [], c = 1; c < arguments.length; c++)
         o[c - 1] = arguments[c];
-      var r = Array.from(typeof e == "string" ? [e] : e);
-      r[r.length - 1] = r[r.length - 1].replace(/\r?\n([\t ]*)$/, "");
+      var r = Array.from(typeof e == 'string' ? [e] : e);
+      r[r.length - 1] = r[r.length - 1].replace(/\r?\n([\t ]*)$/, '');
       var i = r.reduce(function (t, n) {
         var u = n.match(/\n([\t ]+|(?!\s).)/g);
         return u
@@ -746,7 +746,7 @@ try {
                     : I.length) !== null && s !== void 0
                   ? s
                   : 0;
-              }),
+              })
             )
           : t;
       }, []);
@@ -755,34 +755,34 @@ try {
           `
 [	 ]{` +
             Math.min.apply(Math, i) +
-            "}",
-          "g",
+            '}',
+          'g'
         );
         r = r.map(function (t) {
           return t.replace(
             d,
             `
-`,
+`
           );
         });
       }
-      r[0] = r[0].replace(/^\r?\n/, "");
+      r[0] = r[0].replace(/^\r?\n/, '');
       var l = r[0];
       return (
         o.forEach(function (t, n) {
           var u = l.match(/(?:^|\n)( *)$/),
-            a = u ? u[1] : "",
+            a = u ? u[1] : '',
             I = t;
-          typeof t == "string" &&
+          typeof t == 'string' &&
             t.includes(`
 `) &&
             (I = String(t)
               .split(
                 `
-`,
+`
               )
               .map(function (s, C) {
-                return C === 0 ? s : "" + a + s;
+                return C === 0 ? s : '' + a + s;
               }).join(`
 `)),
             (l += I + r[n + 1]);
@@ -790,11 +790,11 @@ try {
         l
       );
     }
-    var ne = "storybook/background",
-      y = "backgrounds",
+    var ne = 'storybook/background',
+      y = 'backgrounds',
       de = {
-        light: { name: "light", value: "#F8F8F8" },
-        dark: { name: "dark", value: "#333" },
+        light: { name: 'light', value: '#F8F8F8' },
+        dark: { name: 'dark', value: '#333' },
       },
       me = w(function () {
         let e = P(y),
@@ -836,7 +836,7 @@ try {
             (I) => {
               r({ [y]: I });
             },
-            [r],
+            [r]
           );
         return g.createElement(
           D,
@@ -844,20 +844,20 @@ try {
           g.createElement(
             B,
             {
-              key: "grid",
+              key: 'grid',
               active: n,
               disabled: t,
-              title: "Apply a grid to the preview",
+              title: 'Apply a grid to the preview',
               onClick: () => a({ value: l, grid: !n }),
             },
-            g.createElement(q, null),
+            g.createElement(q, null)
           ),
           c > 0
             ? g.createElement(
                 H,
                 {
-                  key: "background",
-                  placement: "top",
+                  key: 'background',
+                  placement: 'top',
                   closeOnOutsideClick: !0,
                   tooltip: ({ onHide: I }) =>
                     g.createElement(U, {
@@ -865,8 +865,8 @@ try {
                         ...(o
                           ? [
                               {
-                                id: "reset",
-                                title: "Reset background",
+                                id: 'reset',
+                                title: 'Reset background',
                                 icon: g.createElement(J, null),
                                 onClick: () => {
                                   a({ value: void 0, grid: n }), I();
@@ -878,7 +878,7 @@ try {
                           id: s,
                           title: C.name,
                           icon: g.createElement(Z, {
-                            color: C?.value || "grey",
+                            color: C?.value || 'grey',
                           }),
                           active: s === l,
                           onClick: () => {
@@ -893,42 +893,42 @@ try {
                   B,
                   {
                     disabled: t,
-                    key: "background",
-                    title: "Change the background of the preview",
+                    key: 'background',
+                    title: 'Change the background of the preview',
                     active: !!o || u,
                   },
-                  g.createElement(z, null),
-                ),
+                  g.createElement(z, null)
+                )
               )
-            : null,
+            : null
         );
       }),
       he = ee.span(
         ({ background: e }) => ({
-          borderRadius: "1rem",
-          display: "block",
-          height: "1rem",
-          width: "1rem",
+          borderRadius: '1rem',
+          display: 'block',
+          height: '1rem',
+          width: '1rem',
           background: e,
         }),
         ({ theme: e }) => ({
           boxShadow: `${e.appBorderColor} 0 0 0 1px inset`,
-        }),
+        })
       ),
       fe = (e, o = [], c) => {
-        if (e === "transparent") return "transparent";
+        if (e === 'transparent') return 'transparent';
         if (o.find((i) => i.value === e) || e) return e;
         let r = o.find((i) => i.name === c);
         if (r) return r.value;
         if (c) {
-          let i = o.map((d) => d.name).join(", ");
+          let i = o.map((d) => d.name).join(', ');
           K.warn(oe`
         Backgrounds Addon: could not find the default color "${c}".
         These are the available colors for your story based on your configuration:
         ${i}.
       `);
         }
-        return "transparent";
+        return 'transparent';
       },
       te = (0, W.default)(1e3)((e, o, c, r, i, d) => ({
         id: e || o,
@@ -942,10 +942,10 @@ try {
       })),
       ge = (0, W.default)(10)((e, o, c) => {
         let r = e.map(({ name: i, value: d }) =>
-          te(null, i, d, !0, c, d === o),
+          te(null, i, d, !0, c, d === o)
         );
-        return o !== "transparent"
-          ? [te("reset", "Clear background", "transparent", null, c, !1), ...r]
+        return o !== 'transparent'
+          ? [te('reset', 'Clear background', 'transparent', null, c, !1), ...r]
           : r;
       }),
       be = { default: null, disable: !0, values: [] },
@@ -957,20 +957,20 @@ try {
           l = j(() => fe(d, e.values, e.default), [e, d]);
         Array.isArray(e) &&
           K.warn(
-            "Addon Backgrounds api has changed in Storybook 6.0. Please refer to the migration guide: https://github.com/storybookjs/storybook/blob/next/MIGRATION.md",
+            'Addon Backgrounds api has changed in Storybook 6.0. Please refer to the migration guide: https://github.com/storybookjs/storybook/blob/next/MIGRATION.md'
           );
         let t = G(
           (n) => {
             i({ [y]: { ...r[y], value: n } });
           },
-          [e, r, i],
+          [e, r, i]
         );
         return e.disable
           ? null
           : g.createElement(
               H,
               {
-                placement: "top",
+                placement: 'top',
                 closeOnOutsideClick: !0,
                 tooltip: ({ onHide: n }) =>
                   g.createElement(U, {
@@ -983,12 +983,12 @@ try {
               g.createElement(
                 B,
                 {
-                  key: "background",
-                  title: "Change the background of the preview",
-                  active: l !== "transparent" || o,
+                  key: 'background',
+                  title: 'Change the background of the preview',
+                  active: l !== 'transparent' || o,
                 },
-                g.createElement(z, null),
-              ),
+                g.createElement(z, null)
+              )
             );
       }),
       Se = w(function () {
@@ -999,17 +999,17 @@ try {
         return g.createElement(
           B,
           {
-            key: "background",
+            key: 'background',
             active: r,
-            title: "Apply a grid to the preview",
+            title: 'Apply a grid to the preview',
             onClick: () => o({ [y]: { ...e[y], grid: !r } }),
           },
-          g.createElement(q, null),
+          g.createElement(q, null)
         );
       });
     N.register(ne, () => {
       N.add(ne, {
-        title: "Backgrounds",
+        title: 'Backgrounds',
         type: $.TOOL,
         match: ({ viewMode: e, tabId: o }) =>
           !!(e && e.match(/^(story|docs)$/)) && !o,
@@ -1020,14 +1020,14 @@ try {
                 D,
                 null,
                 g.createElement(Ce, null),
-                g.createElement(Se, null),
+                g.createElement(Se, null)
               ),
       });
     });
   })();
 } catch (e) {
   console.error(
-    "[Storybook] One of your manager-entries failed: " + import.meta.url,
-    e,
+    '[Storybook] One of your manager-entries failed: ' + import.meta.url,
+    e
   );
 }

@@ -1,5 +1,5 @@
-import React from "react";
-import { StyledButton } from "./Button.styles";
+import React from 'react';
+import { StyledButton } from './Button.styles';
 
 /**
  * **Button Component**
@@ -18,7 +18,7 @@ export type ButtonProps = {
   label: string;
   primary?: boolean;
   disabled?: boolean;
-  size?: "small" | "medium" | "large";
+  size?: 'small' | 'medium' | 'large';
   backgroundColor?: string;
   onClick?: () => void;
 };
@@ -27,7 +27,7 @@ export const Button: React.FC<ButtonProps> = ({
   label,
   primary = false,
   disabled = false,
-  size = "medium",
+  size = 'medium',
   backgroundColor,
   onClick,
 }) => {

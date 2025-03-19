@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 import {
   StyledRadioWrapper,
   StyledRadio,
   StyledLabel,
-} from "./RadioButton.styles";
-import { RadioButtonProps } from "./RadioButton.types";
+} from './RadioButton.styles';
+import { RadioButtonProps } from './RadioButton.types';
 
 /**
  * **Radio Button Component**

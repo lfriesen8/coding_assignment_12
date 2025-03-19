@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { HeroImage } from "./HeroImage";
+import type { Meta, StoryObj } from '@storybook/react';
+import { HeroImage } from './HeroImage';
 
 /**
  * **HeroImage Component - Storybook**
@@ -8,19 +8,19 @@ import { HeroImage } from "./HeroImage";
  */
 
 const meta: Meta<typeof HeroImage> = {
-  title: "Components/HeroImage",
+  title: 'Components/HeroImage',
   component: HeroImage,
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
-    src: { control: "text" },
-    alt: { control: "text" },
-    height: { control: "text" },
-    overlayColor: { control: "color" },
-    text: { control: "text" },
-    textColor: { control: "color" },
+    src: { control: 'text' },
+    alt: { control: 'text' },
+    height: { control: 'text' },
+    overlayColor: { control: 'color' },
+    text: { control: 'text' },
+    textColor: { control: 'color' },
   },
 };
 
@@ -32,12 +32,12 @@ type Story = StoryObj<typeof meta>;
  */
 export const Default: Story = {
   args: {
-    src: "https://designcollaborative.com/wp-content/uploads/2021/09/Slider6_Sweetwater-Electric-Guitars-Area-e1633015825122.jpg",
-    alt: "Hero Image",
-    height: "400px",
-    overlayColor: "rgba(0,0,0,0.5)",
-    text: "Welcome to the music store",
-    textColor: "#fff",
+    src: 'https://designcollaborative.com/wp-content/uploads/2021/09/Slider6_Sweetwater-Electric-Guitars-Area-e1633015825122.jpg',
+    alt: 'Hero Image',
+    height: '400px',
+    overlayColor: 'rgba(0,0,0,0.5)',
+    text: 'Welcome to the music store',
+    textColor: '#fff',
   },
 };
 
@@ -46,9 +46,9 @@ export const Default: Story = {
  */
 export const NoText: Story = {
   args: {
-    src: "https://designcollaborative.com/wp-content/uploads/2021/09/Slider6_Sweetwater-Electric-Guitars-Area-e1633015825122.jpg",
-    alt: "Hero Image",
-    height: "400px",
-    overlayColor: "rgba(0,0,0,0.3)",
+    src: 'https://designcollaborative.com/wp-content/uploads/2021/09/Slider6_Sweetwater-Electric-Guitars-Area-e1633015825122.jpg',
+    alt: 'Hero Image',
+    height: '400px',
+    overlayColor: 'rgba(0,0,0,0.3)',
   },
 };

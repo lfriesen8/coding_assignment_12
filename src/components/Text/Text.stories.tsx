@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Text } from "./Text";
+import type { Meta, StoryObj } from '@storybook/react';
+import { Text } from './Text';
 
 /**
  * **Text Component - Storybook**
@@ -13,17 +13,17 @@ import { Text } from "./Text";
  */
 
 const meta: Meta<typeof Text> = {
-  title: "Components/Text",
+  title: 'Components/Text',
   component: Text,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
-    size: { control: "select", options: ["small", "medium", "large"] },
-    bold: { control: "boolean" },
-    italic: { control: "boolean" },
-    color: { control: "color" },
+    size: { control: 'select', options: ['small', 'medium', 'large'] },
+    bold: { control: 'boolean' },
+    italic: { control: 'boolean' },
+    color: { control: 'color' },
   },
 };
 
@@ -35,7 +35,7 @@ type Story = StoryObj<typeof meta>;
  */
 export const Default: Story = {
   args: {
-    children: "This is default text",
+    children: 'This is default text',
   },
 };
 
@@ -44,7 +44,7 @@ export const Default: Story = {
  */
 export const Bold: Story = {
   args: {
-    children: "This is bold text",
+    children: 'This is bold text',
     bold: true,
   },
 };
@@ -54,7 +54,7 @@ export const Bold: Story = {
  */
 export const Italic: Story = {
   args: {
-    children: "This is italic text",
+    children: 'This is italic text',
     italic: true,
   },
 };
@@ -64,8 +64,8 @@ export const Italic: Story = {
  */
 export const Colored: Story = {
   args: {
-    children: "This is colored text",
-    color: "#ff5733",
+    children: 'This is colored text',
+    color: '#ff5733',
   },
 };
 
@@ -74,14 +74,14 @@ export const Colored: Story = {
  */
 export const Small: Story = {
   args: {
-    children: "This is small text",
-    size: "small",
+    children: 'This is small text',
+    size: 'small',
   },
 };
 
 export const Large: Story = {
   args: {
-    children: "This is large text",
-    size: "large",
+    children: 'This is large text',
+    size: 'large',
   },
 };

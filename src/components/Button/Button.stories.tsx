@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
+import type { Meta, StoryObj } from '@storybook/react';
+import { fn } from '@storybook/test';
 
-import { Button } from "./Button";
+import { Button } from './Button';
 
 /**
  * **Button Component Storybook**
@@ -23,21 +23,21 @@ import { Button } from "./Button";
 
 // Storybook metadata configuration
 const meta: Meta<typeof Button> = {
-  title: "Components/Button",
+  title: 'Components/Button',
   component: Button,
   parameters: {
     /**
      * Centers the component inside the Storybook preview.
      * More info: https://storybook.js.org/docs/configure/story-layout
      */
-    layout: "centered",
+    layout: 'centered',
   },
-  tags: ["autodocs"], // Enables automatic documentation generation
+  tags: ['autodocs'], // Enables automatic documentation generation
   argTypes: {
     /**
      * Allows users to change the background color dynamically from Storybook.
      */
-    backgroundColor: { control: "color" },
+    backgroundColor: { control: 'color' },
   },
   /**
    * Spy function to track `onClick` events in Storybook's Actions panel.
@@ -56,7 +56,7 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     primary: true,
-    label: "Primary Button",
+    label: 'Primary Button',
   },
 };
 
@@ -66,7 +66,7 @@ export const Primary: Story = {
  */
 export const Secondary: Story = {
   args: {
-    label: "Secondary Button",
+    label: 'Secondary Button',
   },
 };
 
@@ -76,8 +76,8 @@ export const Secondary: Story = {
  */
 export const Large: Story = {
   args: {
-    size: "large",
-    label: "Large Button",
+    size: 'large',
+    label: 'Large Button',
   },
 };
 
@@ -87,8 +87,8 @@ export const Large: Story = {
  */
 export const Small: Story = {
   args: {
-    size: "small",
-    label: "Small Button",
+    size: 'small',
+    label: 'Small Button',
   },
 };
 
@@ -98,7 +98,7 @@ export const Small: Story = {
  */
 export const Disabled: Story = {
   args: {
-    label: "Disabled Button",
+    label: 'Disabled Button',
     disabled: true,
   },
 };

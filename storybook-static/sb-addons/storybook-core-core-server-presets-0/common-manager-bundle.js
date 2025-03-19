@@ -38,20 +38,20 @@ try {
     var c = (() => {
         let e;
         return (
-          typeof window < "u"
+          typeof window < 'u'
             ? (e = window)
-            : typeof globalThis < "u"
+            : typeof globalThis < 'u'
               ? (e = globalThis)
-              : typeof window < "u"
+              : typeof window < 'u'
                 ? (e = window)
-                : typeof self < "u"
+                : typeof self < 'u'
                   ? (e = self)
                   : (e = {}),
           e
         );
       })(),
-      S = "tag-filters",
-      d = "static-filter";
+      S = 'tag-filters',
+      d = 'static-filter';
     n.register(S, (e) => {
       let u = Object.entries(c.TAGS_OPTIONS ?? {}).reduce((t, r) => {
         let [o, i] = r;
@@ -60,7 +60,7 @@ try {
       e.experimental_setFilter(d, (t) => {
         let r = t.tags ?? [];
         return (
-          (r.includes("dev") || t.type === "docs") &&
+          (r.includes('dev') || t.type === 'docs') &&
           r.filter((o) => u[o]).length === 0
         );
       });
@@ -68,7 +68,7 @@ try {
   })();
 } catch (e) {
   console.error(
-    "[Storybook] One of your manager-entries failed: " + import.meta.url,
-    e,
+    '[Storybook] One of your manager-entries failed: ' + import.meta.url,
+    e
   );
 }

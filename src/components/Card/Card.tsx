@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 import {
   StyledCard,
   CardImage,
   CardTitle,
   CardDescription,
   CardButton,
-} from "./Card.styles";
-import { CardProps } from "./Card.types";
+} from './Card.styles';
+import { CardProps } from './Card.types';
 
 /**
  * **Card Component**

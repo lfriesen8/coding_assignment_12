@@ -1,6 +1,6 @@
-import React from "react";
-import { StyledDropdown, StyledSelect } from "./Dropdown.styles";
-import { DropdownProps } from "./Dropdown.types";
+import React from 'react';
+import { StyledDropdown, StyledSelect } from './Dropdown.styles';
+import { DropdownProps } from './Dropdown.types';
 
 /**
  * **Dropdown Component**

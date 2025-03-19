@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Card } from "./Card";
+import type { Meta, StoryObj } from '@storybook/react';
+import { Card } from './Card';
 
 /**
  * **Card Component - Storybook**
@@ -8,17 +8,17 @@ import { Card } from "./Card";
  */
 
 const meta: Meta<typeof Card> = {
-  title: "Components/Card",
+  title: 'Components/Card',
   component: Card,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
-    title: { control: "text" },
-    description: { control: "text" },
-    image: { control: "text" },
-    buttonLabel: { control: "text" },
+    title: { control: 'text' },
+    description: { control: 'text' },
+    image: { control: 'text' },
+    buttonLabel: { control: 'text' },
   },
 };
 
@@ -30,12 +30,12 @@ type Story = StoryObj<typeof meta>;
  */
 export const Default: Story = {
   args: {
-    title: "PK SPEAKERS",
-    description: "White PK 15 Speakers",
+    title: 'PK SPEAKERS',
+    description: 'White PK 15 Speakers',
     image:
-      "https://canada.crutchfieldonline.com/ImageHandler/trim/750/457/products/2019/16/310/g310YU2MW-F.jpg",
-    buttonLabel: "More info",
-    onButtonClick: () => alert("Button clicked!"),
+      'https://canada.crutchfieldonline.com/ImageHandler/trim/750/457/products/2019/16/310/g310YU2MW-F.jpg',
+    buttonLabel: 'More info',
+    onButtonClick: () => alert('Button clicked!'),
   },
 };
 
@@ -44,7 +44,7 @@ export const Default: Story = {
  */
 export const NoImage: Story = {
   args: {
-    title: "Out of stock",
-    description: "Sorry about that.",
+    title: 'Out of stock',
+    description: 'Sorry about that.',
   },
 };

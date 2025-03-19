@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Img } from "./Img";
+import type { Meta, StoryObj } from '@storybook/react';
+import { Img } from './Img';
 
 /**
  * **Img Component - Storybook**
@@ -8,18 +8,18 @@ import { Img } from "./Img";
  */
 
 const meta: Meta<typeof Img> = {
-  title: "Components/Img",
+  title: 'Components/Img',
   component: Img,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
-    src: { control: "text" },
-    alt: { control: "text" },
-    width: { control: "text" },
-    height: { control: "text" },
-    borderRadius: { control: "text" },
+    src: { control: 'text' },
+    alt: { control: 'text' },
+    width: { control: 'text' },
+    height: { control: 'text' },
+    borderRadius: { control: 'text' },
   },
 };
 
@@ -31,11 +31,11 @@ type Story = StoryObj<typeof meta>;
  */
 export const Default: Story = {
   args: {
-    src: "https://www.thomann.de/blog/wp-content/uploads/2024/08/Djtransitions_header_770x425.png",
-    alt: "Placeholder Image",
+    src: 'https://www.thomann.de/blog/wp-content/uploads/2024/08/Djtransitions_header_770x425.png',
+    alt: 'Placeholder Image',
     width: 150,
     height: 150,
-    borderRadius: "5px",
+    borderRadius: '5px',
   },
 };
 
@@ -44,11 +44,11 @@ export const Default: Story = {
  */
 export const Rounded: Story = {
   args: {
-    src: "https://www.thomann.de/blog/wp-content/uploads/2024/08/Djtransitions_header_770x425.png",
-    alt: "Rounded Image",
+    src: 'https://www.thomann.de/blog/wp-content/uploads/2024/08/Djtransitions_header_770x425.png',
+    alt: 'Rounded Image',
     width: 150,
     height: 150,
-    borderRadius: "50%",
+    borderRadius: '50%',
   },
 };
 
@@ -57,10 +57,10 @@ export const Rounded: Story = {
  */
 export const FullWidth: Story = {
   args: {
-    src: "https://www.thomann.de/blog/wp-content/uploads/2024/08/Djtransitions_header_770x425.png",
-    alt: "Full-Width Image",
-    width: "100%",
+    src: 'https://www.thomann.de/blog/wp-content/uploads/2024/08/Djtransitions_header_770x425.png',
+    alt: 'Full-Width Image',
+    width: '100%',
     height: 300,
-    borderRadius: "0px",
+    borderRadius: '0px',
   },
 };

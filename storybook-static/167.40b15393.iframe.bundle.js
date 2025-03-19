@@ -2,20 +2,20 @@
   self.webpackChunkcoding_assignment_12 || []).push([
   [167],
   {
-    "./node_modules/@storybook/addon-docs/dist/DocsRenderer-CFRXHY34.mjs": (
+    './node_modules/@storybook/addon-docs/dist/DocsRenderer-CFRXHY34.mjs': (
       __unused_webpack_module,
       __webpack_exports__,
-      __webpack_require__,
+      __webpack_require__
     ) => {
       __webpack_require__.d(__webpack_exports__, {
         DocsRenderer: () => DocsRenderer,
       });
-      var react = __webpack_require__("./node_modules/react/index.js"),
+      var react = __webpack_require__('./node_modules/react/index.js'),
         dist = __webpack_require__(
-          "./node_modules/@storybook/blocks/dist/index.mjs",
+          './node_modules/@storybook/blocks/dist/index.mjs'
         ),
         react_18 = __webpack_require__(
-          "./node_modules/@storybook/react-dom-shim/dist/react-18.mjs",
+          './node_modules/@storybook/react-dom-shim/dist/react-18.mjs'
         ),
         defaultComponents = { code: dist.XA, a: dist.zE, ...dist.Sw },
         ErrorBoundary = class extends react.Component {
@@ -51,8 +51,8 @@
                   .then(
                     __webpack_require__.bind(
                       __webpack_require__,
-                      "./node_modules/@mdx-js/react/index.js",
-                    ),
+                      './node_modules/@mdx-js/react/index.js'
+                    )
                   )
                   .then(({ MDXProvider }) =>
                     (0, react_18.renderElement)(
@@ -65,11 +65,11 @@
                           react.createElement(TDocs, {
                             context,
                             docsParameter,
-                          }),
-                        ),
+                          })
+                        )
                       ),
-                      element,
-                    ),
+                      element
+                    )
                   )
                   .then(() => resolve());
               });
@@ -80,42 +80,42 @@
           }
         };
       __webpack_require__(
-        "./node_modules/@storybook/addon-docs/dist/chunk-H6MOWX77.mjs",
+        './node_modules/@storybook/addon-docs/dist/chunk-H6MOWX77.mjs'
       );
     },
-    "./node_modules/@storybook/blocks/dist sync recursive": (module) => {
+    './node_modules/@storybook/blocks/dist sync recursive': (module) => {
       function webpackEmptyContext(req) {
         var e = new Error("Cannot find module '" + req + "'");
-        throw ((e.code = "MODULE_NOT_FOUND"), e);
+        throw ((e.code = 'MODULE_NOT_FOUND'), e);
       }
       (webpackEmptyContext.keys = () => []),
         (webpackEmptyContext.resolve = webpackEmptyContext),
         (webpackEmptyContext.id =
-          "./node_modules/@storybook/blocks/dist sync recursive"),
+          './node_modules/@storybook/blocks/dist sync recursive'),
         (module.exports = webpackEmptyContext);
     },
-    "./node_modules/@storybook/core/dist/components sync recursive": (
-      module,
+    './node_modules/@storybook/core/dist/components sync recursive': (
+      module
     ) => {
       function webpackEmptyContext(req) {
         var e = new Error("Cannot find module '" + req + "'");
-        throw ((e.code = "MODULE_NOT_FOUND"), e);
+        throw ((e.code = 'MODULE_NOT_FOUND'), e);
       }
       (webpackEmptyContext.keys = () => []),
         (webpackEmptyContext.resolve = webpackEmptyContext),
         (webpackEmptyContext.id =
-          "./node_modules/@storybook/core/dist/components sync recursive"),
+          './node_modules/@storybook/core/dist/components sync recursive'),
         (module.exports = webpackEmptyContext);
     },
-    "./node_modules/@storybook/core/dist/theming sync recursive": (module) => {
+    './node_modules/@storybook/core/dist/theming sync recursive': (module) => {
       function webpackEmptyContext(req) {
         var e = new Error("Cannot find module '" + req + "'");
-        throw ((e.code = "MODULE_NOT_FOUND"), e);
+        throw ((e.code = 'MODULE_NOT_FOUND'), e);
       }
       (webpackEmptyContext.keys = () => []),
         (webpackEmptyContext.resolve = webpackEmptyContext),
         (webpackEmptyContext.id =
-          "./node_modules/@storybook/core/dist/theming sync recursive"),
+          './node_modules/@storybook/core/dist/theming sync recursive'),
         (module.exports = webpackEmptyContext);
     },
   },

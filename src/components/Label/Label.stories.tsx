@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Label } from "./Label";
+import type { Meta, StoryObj } from '@storybook/react';
+import { Label } from './Label';
 
 /**
  * **Label Component - Storybook**
@@ -12,15 +12,15 @@ import { Label } from "./Label";
  */
 
 const meta: Meta<typeof Label> = {
-  title: "Components/Label",
+  title: 'Components/Label',
   component: Label,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
-    text: { control: "text" },
-    disabled: { control: "boolean" },
+    text: { control: 'text' },
+    disabled: { control: 'boolean' },
   },
 };
 
@@ -33,7 +33,7 @@ type Story = StoryObj<typeof meta>;
  */
 export const Default: Story = {
   args: {
-    text: "Label Text",
+    text: 'Label Text',
   },
 };
 
@@ -43,7 +43,7 @@ export const Default: Story = {
  */
 export const Disabled: Story = {
   args: {
-    text: "Disabled Label",
+    text: 'Disabled Label',
     disabled: true,
   },
 };
@@ -54,7 +54,7 @@ export const Disabled: Story = {
  */
 export const Associated: Story = {
   args: {
-    text: "Label for Input",
-    htmlFor: "input-id",
+    text: 'Label for Input',
+    htmlFor: 'input-id',
   },
 };

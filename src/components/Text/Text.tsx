@@ -1,6 +1,6 @@
-import React from "react";
-import { StyledText } from "./Text.styles";
-import { TextProps } from "./Text.types";
+import React from 'react';
+import { StyledText } from './Text.styles';
+import { TextProps } from './Text.types';
 
 /**
  * **Text Component**
@@ -16,7 +16,7 @@ import { TextProps } from "./Text.types";
  */
 export const Text: React.FC<TextProps> = ({
   children,
-  size = "medium",
+  size = 'medium',
   bold,
   italic,
   color,

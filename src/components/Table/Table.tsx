@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import * as S from "./Table.styles"; // Import all styled components as S
-import { TableProps } from "./Table.types";
+import React, { useState } from 'react';
+import * as S from './Table.styles'; // Import all styled components as S
+import { TableProps } from './Table.types';
 
 /**
  * **Table Component**
@@ -21,14 +21,14 @@ export const Table: React.FC<TableProps & { disabled?: boolean }> = ({
   disabled = false,
 }) => {
   const [rows, setRows] = useState([
-    { id: 1, name: "John Doe", age: 30, country: "Canada" },
-    { id: 2, name: "Jane Smith", age: 25, country: "USA" },
+    { id: 1, name: 'John Doe', age: 30, country: 'Canada' },
+    { id: 2, name: 'Jane Smith', age: 25, country: 'USA' },
   ]);
 
   const addRow = () => {
     setRows([
       ...rows,
-      { id: Date.now(), name: "New User", age: 0, country: "Unknown" },
+      { id: Date.now(), name: 'New User', age: 0, country: 'Unknown' },
     ]);
   };
 
@@ -40,7 +40,7 @@ export const Table: React.FC<TableProps & { disabled?: boolean }> = ({
     <S.StyledTable
       style={{
         opacity: disabled ? 0.5 : 1,
-        pointerEvents: disabled ? "none" : "auto",
+        pointerEvents: disabled ? 'none' : 'auto',
       }}
     >
       <S.StyledTableHeader>
