@@ -1,0 +1,33 @@
+# Ignore node_modules to avoid huge build context
+node_modules
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Ignore build artifacts
+dist
+storybook-static
+build
+.cache
+coverage
+
+# Ignore logs
+logs
+*.log
+*.gz
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE/Editor files
+.vscode
+.idea
+*.swp
+*.swo
+
+# Ignore version control files
+.git
+.gitignore
