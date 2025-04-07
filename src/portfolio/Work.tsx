@@ -9,7 +9,7 @@ const Work = () => {
         'Built a mock website using Ruby on Rails to showcase different craft breweries and beer across the USA.',
       image:
         'https://upload.wikimedia.org/wikipedia/commons/6/62/Ruby_On_Rails_Logo.svg',
-      link: 'https://github.com/lfriesen8/rails-brewery-project',
+      link: 'https://github.com/lfriesen8/rails-brewery-project.',
       tech: ['Ruby', 'Rails 7.2', 'VS Code', 'WSL'],
     },
     {
@@ -24,7 +24,9 @@ const Work = () => {
       title: 'Mennonite Market Food Services',
       description:
         'Content managing service for Mennonite/European food delivery with full CRUD functionality.',
-      image: 'https://imgur.com/WOq30rj',
+      image:
+        'https://d3f1iyfxxz8i1e.cloudfront.net/courses/course_image/da8bad75cadf.jpg',
+      link: 'https://github.com/lfriesen8/mennonite_market',
       tech: ['Ruby', 'Rails', 'MySQL', 'Multiple gems'],
     },
   ];
