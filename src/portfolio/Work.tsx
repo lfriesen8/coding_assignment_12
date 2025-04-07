@@ -7,27 +7,26 @@ const Work = () => {
       title: 'Ruby on Rails Brewery Project',
       description:
         'Built a mock website using Ruby on Rails to showcase different craft breweries and beer across the USA.',
-      image: '/rails.png', // ✅ Matches your actual file name
-      link: 'https://github.com/lfriesen8/rails-brewery-project.',
+      image:
+        'https://upload.wikimedia.org/wikipedia/commons/6/62/Ruby_On_Rails_Logo.svg',
+      link: 'https://github.com/lfriesen8/rails-brewery-project',
       tech: ['Ruby', 'Rails 7.2', 'VS Code', 'WSL'],
     },
     {
       title: 'DJ Connect CMS Booking Website',
       description:
         'Content managing service for DJ bookings with full CRUD functionality. Came to me as I run a small DJ business.',
-      image: '/djconnect.png', // ✅ Matches your actual file name
+      image: 'https://cdn-icons-png.flaticon.com/512/1584/1584892.png',
       link: 'https://github.com/lfriesen8/dj_connect',
       tech: ['PHP', 'Apache2', 'MySQL'],
     },
-
     {
-        title: 'Mennonite Market Food Services',
-        description:
-          'Content managing service for Mennonite/European food delivery with full CRUD functionality.',
-        image: '/rollkuchen.jpg', // 
-        link: 'https://github.com/lfriesen8/mennonite_market',
-        tech: ['Ruby', 'Rails', 'MySQL', 'Multiple gems'],
-      },
+      title: 'Mennonite Market Food Services',
+      description:
+        'Content managing service for Mennonite/European food delivery with full CRUD functionality.',
+      image: 'https://imgur.com/WOq30rj',
+      tech: ['Ruby', 'Rails', 'MySQL', 'Multiple gems'],
+    },
   ];
 
   return (
@@ -57,4 +56,3 @@ const Work = () => {
 };
 
 export default Work;
-

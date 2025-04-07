@@ -7,7 +7,7 @@ import Setup from './portfolio/Setup';
 import About from './portfolio/About';
 import Contact from './portfolio/Contact';
 import './App.css';
-
+//my portfolio
 function App() {
   return (
     <>
@@ -26,23 +26,36 @@ function App() {
           <a
             href="#about"
             style={{ color: '#fff', textDecoration: 'none' }}
-            onMouseEnter={(e) => (e.currentTarget.style.textDecoration = 'underline')}
-            onMouseLeave={(e) => (e.currentTarget.style.textDecoration = 'none')}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.textDecoration = 'underline')
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.textDecoration = 'none')
+            }
           >
             About Me
           </a>
           <a
             href="#contact"
             style={{ color: '#fff', textDecoration: 'none' }}
-            onMouseEnter={(e) => (e.currentTarget.style.textDecoration = 'underline')}
-            onMouseLeave={(e) => (e.currentTarget.style.textDecoration = 'none')}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.textDecoration = 'underline')
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.textDecoration = 'none')
+            }
           >
             Contact
           </a>
         </div>
       </nav>
 
-      <main style={{ padding: '2rem', background: 'linear-gradient(to bottom, #f3f3f3, #e4e4e4)' }}>
+      <main
+        style={{
+          padding: '2rem',
+          background: 'linear-gradient(to bottom, #f3f3f3, #e4e4e4)',
+        }}
+      >
         <Home />
 
         {/* Work & Skills side by side */}

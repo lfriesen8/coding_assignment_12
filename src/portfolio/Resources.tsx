@@ -6,20 +6,21 @@ const resources = [
   {
     title: 'React Docs',
     description: 'The official docs — everything you need to master React.',
-    image: '/react.png',
-    link: 'https://reactjs.org',
+    image: 'https://reactjs.org/logo-og.png',
+    link: 'https://reactjs.org/',
     buttonLabel: 'View',
   },
   {
     title: 'Docker Docs',
     description: 'Great resource for learning how to containerize your apps.',
-    image: '/docker.png',
+    image: 'https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png',
     link: 'https://docs.docker.com/',
     buttonLabel: 'View',
   },
   {
     title: 'Coding Forum',
-    description: 'Great resource for coding community and help regarding coding.',
+    description:
+      'Great resource for coding community and help regarding coding.',
     image: 'https://www.thecodingforums.com/styles/default/custom/logo.png',
     link: 'https://www.thecodingforums.com/',
     buttonLabel: 'View',
@@ -71,7 +72,9 @@ const Resources = () => {
             height="auto"
             borderRadius="10px"
           />
-          <p style={{ marginTop: '1rem', fontWeight: '500' }}>A developers best friend!</p>
+          <p style={{ marginTop: '1rem', fontWeight: '500' }}>
+            A developers best friend!
+          </p>
         </div>
       </div>
     </section>

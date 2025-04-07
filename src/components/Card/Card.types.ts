@@ -4,6 +4,6 @@ export type CardProps = {
   image?: string;
   buttonLabel?: string;
   onButtonClick?: () => void;
-  link?: string;            // ✅ for GitHub or live links
-  techList?: string[];      // ✅ to show technologies used
+  link?: string; // ✅ for GitHub or live links
+  techList?: string[]; // ✅ to show technologies used
 };

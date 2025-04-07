@@ -7,7 +7,9 @@ const Skills = () => {
     <section style={{ marginTop: '2rem' }}>
       <h2 style={{ fontSize: '1.5rem', marginBottom: '0.75rem' }}>Skills</h2>
       <Text>
-        Here&apos;s a breakdown of my technical and practical background across software development and hands-on experience with computer hardware and different fields:
+        Here&apos;s a breakdown of my technical and practical background across
+        software development and hands-on experience with computer hardware and
+        different fields:
       </Text>
 
       {/* Flex wrapper for side-by-side tables */}

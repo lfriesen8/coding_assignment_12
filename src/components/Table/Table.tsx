@@ -15,7 +15,11 @@ export const Table: React.FC<TableProps> = ({ type }) => {
           { id: 4, skill: 'Node.js / Express', experience: '1 year' },
           { id: 5, skill: 'Docker', experience: '1 year' },
           { id: 6, skill: 'VSCode / Git / Postman', experience: '1 year' },
-          { id: 7, skill: 'Computer Building & Troubleshooting', experience: '10+ years' },
+          {
+            id: 7,
+            skill: 'Computer Building & Troubleshooting',
+            experience: '10+ years',
+          },
         ]
       : [
           { id: 1, skill: 'Managerial Experience', experience: '4 years' },
@@ -24,7 +28,11 @@ export const Table: React.FC<TableProps> = ({ type }) => {
           { id: 4, skill: 'Music Producer', experience: '8 years' },
           { id: 5, skill: 'DJ', experience: '9 years' },
           { id: 6, skill: 'Health & Safety Trained', experience: '5 years' },
-          { id: 7, skill: 'Bilingual (German & English)', experience: 'Lifetime' },
+          {
+            id: 7,
+            skill: 'Bilingual (German & English)',
+            experience: 'Lifetime',
+          },
         ];
 
   const headerColor = type === 'technical' ? '#007bff' : '#dc3545';
@@ -49,4 +57,3 @@ export const Table: React.FC<TableProps> = ({ type }) => {
     </S.StyledTable>
   );
 };
-

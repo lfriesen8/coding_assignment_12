@@ -1,27 +1,22 @@
-# Use an official Node.js runtime as the base image
-FROM node:18-alpine
+# Build Stage
+FROM node:18-alpine AS build
 
-# Set the working directory inside the container
-WORKDIR friesen_liam_ui_garden_build_checks
+WORKDIR /friesen_liam_final_site
 
-# Copy package files first (for better caching)
 COPY package*.json ./
-
-# Install dependencies
 RUN npm install
 
-# Copy the rest of the project files
 COPY . .
+RUN npm run build
 
-# ✅ Build Storybook (instead of React production build)
-RUN npm run build-storybook
+# Production Stage
+FROM node:18-alpine
 
-# ✅ Install http-server globally to serve Storybook
-RUN npm install -g http-server
+WORKDIR /friesen_liam_final_site
+RUN npm install -g serve
 
-# ✅ Expose port 8018 for Storybook
-EXPOSE 8018
+COPY --from=build /friesen_liam_final_site/build ./build
 
-# ✅ Serve the built Storybook instead of the React app
-CMD ["http-server", "storybook-static", "-p", "8018"]
+EXPOSE 5575
+CMD ["serve", "-s", "build", "-l", "5575"]
 

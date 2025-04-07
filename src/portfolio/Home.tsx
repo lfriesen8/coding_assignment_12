@@ -16,10 +16,14 @@ const Home = () => {
 
       <h2>Welcome 👋</h2>
       <Text>
-        Hey, I’m Liam Friesen — a full-stack web development student based in Manitoba. I’m passionate about blending creative and technical skills, whether that’s through code, music, or design.
+        Hey, I’m Liam Friesen — a full-stack web development student based in
+        Manitoba. I’m passionate about blending creative and technical skills,
+        whether that’s through code, music, or design.
       </Text>
       <Text>
-        This portfolio showcases the work I’ve completed throughout the program, including my custom React component library, project builds, and my full dev setup.
+        This portfolio showcases the work I’ve completed throughout the program,
+        including my custom React component library, project builds, and my full
+        dev setup.
       </Text>
     </section>
   );

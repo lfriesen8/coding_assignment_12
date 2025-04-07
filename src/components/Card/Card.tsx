@@ -4,6 +4,7 @@ import {
   CardTitle,
   CardDescription,
   CardButton,
+  CardImage,
 } from './Card.styles';
 import { CardProps } from './Card.types';
 
@@ -16,33 +17,16 @@ export const Card: React.FC<CardProps> = ({
   buttonLabel = 'View',
   onButtonClick,
 }) => {
-  // Ensure fallback in case the image fails
-  const imageSrc = image?.startsWith('/') ? image : `/${image}`;
-
   return (
     <StyledCard>
-      {image && (
-        <img
-          src={imageSrc}
-          alt={title}
-          style={{
-            width: '100%',
-            height: '180px',
-            objectFit: 'cover',
-            borderRadius: '8px',
-          }}
-        />
-      )}
-
+      {image && <CardImage src={image} alt={title} />} {/* ✅ use real URL */}
       <CardTitle>{title}</CardTitle>
       <CardDescription>{description}</CardDescription>
-
       {techList && (
         <p>
           <strong>Tech:</strong> {techList.join(', ')}
         </p>
       )}
-
       {link ? (
         <a href={link} target="_blank" rel="noopener noreferrer">
           <CardButton>{buttonLabel}</CardButton>
@@ -57,4 +41,3 @@ export const Card: React.FC<CardProps> = ({
     </StyledCard>
   );
 };
-

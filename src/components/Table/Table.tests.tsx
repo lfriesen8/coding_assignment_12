@@ -7,7 +7,9 @@ describe('Table Component', () => {
 
     expect(screen.getByText('JavaScript')).toBeInTheDocument();
     expect(screen.getByText('TypeScript')).toBeInTheDocument();
-    expect(screen.getByText('Computer Building & Troubleshooting')).toBeInTheDocument();
+    expect(
+      screen.getByText('Computer Building & Troubleshooting')
+    ).toBeInTheDocument();
     expect(screen.getByText('10+ years')).toBeInTheDocument();
   });
 
