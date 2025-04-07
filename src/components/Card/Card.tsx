@@ -1,42 +1,60 @@
 import React from 'react';
 import {
   StyledCard,
-  CardImage,
   CardTitle,
   CardDescription,
   CardButton,
 } from './Card.styles';
 import { CardProps } from './Card.types';
 
-/**
- * **Card Component**
- *
- * A versatile, reusable card that can display an image, title, description, and button.
- *
- * @component
- * @param {string} title - The title of the card.
- * @param {string} description - The card description text.
- * @param {string} [image] - Optional image URL.
- * @param {string} [buttonLabel] - Optional button text.
- * @param {() => void} [onButtonClick] - Click handler for the button.
- */
 export const Card: React.FC<CardProps> = ({
   title,
   description,
   image,
-  buttonLabel,
+  link,
+  techList,
+  buttonLabel = 'View',
   onButtonClick,
 }) => {
+  // Ensure fallback in case the image fails
+  const imageSrc = image?.startsWith('/') ? image : `/${image}`;
+
   return (
     <StyledCard>
-      {image && <CardImage src={image} alt={title} />}
+      {image && (
+        <img
+          src={imageSrc}
+          alt={title}
+          style={{
+            width: '100%',
+            height: '180px',
+            objectFit: 'cover',
+            borderRadius: '8px',
+          }}
+        />
+      )}
+
       <CardTitle>{title}</CardTitle>
       <CardDescription>{description}</CardDescription>
-      {buttonLabel && (
-        <CardButton onClick={() => onButtonClick && onButtonClick()}>
-          {buttonLabel}
-        </CardButton>
+
+      {techList && (
+        <p>
+          <strong>Tech:</strong> {techList.join(', ')}
+        </p>
+      )}
+
+      {link ? (
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <CardButton>{buttonLabel}</CardButton>
+        </a>
+      ) : (
+        buttonLabel && (
+          <CardButton onClick={() => onButtonClick && onButtonClick()}>
+            {buttonLabel}
+          </CardButton>
+        )
       )}
     </StyledCard>
   );
 };
+

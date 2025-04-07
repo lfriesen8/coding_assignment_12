@@ -1,86 +1,52 @@
-import React, { useState } from 'react';
-import * as S from './Table.styles'; // Import all styled components as S
-import { TableProps } from './Table.types';
+import React from 'react';
+import * as S from './Table.styles';
 
-/**
- * **Table Component**
- *
- * A flexible Table component that supports:
- * - Adding rows dynamically.
- * - Removing rows individually.
- * - A header and footer that remain visible.
- * - A `disabled` state that prevents interaction.
- *
- *
- *
- *
- *
- */
+type TableProps = {
+  type: 'technical' | 'practical';
+};
 
-export const Table: React.FC<TableProps & { disabled?: boolean }> = ({
-  disabled = false,
-}) => {
-  const [rows, setRows] = useState([
-    { id: 1, name: 'John Doe', age: 30, country: 'Canada' },
-    { id: 2, name: 'Jane Smith', age: 25, country: 'USA' },
-  ]);
+export const Table: React.FC<TableProps> = ({ type }) => {
+  const rows =
+    type === 'technical'
+      ? [
+          { id: 1, skill: 'JavaScript', experience: '1 year' },
+          { id: 2, skill: 'TypeScript', experience: '1 year' },
+          { id: 3, skill: 'React', experience: '1 year' },
+          { id: 4, skill: 'Node.js / Express', experience: '1 year' },
+          { id: 5, skill: 'Docker', experience: '1 year' },
+          { id: 6, skill: 'VSCode / Git / Postman', experience: '1 year' },
+          { id: 7, skill: 'Computer Building & Troubleshooting', experience: '10+ years' },
+        ]
+      : [
+          { id: 1, skill: 'Managerial Experience', experience: '4 years' },
+          { id: 2, skill: 'Business Owner', experience: '3 years' },
+          { id: 3, skill: 'Photographer', experience: '8 years' },
+          { id: 4, skill: 'Music Producer', experience: '8 years' },
+          { id: 5, skill: 'DJ', experience: '9 years' },
+          { id: 6, skill: 'Health & Safety Trained', experience: '5 years' },
+          { id: 7, skill: 'Bilingual (German & English)', experience: 'Lifetime' },
+        ];
 
-  const addRow = () => {
-    setRows([
-      ...rows,
-      { id: Date.now(), name: 'New User', age: 0, country: 'Unknown' },
-    ]);
-  };
-
-  const removeRow = (id: number) => {
-    setRows(rows.filter((row) => row.id !== id));
-  };
+  const headerColor = type === 'technical' ? '#007bff' : '#dc3545';
 
   return (
-    <S.StyledTable
-      style={{
-        opacity: disabled ? 0.5 : 1,
-        pointerEvents: disabled ? 'none' : 'auto',
-      }}
-    >
-      <S.StyledTableHeader>
+    <S.StyledTable>
+      <thead style={{ backgroundColor: headerColor, color: 'white' }}>
         <S.StyledTableRow>
-          <S.StyledTableCell>Name</S.StyledTableCell>
-          <S.StyledTableCell>Age</S.StyledTableCell>
-          <S.StyledTableCell>Country</S.StyledTableCell>
-          <S.StyledTableCell>Action</S.StyledTableCell>
+          <S.StyledTableCell>Skill</S.StyledTableCell>
+          <S.StyledTableCell>Experience</S.StyledTableCell>
         </S.StyledTableRow>
-      </S.StyledTableHeader>
+      </thead>
+
       <tbody>
         {rows.map((row) => (
           <S.StyledTableRow key={row.id}>
-            <S.StyledTableCell>{row.name}</S.StyledTableCell>
-            <S.StyledTableCell>{row.age}</S.StyledTableCell>
-            <S.StyledTableCell>{row.country}</S.StyledTableCell>
-            <S.StyledTableCell>
-              <S.StyledButton
-                onClick={() => removeRow(row.id)}
-                disabled={disabled}
-              >
-                Remove
-              </S.StyledButton>
-            </S.StyledTableCell>
+            <S.StyledTableCell>{row.skill}</S.StyledTableCell>
+            <S.StyledTableCell>{row.experience}</S.StyledTableCell>
           </S.StyledTableRow>
         ))}
       </tbody>
-      <S.StyledTableFooter>
-        <S.StyledTableRow>
-          <S.StyledTableCell>Total</S.StyledTableCell>
-          <S.StyledTableCell colSpan={2}>
-            {rows.length} people
-          </S.StyledTableCell>
-          <S.StyledTableCell>
-            <S.StyledButton onClick={addRow} disabled={disabled}>
-              Add Row
-            </S.StyledButton>
-          </S.StyledTableCell>
-        </S.StyledTableRow>
-      </S.StyledTableFooter>
     </S.StyledTable>
   );
 };
+

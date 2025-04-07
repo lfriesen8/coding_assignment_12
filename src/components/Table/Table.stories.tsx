@@ -13,10 +13,10 @@ const meta: Meta<typeof Table> = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
-  render: () => <Table />, // Showcases adding/removing rows dynamically
+export const TechnicalSkills: Story = {
+  render: () => <Table type="technical" />,
 };
 
-export const Disabled: Story = {
-  render: () => <Table disabled={true} />, // Showcases the table in a disabled state
+export const PracticalSkills: Story = {
+  render: () => <Table type="practical" />,
 };
